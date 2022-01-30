@@ -3,33 +3,41 @@
     <div id="array-methods">
       <h1 class="array-methods__heading">Методы массивов</h1>
 
-      <h2 class="array-methods__subheading">Преобразование и упорядочения массива</h2>
+      <div id="adding-removing-elements-in-an-array">
+        <h2 class="array-methods__subheading">Добавление/удаление элементов</h2>
 
-      <ArrayMethodsMap />
+        <ArrayMethodsSplice />
+      </div>
 
-      <ArrayMethodsSort
-        :arrSort="arrSort"
-        :arrStrings="arrStrings"
-        :arrNumber="arrNumber"
-        :vasya="vasya"
-        :petya="petya"
-        :masha="masha"
-        :users="users"
-        :arrSorted="arrSorted"
-        :arrNumberSorted="arrNumberSorted"
-        :arrNumberSortedDescending="arrNumberSortedDescending"
-        :sortByAge="sortByAge"
-        :sortByName="sortByName"
-        :sortBySurname="sortBySurname"
-        :sortById="sortById"
-        :arrStringsSorted="arrStringsSorted"
-      />
+      <div id="transformation-and-ordering-of-an-array">
+        <h2 class="array-methods__subheading">Преобразование и упорядочения массива</h2>
 
-      <ArrayMethodsReverse />
+        <ArrayMethodsMap />
 
-      <ArrayMethodsSplit />
+        <ArrayMethodsSort
+          :arrSort="arrSort"
+          :arrStrings="arrStrings"
+          :arrNumber="arrNumber"
+          :vasya="vasya"
+          :petya="petya"
+          :masha="masha"
+          :users="users"
+          :arrSorted="arrSorted"
+          :arrNumberSorted="arrNumberSorted"
+          :arrNumberSortedDescending="arrNumberSortedDescending"
+          :sortByAge="sortByAge"
+          :sortByName="sortByName"
+          :sortBySurname="sortBySurname"
+          :sortById="sortById"
+          :arrStringsSorted="arrStringsSorted"
+        />
 
-      <ArrayMethodsJoin />
+        <ArrayMethodsReverse />
+
+        <ArrayMethodsSplit />
+
+        <ArrayMethodsJoin />
+      </div>
 
       <!--  -->
       <span class="array-methods__span"></span>
@@ -46,6 +54,10 @@
         >
           xxx
         </button>
+
+        <p class="array-methods__description">
+          Метод ............
+        </p>
 
         <div v-if="isButton">
           <a target="_blank" href=""></a>
@@ -64,6 +76,10 @@
         >
           xxx
         </button>
+
+        <p class="array-methods__description">
+          Метод ............
+        </p>
 
         <div v-if="isButton">
           <a target="_blank" href=""></a>
@@ -185,6 +201,8 @@
 </template>
 
 <script>
+import ArrayMethodsSplice from '@/components/arrayMethods/ArrayMethodsSplice.vue'
+//
 import ArrayMethodsMap from '@/components/arrayMethods/ArrayMethodsMap.vue'
 import ArrayMethodsSort from '@/components/arrayMethods/ArrayMethodsSort.vue'
 import ArrayMethodsReverse from '@/components/arrayMethods/ArrayMethodsReverse.vue'
@@ -285,6 +303,8 @@ export default {
     */
   },
   components: {
+    ArrayMethodsSplice,
+    //
     ArrayMethodsMap,
     ArrayMethodsSort,
     ArrayMethodsReverse,
