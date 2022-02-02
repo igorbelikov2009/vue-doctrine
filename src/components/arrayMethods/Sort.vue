@@ -2,8 +2,8 @@
   <div id="array-methods-sort">
     <button
       class="array-methods__button"
-      @click="isArrayMethodsSort = !isArrayMethodsSort"
-      :class="{ 'array-methods__button_active': isArrayMethodsSort }"
+      @click="isSort = !isSort"
+      :class="{ 'array-methods__button_active': isSort }"
     >
       array.sort(fn)
     </button>
@@ -12,7 +12,7 @@
       Вызов arr.sort() сортирует массив на месте, меняя в нём порядок элементов.
     </p>
 
-    <div v-if="isArrayMethodsSort">
+    <div v-if="isSort">
       <a
         class="array-methods__link"
         target="_blank"
@@ -168,11 +168,11 @@
 
 <script>
 export default {
-  name: 'ArrayMethodsSort',
+  name: 'Sort',
 
   data() {
     return {
-      isArrayMethodsSort: false,
+      isSort: false,
       // arrSort: [5, 2, 1, -10, 8],
       // arrStrings: ['HTML', 'JavaScript', 'CSS'],
       // arrNumber: [1, 15, 2],

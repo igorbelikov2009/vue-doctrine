@@ -6,15 +6,104 @@
       <div id="adding-removing-elements-in-an-array">
         <h2 class="array-methods__subheading">Добавление/удаление элементов</h2>
 
-        <ArrayMethodsSplice />
+        <Splice />
+
+        <Slice />
+
+        <Concat />
+      </div>
+
+      <div id="iterating-over-an-array">
+        <h2 class="array-methods__subheading">Перебор массива: forEach</h2>
+
+        <ForEach />
+      </div>
+
+      <div>
+        <h2 class="array-methods__subheading">
+          Поиск в массиве
+        </h2>
+
+        <IndexOf />
+
+        <LastIndexOf />
+
+        <Includes />
+
+        <div id="note-on-search-methods">
+          <p class="array-methods__text">
+            <span class="array-methods__span"
+              >Примечание к методам IndexOf(), LastIndexOf(), Includes() </span
+            >: <br />
+            Обратите внимание, что методы используют строгое сравнение
+            <span class="array-methods__span"> = = = </span>.Таким образом, если мы ищем
+            <span class="array-methods__span">false</span>, он находит именно
+            <span class="array-methods__span">false</span>, а не
+            <span class="array-methods__span">ноль</span>.
+          </p>
+
+          <p class="array-methods__text">
+            Если вам нужно найти позицию элемента или наличие элемента в массиве, используйте
+            <span class="array-methods__span">Array.indexOf(), Array.lastIndexOf</span> или
+            <span class="array-methods__span">Array.includes()</span> соответственно.
+          </p>
+
+          <p class="array-methods__text" @click="isNaNVisible = !isNaNVisible">
+            Кроме того, очень незначительным отличием
+            <span class="array-methods__span">includes </span> является то, что он правильно
+            обрабатывает <span class="array-methods__span">NaN </span>в отличие от
+            <span class="array-methods__span">indexOf/lastIndexOf</span>:
+            <span class="array-methods__span-red">
+              (кликни здесь)
+            </span>
+          </p>
+
+          <p v-if="isNaNVisible" class="array-methods__text">
+            имеем <span class="array-methods__span">arrNaN: [NaN] </span> <br />
+            <br />
+
+            <span class="array-methods__span">проверяем NaN на indexOf: </span> <br />
+            <span class="array-methods__span-purple">
+              arrNaNIndexOf() { <br />
+              return this.arrNaN.indexOf(NaN) <br />
+              }</span
+            >
+            получаем
+            <span class="array-methods__span-green">
+              {{ arrNaNIndexOf }}, (должен быть 0, но = = = проверка на равенство не работает для
+              NaN)
+            </span>
+            <br />
+            <br />
+
+            <span class="array-methods__span">проверяем NaN на includes: </span> <br />
+            <span class="array-methods__span-purple">
+              arrNaNIncludes() { <br />
+              return this.arrNaN.includes(NaN) <br />
+              }
+            </span>
+            получаем
+            <span class="array-methods__span-green"> {{ arrNaNIncludes }}, всё верно </span>
+          </p>
+        </div>
+
+        <Find />
+
+        <FindIndex />
+
+        <Every />
+
+        <Some />
+
+        <FilterMethod />
       </div>
 
       <div id="transformation-and-ordering-of-an-array">
         <h2 class="array-methods__subheading">Преобразование и упорядочения массива</h2>
 
-        <ArrayMethodsMap />
+        <Map />
 
-        <ArrayMethodsSort
+        <Sort
           :arrSort="arrSort"
           :arrStrings="arrStrings"
           :arrNumber="arrNumber"
@@ -32,11 +121,13 @@
           :arrStringsSorted="arrStringsSorted"
         />
 
-        <ArrayMethodsReverse />
+        <Reverse />
 
-        <ArrayMethodsSplit />
+        <Split />
 
-        <ArrayMethodsJoin />
+        <Join />
+
+        <ReduceMethod />
       </div>
 
       <!--  -->
@@ -60,7 +151,7 @@
         </p>
 
         <div v-if="isButton">
-          <a target="_blank" href=""></a>
+          <a class="array-methods__link" target="_blank" href=""></a>
           <p class="array-methods__text"></p>
           <p class="array-methods__text"></p>
           <p class="array-methods__text"></p>
@@ -82,7 +173,7 @@
         </p>
 
         <div v-if="isButton">
-          <a target="_blank" href=""></a>
+          <a class="array-methods__link" target="_blank" href=""></a>
           <p class="array-methods__text"></p>
           <p class="array-methods__text"></p>
           <p class="array-methods__text"></p>
@@ -137,53 +228,14 @@
         <p class="array-methods__text"></p>
         <p class="array-methods__text"></p>
       </div>
-
-      <div>
-        <p class="array-methods__subheading"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-      </div>
-
-      <div>
-        <p class="array-methods__subheading"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-      </div>
-
-      <div>
-        <p class="array-methods__subheading"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-      </div>
-
-      <div>
-        <p class="array-methods__subheading"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-      </div>
-
-      <div>
-        <p class="array-methods__subheading"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-        <p class="array-methods__text"></p>
-      </div>
     </div>
-
     <!--  -->
     <p class="array-methods__text">
+      <span class="array-methods__span"> сделать что-то</span> <br />
+
       имеем <span class="array-methods__span"></span> <br />
       <span class="array-methods__span-purple"></span>
-      получаем -
+      получаем:
       <span class="array-methods__span-green"></span>
     </p>
     <!--  -->
@@ -201,13 +253,25 @@
 </template>
 
 <script>
-import ArrayMethodsSplice from '@/components/arrayMethods/ArrayMethodsSplice.vue'
+import Splice from '@/components/arrayMethods/Splice.vue'
+import Slice from '@/components/arrayMethods/Slice.vue'
+import Concat from '@/components/arrayMethods/Concat.vue'
+import ForEach from '@/components/arrayMethods/ForEach.vue'
+import IndexOf from '@/components/arrayMethods/IndexOf.vue'
+import LastIndexOf from '@/components/arrayMethods/LastIndexOf.vue'
+import Includes from '@/components/arrayMethods/Includes.vue'
+import Find from '@/components/arrayMethods/Find.vue'
+import FindIndex from '@/components/arrayMethods/FindIndex.vue'
+import Every from '@/components/arrayMethods/Every.vue'
+import Some from '@/components/arrayMethods/Some.vue'
+import FilterMethod from '../../components/arrayMethods/FilterMethod.vue'
+import ReduceMethod from '../../components/arrayMethods/ReduceMethod.vue'
 //
-import ArrayMethodsMap from '@/components/arrayMethods/ArrayMethodsMap.vue'
-import ArrayMethodsSort from '@/components/arrayMethods/ArrayMethodsSort.vue'
-import ArrayMethodsReverse from '@/components/arrayMethods/ArrayMethodsReverse.vue'
-import ArrayMethodsSplit from '@/components/arrayMethods/ArrayMethodsSplit.vue'
-import ArrayMethodsJoin from '@/components/arrayMethods/ArrayMethodsJoin.vue'
+import Map from '@/components/arrayMethods/Map.vue'
+import Sort from '@/components/arrayMethods/Sort.vue'
+import Reverse from '@/components/arrayMethods/Reverse.vue'
+import Split from '@/components/arrayMethods/Split.vue'
+import Join from '@/components/arrayMethods/Join.vue'
 // tasks
 import ToCamelCaseTask from '@/components/arrayMethodsTasks/ToCamelCaseTask.vue'
 import ToTitleCaseTask from '@/components/arrayMethodsTasks/ToTitleCaseTask.vue'
@@ -226,11 +290,7 @@ export default {
   data() {
     return {
       isButton: false,
-
-      isSortBy: false,
-
-      // isArrSort: false,
-      // isarrStrings: false,
+      isNaNVisible: false,
       isSortBy: false,
 
       arrSort: [5, 2, 1, -10, 8],
@@ -239,9 +299,16 @@ export default {
       vasya: { name: 'Вася', surname: 'Пупкин', id: 1, age: 25 },
       petya: { name: 'Петя', surname: 'Иванов', id: 2, age: 30 },
       masha: { name: 'Маша', surname: 'Петрова', id: 3, age: 28 },
+      arrNaN: [NaN],
     }
   },
   computed: {
+    arrNaNIndexOf() {
+      return this.arrNaN.indexOf(NaN)
+    },
+    arrNaNIncludes() {
+      return this.arrNaN.includes(NaN)
+    },
     users() {
       return [this.vasya, this.petya, this.masha]
     },
@@ -303,13 +370,25 @@ export default {
     */
   },
   components: {
-    ArrayMethodsSplice,
+    Splice,
+    Slice,
+    Concat,
+    ForEach,
+    IndexOf,
+    LastIndexOf,
+    Includes,
+    Find,
+    FindIndex,
+    Every,
+    Some,
+    FilterMethod,
     //
-    ArrayMethodsMap,
-    ArrayMethodsSort,
-    ArrayMethodsReverse,
-    ArrayMethodsSplit,
-    ArrayMethodsJoin,
+    Map,
+    Sort,
+    Reverse,
+    Split,
+    Join,
+    ReduceMethod,
     // tasks
     ToCamelCaseTask,
     ToTitleCaseTask,
@@ -425,6 +504,23 @@ export default {
     line-height: inherit;
     font-weight: inherit;
     color: black;
+  }
+
+  // array-methods__span-bold
+  &__span-bold {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 900;
+    color: black;
+  }
+
+  // array-methods__span-red
+  &__span-red {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: #ff3b0e;
+    cursor: pointer;
   }
 
   // array-methods__span-green

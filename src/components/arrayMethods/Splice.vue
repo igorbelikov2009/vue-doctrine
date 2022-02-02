@@ -2,8 +2,8 @@
   <div id="array-methods-splice">
     <button
       class="array-methods__button"
-      @click="isArrayMethodsSplice = !isArrayMethodsSplice"
-      :class="{ 'array-methods__button_active': isArrayMethodsSplice }"
+      @click="isSplice = !isSplice"
+      :class="{ 'array-methods__button_active': isSplice }"
     >
       array.splice()
     </button>
@@ -15,7 +15,7 @@
       <br />
     </p>
 
-    <div v-if="isArrayMethodsSplice">
+    <div v-if="isSplice">
       <a
         target="_blank"
         href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"
@@ -224,11 +224,11 @@
 
 <script>
 export default {
-  name: 'ArrayMethodsSplice',
+  name: 'Splice',
 
   data() {
     return {
-      isArrayMethodsSplice: false,
+      isSplice: false,
       arrayForSplice: ['Я', 'изучаю', 'JavaScript'],
       arrayForSplice2: ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас'],
       arrayForSplice3: ['Я', 'изучаю', 'JavaScript'],

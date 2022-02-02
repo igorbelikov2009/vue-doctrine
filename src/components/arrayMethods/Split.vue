@@ -2,8 +2,8 @@
   <div id="array-methods-split">
     <button
       class="array-methods__button"
-      @click="isArrayMethodsSplit = !isArrayMethodsSplit"
-      :class="{ 'array-methods__button_active': isArrayMethodsSplit }"
+      @click="isSplit = !isSplit"
+      :class="{ 'array-methods__button_active': isSplit }"
     >
       string.split([separator[, limit]])
     </button>
@@ -13,7 +13,7 @@
       подстрокой.
     </p>
 
-    <div v-if="isArrayMethodsSplit">
+    <div v-if="isSplit">
       <a
         target="_blank"
         href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split"
@@ -115,10 +115,10 @@
 
 <script>
 export default {
-  name: 'ArrayMethodsSplit',
+  name: 'Split',
 
   data() {
-    return { isArrayMethodsSplit: false, stringNames: 'Вася, Петя, Маша, Саша' }
+    return { isSplit: false, stringNames: 'Вася, Петя, Маша, Саша' }
   },
   computed: {
     stringNamesSplit() {

@@ -2,8 +2,8 @@
   <div id="array-methods-reverse">
     <button
       class="array-methods__button"
-      @click="isArrayMethodsReverse = !isArrayMethodsReverse"
-      :class="{ 'array-methods__button_active': isArrayMethodsReverse }"
+      @click="isReverse = !isReverse"
+      :class="{ 'array-methods__button_active': isReverse }"
     >
       array.reverse
     </button>
@@ -12,7 +12,7 @@
       Метод arr.reverse меняет порядок элементов в arr на обратный.
     </p>
 
-    <div v-if="isArrayMethodsReverse">
+    <div v-if="isReverse">
       <a
         target="_blank"
         href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse"
@@ -43,11 +43,11 @@
 
 <script>
 export default {
-  name: 'ArrayMethodsReverse',
+  name: 'Reverse',
 
   data() {
     return {
-      isArrayMethodsReverse: false,
+      isReverse: false,
       arrayBeforeReverse: [1, 2, 3, 4, 5],
     }
   },

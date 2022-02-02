@@ -2,8 +2,8 @@
   <div id="array-methods-map">
     <button
       class="array-methods__button"
-      @click="isArrayMethodsMap = !isArrayMethodsMap"
-      :class="{ 'array-methods__button_active': isArrayMethodsMap }"
+      @click="isMap = !isMap"
+      :class="{ 'array-methods__button_active': isMap }"
     >
       array.map()
     </button>
@@ -13,7 +13,7 @@
       возвращает массив результатов выполнения этой функции.
     </p>
 
-    <div v-if="isArrayMethodsMap">
+    <div v-if="isMap">
       <a
         target="_blank"
         href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
@@ -64,10 +64,10 @@
 
 <script>
 export default {
-  name: 'ArrayMethodsMap',
+  name: 'Map',
   data() {
     return {
-      isArrayMethodsMap: false,
+      isMap: false,
       arrayUpperCase: ['Bilbo', 'Gandalf', 'Nazgul'],
     }
   },

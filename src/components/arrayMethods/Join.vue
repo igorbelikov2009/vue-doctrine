@@ -2,8 +2,8 @@
   <div id="array-methods-Join">
     <button
       class="array-methods__button"
-      @click="isArrayMethodsJoin = !isArrayMethodsJoin"
-      :class="{ 'array-methods__button_active': isArrayMethodsJoin }"
+      @click="isJoin = !isJoin"
+      :class="{ 'array-methods__button_active': isJoin }"
     >
       array.join([separator])
     </button>
@@ -12,7 +12,7 @@
       Метод join() объединяет все элементы массива (или массивоподобного объекта) в строку.
     </p>
 
-    <div v-if="isArrayMethodsJoin">
+    <div v-if="isJoin">
       <a
         target="_blank"
         href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
@@ -122,11 +122,11 @@
 
 <script>
 export default {
-  name: 'ArrayMethodsJoin',
+  name: 'Join',
 
   data() {
     return {
-      isArrayMethodsJoin: false,
+      isJoin: false,
       arrayToString: ['Ветер', 'Дождь', 'Огонь'],
     }
   },
