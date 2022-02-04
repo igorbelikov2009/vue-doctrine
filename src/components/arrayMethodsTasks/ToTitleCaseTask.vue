@@ -29,7 +29,9 @@
           }
         </span>
         получаем -
-        <span class="array-methods__span-green">"toTitleCase": {{ toTitleCase }}</span>
+        <span class="array-methods__span-green">"toTitleCase": {{ toTitleCase }}</span> <br />
+        <br />
+        ToTitleCaseTask.vue
       </p>
     </div>
   </div>

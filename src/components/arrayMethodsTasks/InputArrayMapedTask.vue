@@ -53,7 +53,9 @@
           }
         </span>
         получаем -
-        <span class="array-methods__span-green">inputArrMaped: {{ inputArrMaped }} </span>
+        <span class="array-methods__span-green">inputArrMaped: {{ inputArrMaped }} </span> <br />
+        <br />
+        InputArrayMapedTask.vue
       </p>
     </div>
   </div>

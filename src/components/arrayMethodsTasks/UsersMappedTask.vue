@@ -12,18 +12,29 @@
       Трансформировать объекты в массив пользователей "users". Из этого массива создать массивы
       элементов "names", "ages", "surnames", "ids" и массив "объектов usersMapped".
       <br />
-      <span class="array-methods__span">Objects: {{ vasya }} {{ petya }} {{ masha }} </span> <br />
-      <span class="array-methods__span-purple"> => </span>
-      <span class="array-methods__span-green"> Array "users"</span>
-      <span class="array-methods__span-purple"> => </span>
+      <span class="array-methods__span">Имеем объекты: {{ vasya }} {{ petya }} {{ masha }} </span>
+      <br />
+      <span class="array-methods__span-purple">
+        => из этих объектов необходимо получить массив пользователей</span
+      >
+      <br />
+      <span class="array-methods__span-green"> users: {{ users }} </span> <br />
+      <span class="array-methods__span-purple">
+        => из массива пользователей users необходимо получить следующие массивы
+      </span>
+      <br />
       <span class="array-methods__span-green">
-        names:[], ages:[], surnames:[], ids:[], usersMapped:[{}, {}, {}, {}]
+        names: {{ names }}, <br />
+        ages: {{ ages }}, <br />
+        surnames: {{ surnames }}, <br />
+        ids: {{ ids }}, <br />
+        usersMapped: {{ usersMapped }}
       </span>
     </p>
 
     <div v-if="isUsersMapped">
       <p class="array-methods__text">
-        имеем <span class="array-methods__span">Objects: {{ vasya }} {{ petya }} {{ masha }}</span>
+        имеем <span class="array-methods__span">объекты: {{ vasya }} {{ petya }} {{ masha }}</span>
         <br />
         <span class="array-methods__span-purple">
           users() { <br />
@@ -92,7 +103,9 @@
           }
         </span>
         получаем -
-        <span class="array-methods__span-green">usersMapped:{{ usersMapped }} </span>
+        <span class="array-methods__span-green">usersMapped: {{ usersMapped }} </span> <br />
+        <br />
+        UsersMappedTask.vue
       </p>
     </div>
   </div>

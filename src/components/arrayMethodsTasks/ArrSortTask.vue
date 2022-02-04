@@ -54,6 +54,9 @@
         <span class="array-methods__span-green"
           >arrSortedDByIncrease: {{ arrSortedDByIncrease }}</span
         >
+        <br />
+        <br />
+        ArrSortTask.vue
       </p>
     </div>
   </div>

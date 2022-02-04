@@ -17,10 +17,6 @@
     </p>
 
     <div v-if="isSortBy">
-      <!-- <p class="array-methods__text">
-        <span class="array-methods__span"> массив имён </span>users: {{ users }}
-      </p> -->
-
       <p class="array-methods__text">
         Сортировать по <span class="array-methods__span"> возрасту</span> <br />
         <span class="array-methods__span-purple">
@@ -63,7 +59,9 @@
           return this.users.slice().sort((a, b) => (a.id > b.id ? 1 : -1)) <br />
           }
         </span>
-        получаем - <span class="array-methods__span-green"> sortById: {{ sortById }} </span>
+        получаем - <span class="array-methods__span-green"> sortById: {{ sortById }} </span> <br />
+        <br />
+        ArrSortByTask.vue
       </p>
     </div>
   </div>

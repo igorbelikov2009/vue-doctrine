@@ -1,57 +1,57 @@
 <template>
-  <div id="toCamelCase">
+  <div id="array-methods-task">
     <button
       class="array-methods__button"
-      @click="isToCamelCase = !isToCamelCase"
-      :class="{ 'array-methods__button_active': isToCamelCase }"
+      @click="isExpandingAnArrayReverse = !isExpandingAnArrayReverse"
+      :class="{ 'array-methods__button_active': isExpandingAnArrayReverse }"
     >
-      Переведите текст в toCamelCase
+      Разворачивание массива массивов справа налево
     </button>
 
     <p class="array-methods__description">
-      <span class="array-methods__span">border-left-width </span>
+      <span class="array-methods__span"> {{ flattened }} </span>
       <span class="array-methods__span-purple"> => </span>
-      <span class="array-methods__span-green"> borderLeftWidth</span>
+      <span class="array-methods__span-green"> {{ flattenedDeployedRight }}</span>
     </p>
 
-    <div v-if="isToCamelCase">
+    <div v-if="isExpandingAnArrayReverse">
       <p class="array-methods__text">
-        имеем
-        <span class="array-methods__span">textForCamelCase: {{ textForCamelCase }}</span>
+        <span class="array-methods__span">Разворачивание массива массивов справа налево</span>
         <br />
-        <span class="array-methods__span-purple">
-          toCamelCase() { <br />
-          return this.textForCamelCase <br />
-          .split('-') <br />
-          .map((word, index) => (index == 0 ? word : word[0].toUpperCase() + word.slice(1))) <br />
-          .join('') <br />
-          }
-        </span>
-        получаем -
-        <span class="array-methods__span-green">"toCamelCase": {{ toCamelCase }}</span> <br />
-        <br />
-        ToCamelCaseTask.vue
+
+        имеем <span class="array-methods__span">flattened: {{ flattened }} </span> <br />
+        <span class="array-methods__span-purple"
+          >flattenedDeployedRight() { <br />
+          return this.flattened.reduceRight((a, b) => a.concat(b)) <br />
+          }</span
+        >
+        получаем:
+        <span class="array-methods__span-green"> {{ flattenedDeployedRight }}</span>
       </p>
+      <br />
+      <br />
+      ExpandingAnArrayReverse.vue
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ToCamelCaseTask',
+  name: 'ExpandingAnArrayReverse',
 
   data() {
     return {
-      isToCamelCase: false,
-      textForCamelCase: 'border-left-width',
+      isExpandingAnArrayReverse: false,
+      flattened: [
+        [0, 1],
+        [2, 3],
+        [4, 5],
+      ],
     }
   },
   computed: {
-    toCamelCase() {
-      return this.textForCamelCase
-        .split('-')
-        .map((word, index) => (index == 0 ? word : word[0].toUpperCase() + word.slice(1)))
-        .join('')
+    flattenedDeployedRight() {
+      return this.flattened.reduceRight((a, b) => a.concat(b))
     },
   },
 }
@@ -100,7 +100,7 @@ export default {
     display: block;
     font-size: 18px;
     line-height: 24px;
-    color: black;
+    color: #c328c3;
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
@@ -124,6 +124,22 @@ export default {
     line-height: inherit;
     font-weight: inherit;
     color: black;
+  }
+
+  // array-methods__span-bold
+  &__span-bold {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 900;
+    color: black;
+  }
+
+  // array-methods__span-red
+  &__span-red {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: #ff3b0e;
   }
 
   // array-methods__span-green

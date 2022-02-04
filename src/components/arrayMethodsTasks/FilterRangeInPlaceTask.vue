@@ -36,6 +36,9 @@
         </span>
         получаем -
         <span class="array-methods__span-green">filterRangeInPlace: {{ filterRangeInPlace }} </span>
+        <br />
+        <br />
+        FilterRangeInPlaceTask.vue
       </p>
     </div>
   </div>

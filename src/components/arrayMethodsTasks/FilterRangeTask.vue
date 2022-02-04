@@ -17,8 +17,8 @@
         filterRange(arrNumber, 1, 7) =>
       </span>
       <span class="array-methods__span-green">
-        arrNumber: {{ arrNumber }} (без изменений), filterRange: {{ filterRange }} (совпадающие
-        значения)
+        arrNumber: {{ arrNumber }} (исходный массив, без изменений), filterRange:
+        {{ filterRange }} (новый массив, совпадающие значения)
       </span>
     </p>
 
@@ -37,7 +37,9 @@
         // return this.arrNumber.filter(item => this.a &lt;= item &amp;&amp; item &lt;= this.b)
         <br />
         получаем -
-        <span class="array-methods__span-green">filterRange: {{ filterRange }} </span>
+        <span class="array-methods__span-green">filterRange: {{ filterRange }} </span> <br />
+        <br />
+        FilterRangeTask.vue
       </p>
     </div>
   </div>

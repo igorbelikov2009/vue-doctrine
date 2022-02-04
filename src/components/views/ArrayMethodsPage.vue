@@ -128,6 +128,8 @@
         <Join />
 
         <ReduceMethod />
+
+        <ReduceRightMethod />
       </div>
 
       <!--  -->
@@ -187,6 +189,8 @@
 
       <ToCamelCaseTask />
 
+      <GetSumDirtyNumbersTask />
+
       <ToTitleCaseTask />
 
       <FilterRangeTask />
@@ -221,14 +225,54 @@
         :sortById="sortById"
       />
 
-      <div>
-        <p class="array-methods__subheading"></p>
+      <SumAllValuesArray />
+
+      <SumValuesArrayOfObjects />
+
+      <ExpandingArrayOfArrays />
+
+      <ExpandingAnArrayReverse />
+
+      <ConcatenatingArrays />
+
+      <CreateArrayFromArrayOfObjects />
+    </div>
+    <!--  -->
+    <div id="array-methods-task">
+      <button
+        class="array-methods__button"
+        @click="isButton = !isButton"
+        :class="{ 'array-methods__button_active': isButton }"
+      >
+        xxx
+      </button>
+
+      <p class="array-methods__description">
+        xxx
+        <br />
+        <span class="array-methods__span">xxx </span>
+        <span class="array-methods__span-purple"> => </span>
+        <span class="array-methods__span-green"> xxx</span>
+      </p>
+
+      <div v-if="isButton">
+        <p class="array-methods__text">
+          <span class="array-methods__span"> сделать что-то</span> <br />
+
+          имеем <span class="array-methods__span"></span> <br />
+          <span class="array-methods__span-purple"></span>
+          получаем:
+          <span class="array-methods__span-green"></span>
+        </p>
+
         <p class="array-methods__text"></p>
         <p class="array-methods__text"></p>
         <p class="array-methods__text"></p>
         <p class="array-methods__text"></p>
       </div>
     </div>
+    <!--  -->
+
     <!--  -->
     <p class="array-methods__text">
       <span class="array-methods__span"> сделать что-то</span> <br />
@@ -264,16 +308,18 @@ import Find from '@/components/arrayMethods/Find.vue'
 import FindIndex from '@/components/arrayMethods/FindIndex.vue'
 import Every from '@/components/arrayMethods/Every.vue'
 import Some from '@/components/arrayMethods/Some.vue'
-import FilterMethod from '../../components/arrayMethods/FilterMethod.vue'
-import ReduceMethod from '../../components/arrayMethods/ReduceMethod.vue'
+import FilterMethod from '@/components/arrayMethods/FilterMethod.vue'
 //
 import Map from '@/components/arrayMethods/Map.vue'
 import Sort from '@/components/arrayMethods/Sort.vue'
 import Reverse from '@/components/arrayMethods/Reverse.vue'
 import Split from '@/components/arrayMethods/Split.vue'
 import Join from '@/components/arrayMethods/Join.vue'
+import ReduceMethod from '@/components/arrayMethods/ReduceMethod.vue'
+import ReduceRightMethod from '@/components/arrayMethods/ReduceRightMethod.vue'
 // tasks
 import ToCamelCaseTask from '@/components/arrayMethodsTasks/ToCamelCaseTask.vue'
+import GetSumDirtyNumbersTask from '@/components/arrayMethodsTasks/GetSumDirtyNumbersTask.vue'
 import ToTitleCaseTask from '@/components/arrayMethodsTasks/ToTitleCaseTask.vue'
 import FilterRangeTask from '@/components/arrayMethodsTasks/FilterRangeTask.vue'
 import FilterRangeInPlaceTask from '@/components/arrayMethodsTasks/FilterRangeInPlaceTask.vue'
@@ -283,6 +329,12 @@ import UsersMappedTask from '@/components/arrayMethodsTasks/UsersMappedTask.vue'
 import ArrSortTask from '@/components/arrayMethodsTasks/ArrSortTask.vue'
 import ArrayStringsSortedTask from '@/components/arrayMethodsTasks/ArrayStringsSortedTask.vue'
 import ArrSortByTask from '@/components/arrayMethodsTasks/ArrSortByTask.vue'
+import SumAllValuesArray from '@/components/arrayMethodsTasks/SumAllValuesArray.vue'
+import SumValuesArrayOfObjects from '@/components/arrayMethodsTasks/SumValuesArrayOfObjects.vue'
+import ExpandingArrayOfArrays from '@/components/arrayMethodsTasks/ExpandingArrayOfArrays.vue'
+import ExpandingAnArrayReverse from '@/components/arrayMethodsTasks/ExpandingAnArrayReverse.vue'
+import ConcatenatingArrays from '@/components/arrayMethodsTasks/ConcatenatingArrays.vue'
+import CreateArrayFromArrayOfObjects from '@/components/arrayMethodsTasks/CreateArrayFromArrayOfObjects.vue'
 
 export default {
   name: 'ArrayMethodsPage',
@@ -389,8 +441,10 @@ export default {
     Split,
     Join,
     ReduceMethod,
+    ReduceRightMethod,
     // tasks
     ToCamelCaseTask,
+    GetSumDirtyNumbersTask,
     ToTitleCaseTask,
     FilterRangeTask,
     FilterRangeInPlaceTask,
@@ -400,6 +454,12 @@ export default {
     ArrSortTask,
     ArrayStringsSortedTask,
     ArrSortByTask,
+    SumAllValuesArray,
+    SumValuesArrayOfObjects,
+    ExpandingArrayOfArrays,
+    ExpandingAnArrayReverse,
+    ConcatenatingArrays,
+    CreateArrayFromArrayOfObjects,
   },
 }
 </script>

@@ -33,6 +33,9 @@
       </span>
       получаем -
       <span class="array-methods__span-green">arrStringsUnique: {{ arrStringsUnique }} </span>
+      <br />
+      <br />
+      ArrStringsUniqueTask.vue
     </div>
   </div>
 </template>

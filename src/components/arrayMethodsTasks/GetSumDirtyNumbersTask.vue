@@ -1,36 +1,39 @@
 <template>
-  <div id="toCamelCase">
+  <div id="getSumDirtyNumbersTask">
     <button
       class="array-methods__button"
-      @click="isToCamelCase = !isToCamelCase"
-      :class="{ 'array-methods__button_active': isToCamelCase }"
+      @click="isGetSumDirtyNumbersTask = !isGetSumDirtyNumbersTask"
+      :class="{ 'array-methods__button_active': isGetSumDirtyNumbersTask }"
     >
-      Переведите текст в toCamelCase
+      получить сумму грязных чисел
     </button>
 
     <p class="array-methods__description">
-      <span class="array-methods__span">border-left-width </span>
+      GetSumDirtyNumbersTask.vue <br />
+      <span class="array-methods__span"> {{ dirtyNumbers }}</span>
       <span class="array-methods__span-purple"> => </span>
-      <span class="array-methods__span-green"> borderLeftWidth</span>
+      <span class="array-methods__span-green">{{ sumDirtyNumbers }} </span>
     </p>
 
-    <div v-if="isToCamelCase">
+    <div v-if="isGetSumDirtyNumbersTask">
       <p class="array-methods__text">
-        имеем
-        <span class="array-methods__span">textForCamelCase: {{ textForCamelCase }}</span>
-        <br />
+        <!-- <span class="array-methods__span"> сделать что-то</span> <br /> -->
+
+        имеем <span class="array-methods__span">dirtyNumbers: {{ dirtyNumbers }} </span> <br />
         <span class="array-methods__span-purple">
-          toCamelCase() { <br />
-          return this.textForCamelCase <br />
-          .split('-') <br />
-          .map((word, index) => (index == 0 ? word : word[0].toUpperCase() + word.slice(1))) <br />
-          .join('') <br />
-          }
-        </span>
-        получаем -
-        <span class="array-methods__span-green">"toCamelCase": {{ toCamelCase }}</span> <br />
+          sumDirtyNumbers() { <br />
+          return this.dirtyNumbers <br />
+          .split('^') <br />
+          .map(function(item) { <br />
+          return Number(item) <br />
+          }) <br />
+          .reduce((a, b) => a + b) <br />
+          }</span
+        >
+        получаем:
+        <span class="array-methods__span-green">{{ sumDirtyNumbers }} </span> <br />
         <br />
-        ToCamelCaseTask.vue
+        GetSumDirtyNumbersTask.vue
       </p>
     </div>
   </div>
@@ -38,20 +41,22 @@
 
 <script>
 export default {
-  name: 'ToCamelCaseTask',
+  name: 'GetSumDirtyNumbersTask',
 
   data() {
     return {
-      isToCamelCase: false,
-      textForCamelCase: 'border-left-width',
+      isGetSumDirtyNumbersTask: false,
+      dirtyNumbers: '11^23^145^3^123^33',
     }
   },
   computed: {
-    toCamelCase() {
-      return this.textForCamelCase
-        .split('-')
-        .map((word, index) => (index == 0 ? word : word[0].toUpperCase() + word.slice(1)))
-        .join('')
+    sumDirtyNumbers() {
+      return this.dirtyNumbers
+        .split('^')
+        .map(function(item) {
+          return Number(item)
+        })
+        .reduce((a, b) => a + b)
     },
   },
 }
@@ -100,7 +105,7 @@ export default {
     display: block;
     font-size: 18px;
     line-height: 24px;
-    color: black;
+    color: #c328c3;
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
@@ -124,6 +129,22 @@ export default {
     line-height: inherit;
     font-weight: inherit;
     color: black;
+  }
+
+  // array-methods__span-bold
+  &__span-bold {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 900;
+    color: black;
+  }
+
+  // array-methods__span-red
+  &__span-red {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: #ff3b0e;
   }
 
   // array-methods__span-green

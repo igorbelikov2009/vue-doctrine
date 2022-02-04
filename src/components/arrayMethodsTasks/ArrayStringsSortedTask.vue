@@ -47,6 +47,9 @@
         <span class="array-methods__span-green"
           >arrStringsSortedReverse: {{ arrStringsSortedReverse }}
         </span>
+        <br />
+        <br />
+        ArrayStringsSortedTask.vue
       </p>
     </div>
   </div>
