@@ -207,6 +207,7 @@ export default {
       ],
     }
   },
+
   computed: {
     arrStringsIncludesHTML() {
       return this.arrStrings.includes('HTML')

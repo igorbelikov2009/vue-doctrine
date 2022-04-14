@@ -5,7 +5,7 @@
       @click="isSort = !isSort"
       :class="{ 'array-methods__button_active': isSort }"
     >
-      array.sort(fn)
+      sort(fn)
     </button>
 
     <p class="array-methods__description">
@@ -167,75 +167,61 @@
 </template>
 
 <script>
+// import arrSort from '../../store/arrSort'
 export default {
   name: 'Sort',
 
   data() {
     return {
       isSort: false,
-      // arrSort: [5, 2, 1, -10, 8],
-      // arrStrings: ['HTML', 'JavaScript', 'CSS'],
-      // arrNumber: [1, 15, 2],
-      // vasya: { name: 'Вася', surname: 'Пупкин', id: 1, age: 25 },
-      // petya: { name: 'Петя', surname: 'Иванов', id: 2, age: 30 },
-      // masha: { name: 'Маша', surname: 'Петрова', id: 3, age: 28 },
+      arrNumber: [1, 15, 2],
     }
   },
-  props: {
-    arrSort: { type: Array },
-    arrStrings: { type: Array },
-    arrNumber: { type: Array },
-    vasya: { type: Object },
-    petya: { type: Object },
-    masha: { type: Object },
-    users: { type: Array },
-    arrSorted: { type: Array },
-    arrStringsSorted: { type: Array },
-    arrNumberSorted: { type: Array },
-    arrNumberSortedDescending: { type: Array },
-    sortByAge: { type: Array },
-    sortByName: { type: Array },
-    sortBySurname: { type: Array },
-    sortById: { type: Array },
+
+  computed: {
+    arrSort() {
+      return this.$store.state.arrSort.arrSort
+    },
+    arrSorted() {
+      return this.arrSort.slice().sort((a, b) => b - a)
+    },
+    arrStrings() {
+      return this.$store.state.arrStrings.arrStrings
+    },
+    vasya() {
+      return this.$store.state.users.vasya
+    },
+    petya() {
+      return this.$store.state.users.petya
+    },
+    masha() {
+      return this.$store.state.users.masha
+    },
+    users() {
+      return this.$store.getters['users/users']
+    },
+    sortByAge() {
+      return this.$store.getters['users/sortByAge']
+    },
+    sortByName() {
+      return this.$store.getters['users/sortByName']
+    },
+    sortBySurname() {
+      return this.$store.getters['users/sortBySurname']
+    },
+    sortById() {
+      return this.$store.getters['users/sortById']
+    },
+    arrStringsSorted() {
+      return this.arrStrings.slice().sort()
+    },
+    arrNumberSorted() {
+      return this.arrNumber.slice().sort((a, b) => a - b)
+    },
+    arrNumberSortedDescending() {
+      return this.arrNumber.slice().sort((a, b) => b - a)
+    },
   },
-  // computed: {
-  //   users() {
-  //     return [this.vasya, this.petya, this.masha]
-  //   },
-  //   arrSorted() {
-  //     // let arrSorted = this.arrSort.sort((a, b) => b - a)
-  //     // так массив arrSort меняем на месте в arrSorted
-
-  //     // а так массив arrSort копируем в arrSorted и меняем уже arrSorted
-  //     return this.arrSort.slice().sort((a, b) => b - a)
-  //     // метод slice()
-
-  //     // console.log(arrSorted)
-  //   },
-  //   arrStringsSorted() {
-  //     return this.arrStrings.slice().sort()
-  //   },
-  //   arrNumberSorted() {
-  //     return this.arrNumber.slice().sort((a, b) => a - b)
-  //   },
-  //   arrNumberSortedDescending() {
-  //     return this.arrNumber.slice().sort((a, b) => b - a)
-  //   },
-
-  //   sortByAge() {
-  //     return this.users.slice().sort((a, b) => (a.age > b.age ? 1 : -1))
-  //     //  без slice() исходный массив измениться на месте
-  //   },
-  //   sortByName() {
-  //     return this.users.slice().sort((a, b) => (a.name > b.name ? 1 : -1))
-  //   },
-  //   sortBySurname() {
-  //     return this.users.slice().sort((a, b) => (a.surname > b.surname ? 1 : -1))
-  //   },
-  //   sortById() {
-  //     return this.users.slice().sort((a, b) => (a.id > b.id ? 1 : -1))
-  //   },
-  // },
 }
 </script>
 

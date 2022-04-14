@@ -10,8 +10,6 @@
 
     <p class="array-methods__description">
       Метод splice() изменяет содержимое массива, удаляя существующие элементы и/или добавляя новые.
-      Это универсальный «швейцарский нож» для работы с массивами. Умеет всё: добавлять, удалять и
-      заменять элементы.
       <br />
     </p>
 
@@ -24,7 +22,8 @@
       <p class="array-methods__text">
         splice(index, deleteCount, elem1, ..., elemN). <br />
         Начиная с позиции index, удаляет количество deleteCount элементов и вставляет elem1, ...,
-        elemN на их место.
+        elemN на их место. Если index больше длины массива, реальный индекс будет установлен на
+        длину массива. Если отрицателен, указывает индекс элемента с конца.
         <span class="array-methods__span">Возвращает массив из удалённых элементов.</span>
       </p>
 
@@ -36,25 +35,22 @@
         <span class="array-methods__span"> Задача: начиная с позиции 1, удалить 1 элемент</span>
         <br />
         имеем
-        <span class="array-methods__span">arrayForSplice: ['Я', 'изучаю', 'JavaScript'] </span>
+        <span class="array-methods__span">array1: ['Я', 'изучаю', 'JavaScript'] </span>
         <br />
 
         <span class="array-methods__span-purple">
-          arrayForSpliceDeleteOneElem() { <br />
-          return this.arrayForSplice.splice(1, 1) <br />
+          arraySplice1() { <br />
+          return this.array.splice(1, 1) <br />
           }
         </span>
         меняется
-        <span class="array-methods__span">
-          исходный массив arrayForSplice: {{ arrayForSplice }}
-        </span>
+        <span class="array-methods__span"> исходный массив array1: {{ array1 }} </span>
         <br />
         возвращается (return) массив из удалённых элементов
-        <span class="array-methods__span-green">
-          arrayForSpliceDeleteOneElem: {{ arrayForSpliceDeleteOneElem }}
-        </span>
+        <span class="array-methods__span-green"> arraySplice1: {{ arraySplice1 }} </span>
       </p>
 
+      <!--  -->
       <p class="array-methods__text">
         <span class="array-methods__span">
           Задача: удалить 3 первых элемента и заменить их двумя другими</span
@@ -62,23 +58,19 @@
         <br />
         имеем
         <span class="array-methods__span"
-          >arrayForSplice2: ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас']
+          >array2: ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас']
         </span>
         <br />
         <span class="array-methods__span-purple">
-          arrayForSplice2DeleteAndAddedElems() { <br />
-          return this.arrayForSplice2.splice(0, 3, 'Давай', 'танцевать') <br />
+          arraySplice2() { <br />
+          return this.array2.splice(0, 3, 'Давай', 'танцевать') <br />
           }
         </span>
         меняется
-        <span class="array-methods__span"
-          >исходный массив arrayForSplice2: {{ arrayForSplice2 }}
-        </span>
+        <span class="array-methods__span">исходный массив array2: {{ array2 }} </span>
         <br />
         возвращается (return) массив из удалённых элементов
-        <span class="array-methods__span-green"
-          >arrayForSplice2DeleteAndAddedElems: {{ arrayForSplice2DeleteAndAddedElems }}
-        </span>
+        <span class="array-methods__span-green">arraySplice2: {{ arraySplice2 }} </span>
       </p>
 
       <span class="array-methods__span-red"
@@ -92,22 +84,18 @@
         </span>
         <br />
         имеем
-        <span class="array-methods__span">arrayForSplice3: ['Я', 'изучаю', 'JavaScript'],</span>
+        <span class="array-methods__span">array3: ['Я', 'изучаю', 'JavaScript'],</span>
         <br />
         <span class="array-methods__span-purple">
-          arrayForSplice3AddedElems() { <br />
-          return this.arrayForSplice3.splice(2, 0, 'сложный', 'язык') <br />
+          arraySplice3() { <br />
+          return this.array3.splice(2, 0, 'сложный', 'язык') <br />
           }
         </span>
         меняется
-        <span class="array-methods__span"
-          >исходный массив arrayForSplice3: {{ arrayForSplice3 }}
-        </span>
+        <span class="array-methods__span">исходный массив array3: {{ array3 }} </span>
         <br />
         возвращается (return) массив из удалённых элементов
-        <span class="array-methods__span-green"
-          >arrayForSplice3AddedElems: {{ arrayForSplice3AddedElems }}
-        </span>
+        <span class="array-methods__span-green">arraySplice3: {{ arraySplice3 }} </span>
         <span class="array-methods__span"> - пустой </span>
       </p>
 
@@ -122,21 +110,17 @@
           вставить числа 3 и 4
         </span>
         <br />
-        имеем <span class="array-methods__span">arrayForSplice4: [1, 2, 5]</span> <br />
+        имеем <span class="array-methods__span">array4: [1, 2, 5]</span> <br />
         <span class="array-methods__span-purple">
-          arrayForSplice4AddedElems() { <br />
-          return this.arrayForSplice4.splice(-1, 0, 3, 4) <br />
+          arraySplice4() { <br />
+          return this.array4.splice(-1, 0, 3, 4) <br />
           }
         </span>
         меняется
-        <span class="array-methods__span"
-          >исходный массив arrayForSplice4: {{ arrayForSplice4 }}
-        </span>
+        <span class="array-methods__span">исходный массив array4: {{ array4 }} </span>
         <br />
         возвращается (return) массив из удалённых элементов
-        <span class="array-methods__span-green"
-          >arrayForSplice4AddedElems: {{ arrayForSplice4AddedElems }}
-        </span>
+        <span class="array-methods__span-green">arraySplice4: {{ arraySplice4 }} </span>
         <span class="array-methods__span"> - пустой </span>
       </p>
 
@@ -147,46 +131,36 @@
         <br />
         имеем
         <span class="array-methods__span"
-          >arrayForSplice5: ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon']</span
+          >array5: ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon']</span
         >
         <br />
         <span class="array-methods__span-purple">
-          arrayForSplice5DeleteElems() { <br />
-          return this.arrayForSplice5.splice(this.arrayForSplice5.length - 3, 2) <br />
+          arraySplice5() { <br />
+          return this.array5.splice(this.array5.length - 3, 2) <br />
           }
         </span>
         меняется
-        <span class="array-methods__span"
-          >исходный массив arrayForSplice5: {{ arrayForSplice5 }}
-        </span>
+        <span class="array-methods__span">исходный массив array5: {{ array5 }} </span>
         <br />
         возвращается (return) массив из удалённых элементов
-        <span class="array-methods__span-green"
-          >arrayForSplice5DeleteElems: {{ arrayForSplice5DeleteElems }}
-        </span>
+        <span class="array-methods__span-green">arraySplice5: {{ arraySplice5 }} </span>
       </p>
 
       <p class="array-methods__text">
         <span class="array-methods__span">Задача: Удалить 1 элемент по индексу -2 </span> <br />
         имеем
-        <span class="array-methods__span"
-          >arrayForSplice6: ['angel', 'clown', 'mandarin', 'sturgeon']</span
-        >
+        <span class="array-methods__span">array6: ['angel', 'clown', 'mandarin', 'sturgeon']</span>
         <br />
         <span class="array-methods__span-purple">
-          arrayForSplice6DeleteElem() { <br />
-          return this.arrayForSplice6.splice(-2, 1) <br />
+          arraySplice6() { <br />
+          return this.array6.splice(-2, 1) <br />
           }
         </span>
         меняется
-        <span class="array-methods__span"
-          >исходный массив arrayForSplice6: {{ arrayForSplice6 }}
-        </span>
+        <span class="array-methods__span">исходный массив array6: {{ array6 }} </span>
         <br />
         возвращается (return) массив из удалённых элементов
-        <span class="array-methods__span-green"
-          >arrayForSplice6DeleteElem: {{ arrayForSplice6DeleteElem }}
-        </span>
+        <span class="array-methods__span-green">arraySplice6: {{ arraySplice6 }} </span>
       </p>
 
       <span class="array-methods__span-red"
@@ -199,24 +173,18 @@
         </span>
         <br />
         имеем
-        <span class="array-methods__span"
-          >arrayForSplice7: ['angel', 'clown', 'mandarin', 'sturgeon']
-        </span>
+        <span class="array-methods__span">array7: ['angel', 'clown', 'mandarin', 'sturgeon'] </span>
         <br />
         <span class="array-methods__span-purple">
-          arrayForSplice7DeleteElems(){ <br />
-          return this.arrayForSplice7.splice(2) <br />
+          arraySplice7(){ <br />
+          return this.array7.splice(2) <br />
           }
         </span>
         меняется
-        <span class="array-methods__span"
-          >исходный массив arrayForSplice7: {{ arrayForSplice7 }}
-        </span>
+        <span class="array-methods__span">исходный массив array7: {{ array7 }} </span>
         <br />
         возвращается (return) массив из удалённых элементов
-        <span class="array-methods__span-green"
-          >arrayForSplice7DeleteElems: {{ arrayForSplice7DeleteElems }}
-        </span>
+        <span class="array-methods__span-green">arraySplice7: {{ arraySplice7 }} </span>
       </p>
     </div>
   </div>
@@ -229,36 +197,40 @@ export default {
   data() {
     return {
       isSplice: false,
-      arrayForSplice: ['Я', 'изучаю', 'JavaScript'],
-      arrayForSplice2: ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас'],
-      arrayForSplice3: ['Я', 'изучаю', 'JavaScript'],
-      arrayForSplice4: [1, 2, 5],
-      arrayForSplice5: ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'],
-      arrayForSplice6: ['angel', 'clown', 'mandarin', 'sturgeon'],
-      arrayForSplice7: ['angel', 'clown', 'mandarin', 'sturgeon'],
+      array1: ['Я', 'изучаю', 'JavaScript'],
+      array2: ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас'],
+      array3: ['Я', 'изучаю', 'JavaScript'],
+      array4: [1, 2, 5],
+      array5: ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'],
+      array6: ['angel', 'clown', 'mandarin', 'sturgeon'],
+      array7: ['angel', 'clown', 'mandarin', 'sturgeon'],
     }
   },
   computed: {
-    arrayForSpliceDeleteOneElem() {
-      return this.arrayForSplice.splice(1, 1)
+    arraySplice1() {
+      // return this.array1.splice(1, 1)
+      return this.array1.splice(1, 1)
     },
-    arrayForSplice2DeleteAndAddedElems() {
-      return this.arrayForSplice2.splice(0, 3, 'Давай', 'танцевать')
+    arraySplice2() {
+      // return this.array2.splice(0, 3, 'Давай', 'танцевать')
+      return this.array2.splice(0, 3, 'Давай', 'танцевать')
     },
-    arrayForSplice3AddedElems() {
-      return this.arrayForSplice3.splice(2, 0, 'сложный', 'язык')
+    arraySplice3() {
+      return this.array3.splice(2, 0, 'сложный', 'язык')
     },
-    arrayForSplice4AddedElems() {
-      return this.arrayForSplice4.splice(-1, 0, 3, 4)
+    arraySplice4() {
+      return this.array4.splice(-1, 0, 3, 4)
     },
-    arrayForSplice5DeleteElems() {
-      return this.arrayForSplice5.splice(this.arrayForSplice5.length - 3, 2)
+    arraySplice5() {
+      return this.array5.splice(this.array5.length - 3, 2)
+      // return this.array5.splice(2, 2)
     },
-    arrayForSplice6DeleteElem() {
-      return this.arrayForSplice6.splice(-2, 1)
+    arraySplice6() {
+      // return this.array6.splice(-2, 1)
+      return this.array6.splice(-2, 1)
     },
-    arrayForSplice7DeleteElems() {
-      return this.arrayForSplice7.splice(2)
+    arraySplice7() {
+      return this.array7.splice(2)
     },
   },
 }

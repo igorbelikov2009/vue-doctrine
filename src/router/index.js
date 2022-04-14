@@ -9,6 +9,16 @@ import Lesson04 from '../components/views/Lesson04.vue'
 import Lesson05 from '../components/views/Lesson05.vue'
 import Lesson06 from '../components/views/Lesson06.vue'
 import Lesson07 from '../components/views/Lesson07.vue'
+import ApiFetchAxiosPage from '../components/views/ApiFetchAxiosPage.vue'
+import UsingAxiosPage from '../components/views/UsingAxiosPage.vue'
+import Posts from '../components/views/Posts.vue'
+import VuexPage from '../components/views/VuexPage.vue'
+import QuestionsWithAnswersPage from '../components/views/QuestionsWithAnswersPage.vue'
+import ObjectMethodsPage from '../components/views/ObjectMethodsPage.vue'
+import FunctionsPage from '../components/views/FunctionsPage.vue'
+import FunctionalExpressionPage from '../components/views/FunctionalExpressionPage.vue'
+import OperatorPage from '../components/views/OperatorPage.vue'
+import ProcessingErrorsPage from '../components/views/ProcessingErrorsPage.vue'
 
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
@@ -62,6 +72,56 @@ const routes = [
     path: '/lesson07',
     name: 'Lesson07',
     component: Lesson07,
+  },
+  {
+    path: '/posts',
+    name: 'Posts',
+    component: Posts,
+  },
+  {
+    path: '/vuexpage',
+    name: 'VuexPage',
+    component: VuexPage,
+  },
+  {
+    path: '/questionswithanswers',
+    name: 'QuestionsWithAnswersPage',
+    component: QuestionsWithAnswersPage,
+  },
+  {
+    path: '/objectmethodspage',
+    name: 'ObjectMethodsPage',
+    component: ObjectMethodsPage,
+  },
+  {
+    path: '/functionspage',
+    name: 'FunctionsPage',
+    component: FunctionsPage,
+  },
+  {
+    path: '/functionalexpression',
+    name: 'FunctionalExpressionPage',
+    component: FunctionalExpressionPage,
+  },
+  {
+    path: '/operatorpage',
+    name: 'OperatorPage',
+    component: OperatorPage,
+  },
+  {
+    path: '/processingerrorspage',
+    name: 'ProcessingErrorsPage',
+    component: ProcessingErrorsPage,
+  },
+  {
+    path: '/apifetchaxios',
+    name: 'ApiFetchAxiosPage',
+    component: ApiFetchAxiosPage,
+  },
+  {
+    path: '/usingaxios',
+    name: 'UsingAxiosPage',
+    component: UsingAxiosPage,
   },
 ]
 

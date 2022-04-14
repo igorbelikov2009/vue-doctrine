@@ -1,69 +1,76 @@
 <template>
-  <div id="arrStringsUnique">
+  <div id="array-methods-task">
     <button
       class="array-methods__button"
-      @click="isArrStringsUnique = !isArrStringsUnique"
-      :class="{ 'array-methods__button_active': isArrStringsUnique }"
+      @click="isCalculator = !isCalculator"
+      :class="{ 'array-methods__button_active': isCalculator }"
     >
-      Оставить уникальные элементы массива arrStringsUnique
+      Создайте функцию конструктор Calculator, которая создаёт «расширяемые» объекты калькулятора.
     </button>
 
     <p class="array-methods__description">
-      Оставить уникальные элементы массива arrStringsUnique
+      xxx
       <br />
-      <span class="array-methods__span">arrStrings: {{ arrStrings }} </span>
+      <span class="array-methods__span">xxx </span>
       <span class="array-methods__span-purple"> => </span>
-      <span class="array-methods__span-green"> arrStringsUnique: {{ arrStringsUnique }}</span>
+      <span class="array-methods__span-green"> xxx</span>
     </p>
 
-    <div v-if="isArrStringsUnique">
-      имеем <span class="array-methods__span">arrStrings: {{ arrStrings }} </span> <br />
-      <span class="array-methods__span-purple">
-        arrStringsUnique() { <br />
-        let result = [] <br />
-        <br />
-        for (let str of this.arrStrings) { <br />
-        if (!result.includes(str)) { <br />
-        result.push(str) <br />
-        } <br />
-        } <br />
-        <br />
-        return result <br />
-        }
-      </span>
-      получаем -
-      <span class="array-methods__span-green">arrStringsUnique: {{ arrStringsUnique }} </span>
-      <br />
-      <br />
+    <div v-if="isCalculator">
+      <p class="array-methods__text">
+        <span class="array-methods__span"> сделать что-то</span> <br />
 
-      <br />
-      <br />
-      ArrStringsUniqueTask.vue
+        имеем <span class="array-methods__span"></span> <br />
+        <span class="array-methods__span-purple"></span>
+        получаем:
+        <span class="array-methods__span-green">{{ calc }}</span>
+      </p>
+
+      <p class="array-methods__text">Calculator.vue</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ArrStringsUniqueTask',
+  name: 'Calculator',
 
   data() {
     return {
-      isArrStringsUnique: false,
-      arrStrings: ['кришна', 'кришна', 'харе', 'харе', 'харе', 'харе', 'кришна', 'кришна', ':-O'],
+      isCalculator: false,
+      a: 6,
+      b: 7,
+      c: '6' + '7',
     }
   },
   computed: {
-    arrStringsUnique() {
-      let result = []
-
-      for (let str of this.arrStrings) {
-        if (!result.includes(str)) {
-          result.push(str)
-        }
+    calc() {
+      return this.calculator(this.c)
+    },
+  },
+  methods: {
+    calculator() {
+      this.methods = {
+        '-': (a, b) => a - b,
+        '+': (a, b) => a + b,
       }
 
-      return result
+      this.calculate = function(str) {
+        let split = str.split(' '),
+          a = +split[0],
+          op = split[1],
+          b = +split[2]
+
+        if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+          return NaN
+        }
+
+        return this.methods[op](a, b)
+      }
+
+      this.addMethod = function(name, func) {
+        this.methods[name] = func
+      }
     },
   },
 }
@@ -136,6 +143,22 @@ export default {
     line-height: inherit;
     font-weight: inherit;
     color: black;
+  }
+
+  // array-methods__span-bold
+  &__span-bold {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 900;
+    color: black;
+  }
+
+  // array-methods__span-red
+  &__span-red {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: #ff3b0e;
   }
 
   // array-methods__span-green

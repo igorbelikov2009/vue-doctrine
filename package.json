@@ -1,5 +1,5 @@
 {
-  "name": "rh-npf-vue",
+  "name": "vue-doctrine",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,11 +7,13 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "core-js": "^3.6.5",
     "marked": "^3.0.7",
     "vue": "^2.6.11",
     "vue-router": "^3.5.3",
-    "vuelidate": "^0.7.6"
+    "vuelidate": "^0.7.6",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

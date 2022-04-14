@@ -28,31 +28,28 @@
       </p>
 
       <p class="array-methods__text">
-        e,s (копирует с 1 до 3) <br />
         имеем
         <br />
-        <span class="array-methods__span">arrayLetter: {{ arrayLetter }} </span>
+        <span class="array-methods__span">array: {{ array }} </span> <br />
         <span class="array-methods__span-purple">
-          arrayLetterSlice(){ <br />
-          return this.arrayLetter.slice(1, 3) <br />
+          arraySlice(){ <br />
+          return this.array.slice(1, 3) <br />
           }</span
         >
         получаем -
-        <span class="array-methods__span-green">arrayLetterSlice: {{ arrayLetterSlice }} </span>
+        <span class="array-methods__span-green">arraySlice: {{ arraySlice }} </span>
       </p>
 
       <p class="array-methods__text">
-        s,t (копирует с -2 до конца) <br />
-        имеем <span class="array-methods__span">arrayLetter: {{ arrayLetter }} </span> <br />
+        имеем <br />
+        <span class="array-methods__span">array: {{ array }} </span> <br />
         <span class="array-methods__span-purple">
-          arrayLetterSliceNegativeIndex() { <br />
-          return this.arrayLetter.slice(-2) <br />
+          arraySlice2() { <br />
+          return this.array.slice(-2) <br />
           }</span
         >
         получаем -
-        <span class="array-methods__span-green"
-          >arrayLetterSliceNegativeIndex: {{ arrayLetterSliceNegativeIndex }}
-        </span>
+        <span class="array-methods__span-green">arraySlice2: {{ arraySlice2 }} </span>
       </p>
 
       <p class="array-methods__text">
@@ -187,18 +184,18 @@ export default {
   data() {
     return {
       isSlice: false,
-      arrayLetter: ['t', 'e', 's', 't'],
+      array: ['t', 'e', 's', 't'],
       fruits: ['Банан', 'Апельсин', 'Лимон', 'Яблоко', 'Манго'],
       animals: ['ant', 'bison', 'camel', 'duck', 'elephant'],
       //   animals: ['cockroach', 'bison', 'camel', 'duck', 'elephant'],
     }
   },
   computed: {
-    arrayLetterSlice() {
-      return this.arrayLetter.slice(1, 3)
+    arraySlice() {
+      return this.array.slice(1, 3)
     },
-    arrayLetterSliceNegativeIndex() {
-      return this.arrayLetter.slice(-2)
+    arraySlice2() {
+      return this.array.slice(-2)
     },
     citrus() {
       return this.fruits.slice(1, 3)

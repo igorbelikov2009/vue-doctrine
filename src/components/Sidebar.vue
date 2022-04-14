@@ -35,16 +35,46 @@
         >
 
         <router-link class="sidebar__link" :to="{ name: 'Lesson07' }"
-          >Урок 7 миксины(примеси), плагины, фильтры, установка "marked"</router-link
+          >Урок 7 - миксины(примеси), плагины, фильтры, установка "marked"</router-link
         >
+
+        <router-link class="sidebar__link" :to="{ name: 'Posts' }"
+          >Урок 9.1 - Работа с Vuex, глобальным хранилищем
+        </router-link>
+
+        <router-link class="sidebar__link" :to="{ name: 'VuexPage' }"
+          >Урок 9.2 - Vuex, глобальное хранилище, теория</router-link
+        >
+
+        <router-link class="sidebar__link" :to="{ name: 'ApiFetchAxiosPage' }"
+          >Урок 10 - работа с API fetch и axios</router-link
+        >
+
+        <router-link class="sidebar__link" :to="{ name: 'UsingAxiosPage' }"
+          >Урок 11 - Таблица на Vue.js. VUEX+AXIOS+API. Пагинация и сортировка данных.</router-link
+        >
+
         <router-link class="sidebar__link" :to="{ name: 'ArrayMethodsPage' }"
           >Методы массивов</router-link
         >
 
-        <a class="sidebar__link">aaa</a>
-        <a class="sidebar__link">aaa</a>
-        <a class="sidebar__link">aaa</a>
-        <a class="sidebar__link">aaa</a>
+        <router-link class="sidebar__link" :to="{ name: 'ObjectMethodsPage' }">Объекты</router-link>
+
+        <router-link class="sidebar__link" :to="{ name: 'OperatorPage' }">Операторы</router-link>
+
+        <router-link class="sidebar__link" :to="{ name: 'FunctionsPage' }">Функции</router-link>
+
+        <router-link class="sidebar__link" :to="{ name: 'FunctionalExpressionPage' }"
+          >Функциональное выражение</router-link
+        >
+
+        <router-link class="sidebar__link" :to="{ name: 'ProcessingErrorsPage' }"
+          >Обработка ошибок, деструктуризация</router-link
+        >
+
+        <router-link class="sidebar__link" :to="{ name: 'QuestionsWithAnswersPage' }"
+          >Вопросы (с ответами) кандидату на должность frontend разработчика</router-link
+        >
       </div>
 
       <button class="sidebar__cross-switch" @click="closeSidebar">

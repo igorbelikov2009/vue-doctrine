@@ -1,0 +1,176 @@
+<template>
+  <div id="array-methods-task">
+    <button
+      class="array-methods__button"
+      @click="isFilterArrayOfString = !isFilterArrayOfString"
+      :class="{ 'array-methods__button_active': isFilterArrayOfString }"
+    >
+      Отфильтровать массив, оставить только строки.
+    </button>
+
+    <p class="array-methods__description">
+      <span class="array-methods__span">{{ filterList }} </span>
+      <span class="array-methods__span-purple"> => </span>
+      <span class="array-methods__span-green"> {{ filterListString }}</span>
+    </p>
+
+    <div v-if="isFilterArrayOfString">
+      <p class="array-methods__text">
+        <span class="array-methods__span">Отфильтровать массив, оставить только строки.</span>
+        <br />
+
+        имеем <span class="array-methods__span">{{ filterList }}</span> <br />
+        <span class="array-methods__span-purple">
+          filterListString() { <br />
+          let listString <br />
+          for (let i = 0; i &lt; this.filterList.length; i++) { <br />
+          let val = this.filterList[i] <br />
+
+          if (typeof val === 'string') { <br />
+          listString.push(val) <br />
+          } } return listString <br />
+          }</span
+        >
+        получаем:
+        <span class="array-methods__span-green">{{ filterListString }} </span> <br />
+        <br />
+        FilterArrayOfString.vue
+      </p>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FilterArrayOfString',
+
+  data() {
+    return {
+      isFilterArrayOfString: false,
+      // filterList: [1, 2, 3, 4, 'a', 'b', 'c', 'd'],
+    }
+  },
+  props: {
+    filterList: { type: Array },
+  },
+  computed: {
+    filterListString() {
+      return this.$store.getters['filterList/filterListString']
+    },
+    // filterListString() {
+    //   let listString = []
+    //   for (let i = 0; i < this.filterList.length; i++) {
+    //     let val = this.filterList[i]
+
+    //     if (typeof val === 'string') {
+    //       listString.push(val)
+    //     }
+    //   }
+    //   return listString
+    // },
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+.array-methods {
+  &__button {
+    display: block;
+    margin-top: 48px;
+    font-size: 18px;
+    line-height: 24px;
+    color: black;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      line-height: 22px;
+      color: red;
+      border: 1px red solid;
+      border-radius: 24px;
+      box-sizing: border-box;
+    }
+
+    // array-methods__button_active
+    &_active {
+      line-height: 22px;
+      color: red;
+      border: 1px red solid;
+      border-radius: 24px;
+      box-sizing: border-box;
+    }
+  }
+
+  &__description {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    color: #978d8d;
+    font-weight: 500;
+    margin-bottom: 36px;
+  }
+
+  &__link {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    color: #c328c3;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: blue;
+    }
+  }
+
+  &__text {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    color: #978d8d;
+    font-weight: 500;
+  }
+
+  // array-methods__span
+  &__span {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: black;
+  }
+
+  // array-methods__span-bold
+  &__span-bold {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 900;
+    color: black;
+  }
+
+  // array-methods__span-red
+  &__span-red {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: #ff3b0e;
+  }
+
+  // array-methods__span-green
+  &__span-green {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: green;
+  }
+
+  // array-methods__span-purple
+  &__span-purple {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: #9b13bd;
+  }
+}
+</style>

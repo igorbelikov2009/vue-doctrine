@@ -103,23 +103,7 @@
 
         <Map />
 
-        <Sort
-          :arrSort="arrSort"
-          :arrStrings="arrStrings"
-          :arrNumber="arrNumber"
-          :vasya="vasya"
-          :petya="petya"
-          :masha="masha"
-          :users="users"
-          :arrSorted="arrSorted"
-          :arrNumberSorted="arrNumberSorted"
-          :arrNumberSortedDescending="arrNumberSortedDescending"
-          :sortByAge="sortByAge"
-          :sortByName="sortByName"
-          :sortBySurname="sortBySurname"
-          :sortById="sortById"
-          :arrStringsSorted="arrStringsSorted"
-        />
+        <Sort />
 
         <Reverse />
 
@@ -130,6 +114,12 @@
         <ReduceMethod />
 
         <ReduceRightMethod />
+      </div>
+
+      <div id="additional-Information">
+        <h2 class="array-methods__subheading">Правильная проверка типа массива</h2>
+
+        <ArrayIsArray />
       </div>
 
       <!--  -->
@@ -193,6 +183,10 @@
 
       <ToTitleCaseTask />
 
+      <FilterArrayOfNumbers :filterList="filterList" />
+
+      <FilterArrayOfString :filterList="filterList" />
+
       <FilterRangeTask />
 
       <FilterRangeInPlaceTask />
@@ -200,6 +194,10 @@
       <InputArrayMapedTask />
 
       <ArrStringsUniqueTask />
+
+      <ArrUnique />
+
+      <NumberIdenticElemInAarray />
 
       <UsersMappedTask
         :vasya="vasya"
@@ -236,7 +234,18 @@
       <ConcatenatingArrays />
 
       <CreateArrayFromArrayOfObjects />
+
+      <MultiplicativePersistence />
+
+      <PrinterErrors />
+
+      <AnagramsCheck />
+
+      <AllZerosToTheEnd />
+
+      <Calculator />
     </div>
+
     <!--  -->
     <div id="array-methods-task">
       <button
@@ -248,8 +257,6 @@
       </button>
 
       <p class="array-methods__description">
-        xxx
-        <br />
         <span class="array-methods__span">xxx </span>
         <span class="array-methods__span-purple"> => </span>
         <span class="array-methods__span-green"> xxx</span>
@@ -309,7 +316,6 @@ import FindIndex from '@/components/arrayMethods/FindIndex.vue'
 import Every from '@/components/arrayMethods/Every.vue'
 import Some from '@/components/arrayMethods/Some.vue'
 import FilterMethod from '@/components/arrayMethods/FilterMethod.vue'
-//
 import Map from '@/components/arrayMethods/Map.vue'
 import Sort from '@/components/arrayMethods/Sort.vue'
 import Reverse from '@/components/arrayMethods/Reverse.vue'
@@ -317,14 +323,19 @@ import Split from '@/components/arrayMethods/Split.vue'
 import Join from '@/components/arrayMethods/Join.vue'
 import ReduceMethod from '@/components/arrayMethods/ReduceMethod.vue'
 import ReduceRightMethod from '@/components/arrayMethods/ReduceRightMethod.vue'
+import ArrayIsArray from '@/components/arrayMethods/ArrayIsArray.vue'
 // tasks
 import ToCamelCaseTask from '@/components/arrayMethodsTasks/ToCamelCaseTask.vue'
 import GetSumDirtyNumbersTask from '@/components/arrayMethodsTasks/GetSumDirtyNumbersTask.vue'
 import ToTitleCaseTask from '@/components/arrayMethodsTasks/ToTitleCaseTask.vue'
+import FilterArrayOfNumbers from '@/components/arrayMethodsTasks/FilterArrayOfNumbers.vue'
+import FilterArrayOfString from '@/components/arrayMethodsTasks/FilterArrayOfString.vue'
 import FilterRangeTask from '@/components/arrayMethodsTasks/FilterRangeTask.vue'
 import FilterRangeInPlaceTask from '@/components/arrayMethodsTasks/FilterRangeInPlaceTask.vue'
 import InputArrayMapedTask from '@/components/arrayMethodsTasks/InputArrayMapedTask.vue'
 import ArrStringsUniqueTask from '@/components/arrayMethodsTasks/ArrStringsUniqueTask.vue'
+import ArrUnique from '@/components/arrayMethodsTasks/ArrUnique.vue'
+import NumberIdenticElemInAarray from '@/components/arrayMethodsTasks/NumberIdenticElemInAarray.vue'
 import UsersMappedTask from '@/components/arrayMethodsTasks/UsersMappedTask.vue'
 import ArrSortTask from '@/components/arrayMethodsTasks/ArrSortTask.vue'
 import ArrayStringsSortedTask from '@/components/arrayMethodsTasks/ArrayStringsSortedTask.vue'
@@ -335,6 +346,11 @@ import ExpandingArrayOfArrays from '@/components/arrayMethodsTasks/ExpandingArra
 import ExpandingAnArrayReverse from '@/components/arrayMethodsTasks/ExpandingAnArrayReverse.vue'
 import ConcatenatingArrays from '@/components/arrayMethodsTasks/ConcatenatingArrays.vue'
 import CreateArrayFromArrayOfObjects from '@/components/arrayMethodsTasks/CreateArrayFromArrayOfObjects.vue'
+import MultiplicativePersistence from '@/components/arrayMethodsTasks/MultiplicativePersistence.vue'
+import PrinterErrors from '@/components/arrayMethodsTasks/PrinterErrors.vue'
+import AnagramsCheck from '@/components/arrayMethodsTasks/AnagramsCheck.vue'
+import AllZerosToTheEnd from '@/components/arrayMethodsTasks/AllZerosToTheEnd.vue'
+import Calculator from '@/components/arrayMethodsTasks/Calculator.vue'
 
 export default {
   name: 'ArrayMethodsPage',
@@ -345,16 +361,33 @@ export default {
       isNaNVisible: false,
       isSortBy: false,
 
-      arrSort: [5, 2, 1, -10, 8],
-      arrStrings: ['HTML', 'JavaScript', 'CSS', 'SASS', 'VUE.CLI'],
+      // arrSort: [5, 2, 1, -10, 8],
+      // arrStrings: ['HTML', 'JavaScript', 'CSS', 'SASS', 'VUE.CLI'],
       arrNumber: [1, 15, 2],
       vasya: { name: 'Вася', surname: 'Пупкин', id: 1, age: 25 },
       petya: { name: 'Петя', surname: 'Иванов', id: 2, age: 30 },
       masha: { name: 'Маша', surname: 'Петрова', id: 3, age: 28 },
       arrNaN: [NaN],
+      // filterList: [1, 2, 3, 4, 'a', 'b', 'c', 'd'],
     }
   },
   computed: {
+    arrSort() {
+      return this.$store.state.arrSort.arrSort
+    },
+    filterList() {
+      return this.$store.state.filterList.filterList
+    },
+    arrStrings() {
+      return this.$store.state.arrStrings.arrStrings
+    },
+    // arrSortStore() {
+    //   return this.$store.state.arrSort.arrSort
+    // },
+    // allNews() {
+    //   return this.$store.state.news.news
+    // },
+    //
     arrNaNIndexOf() {
       return this.arrNaN.indexOf(NaN)
     },
@@ -384,14 +417,7 @@ export default {
       }))
     },
     arrSorted() {
-      // let arrSorted = this.arrSort.sort((a, b) => b - a)
-      // так массив arrSort меняем на месте в arrSorted
-
-      // а так массив arrSort копируем в arrSorted и меняем уже arrSorted
       return this.arrSort.slice().sort((a, b) => b - a)
-      // метод slice()
-
-      // console.log(arrSorted)
     },
     arrStringsSorted() {
       return this.arrStrings.slice().sort()
@@ -415,11 +441,6 @@ export default {
     sortById() {
       return this.users.slice().sort((a, b) => (a.id > b.id ? 1 : -1))
     },
-    /*
-        .map(item => new Date(item.date).getFullYear())
-        .filter((item, index, self) => index === self.indexOf(item))
-        .map(item => ({ name: String(item), value: item }));
-    */
   },
   components: {
     Splice,
@@ -434,7 +455,6 @@ export default {
     Every,
     Some,
     FilterMethod,
-    //
     Map,
     Sort,
     Reverse,
@@ -442,14 +462,19 @@ export default {
     Join,
     ReduceMethod,
     ReduceRightMethod,
+    ArrayIsArray,
     // tasks
     ToCamelCaseTask,
     GetSumDirtyNumbersTask,
     ToTitleCaseTask,
+    FilterArrayOfNumbers,
+    FilterArrayOfString,
     FilterRangeTask,
     FilterRangeInPlaceTask,
     InputArrayMapedTask,
     ArrStringsUniqueTask,
+    ArrUnique,
+    NumberIdenticElemInAarray,
     UsersMappedTask,
     ArrSortTask,
     ArrayStringsSortedTask,
@@ -460,6 +485,11 @@ export default {
     ExpandingAnArrayReverse,
     ConcatenatingArrays,
     CreateArrayFromArrayOfObjects,
+    MultiplicativePersistence,
+    PrinterErrors,
+    AnagramsCheck,
+    AllZerosToTheEnd,
+    Calculator,
   },
 }
 </script>
