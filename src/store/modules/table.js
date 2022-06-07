@@ -1,14 +1,24 @@
-// import axios from 'axios'
-//  url = http://localhost:3000/users
+import axios from 'axios'
+
 export default {
-  state: {
-    users,
-  },
   actions: {
-    // GET_USERS_FROM_API({ commit }) {
-    //   //   return axios()
-    // },
+    async axiosUsers(context, limit = 170) {
+      const { data } = await axios('https://jsonplaceholder.typicode.com/posts?_limit=' + limit)
+
+      context.commit('updateUsers', data)
+    },
   },
-  mutations: {},
-  getters: {},
+  mutations: {
+    updateUsers(state, users) {
+      state.users = users
+    },
+  },
+  state: {
+    users: [],
+  },
+  getters: {
+    allUsers(state) {
+      return state.users
+    },
+  },
 }

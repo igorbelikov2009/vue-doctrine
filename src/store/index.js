@@ -13,7 +13,7 @@ import post from './modules/post'
 import message from './modules/message'
 import cardPosts from './modules/cardPosts'
 import alertPosts from './modules/alertPost'
-// import table from './modules/table'
+import table from './modules/table'
 
 const store = new Vuex.Store({
   modules: {
@@ -26,7 +26,7 @@ const store = new Vuex.Store({
     message,
     cardPosts,
     alertPosts,
-    // table,
+    table,
   },
 })
 

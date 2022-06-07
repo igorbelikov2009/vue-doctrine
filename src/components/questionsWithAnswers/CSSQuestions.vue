@@ -834,7 +834,7 @@
           @click="isQuestion25 = !isQuestion25"
           :class="{ 'general-issues__question_active': isQuestion25 }"
         >
-          Центрирование абсолютно позиционированных элементов
+          Центрирование абсолютно позиционированных или фиксированных элементов
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion25">
@@ -859,6 +859,8 @@
             .child { <br />
             height: 100px; <br />
             position: absolute; <br />
+            или <br />
+            position: fixed; <br />
             top: 0; <br />
             bottom: 0; <br />
             margin: auto 0; <br />
@@ -900,6 +902,8 @@
             } <br />
             .child { <br />
             position: absolute; <br />
+            или <br />
+            position: fixed; <br />
             top: 50%; <br />
             left: 50%; <br />
             transform: translateX(-50%) translateY(-50%); <br />
@@ -950,27 +954,89 @@
           @click="isQuestion27 = !isQuestion27"
           :class="{ 'general-issues__question_active': isQuestion27 }"
         >
-          xxx
+          Запретить - разрешить прокрутку страницы
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion27">
-          XXX
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://learn.javascript.ru/size-and-scroll-window#zapretit-prokrutku"
+            >Запретить прокрутку</a
+          >
+
+          <p>
+            запретить: <br />
+            <span class="general-issues__span-purple">
+              document.body.style.overflow = 'hidden' ;
+            </span>
+          </p>
+
+          <p>
+            разрешить: <br />
+            <span class="general-issues__span-purple"> document.body.style.overflow = '' ; </span>
+          </p>
         </div>
       </div>
 
+      <!--  -->
       <div>
         <button
           class="general-issues__question"
           @click="isQuestion28 = !isQuestion28"
           :class="{ 'general-issues__question_active': isQuestion28 }"
         >
-          xxx
+          Убрать полосу прокрутки
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion28">
-          XXX
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://active-vision.ru/blog/polosa-prokrutki-css/"
+            >Как стилизовать или убрать полосу прокрутки — CSS скроллбар</a
+          >
+
+          <p>
+            <span class="general-issues__span-green"> /*Убрать полосу прокрутки у элемента*/</span>
+            <br />
+            <span class="general-issues__span-purple">
+              .element::-webkit-scrollbar { width: 0; }</span
+            >
+          </p>
+
+          <p>
+            <span class="general-issues__span-green"
+              >/*Убрать полосу прокрутки для всей страницы*/
+            </span>
+            <br />
+            <span class="general-issues__span-purple"> ::-webkit-scrollbar { width: 0; }</span>
+          </p>
+
+          <p>
+            <span class="general-issues__span-purple">
+              .element { <br />
+              width: 1280px; <br />
+              display: flex; <br />
+              overflow-x: scroll; <br />
+              <br />
+              @media screen and (min-width: 1280px) { <br />
+              overflow-x: hidden; <br />
+              <br />
+              <span class="general-issues__span-green"
+                >/*Убрать полосу прокрутки для всей страницы*/
+              </span>
+              <br />
+              .element::-webkit-scrollbar { <br />
+              width: 0; <br />
+              } <br />
+              } <br />
+              } <br />
+            </span>
+          </p>
         </div>
       </div>
+      <!--  -->
 
       <!-- 31 -->
       <div>
@@ -982,9 +1048,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion29">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion29">XXX</div>
       </div>
       <!-- 31 -->
 
@@ -997,9 +1061,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion30">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion30">XXX</div>
       </div>
 
       <div>
@@ -1011,9 +1073,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion30">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion30">XXX</div>
       </div>
 
       <div>
@@ -1025,9 +1085,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion31">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion31">XXX</div>
       </div>
 
       <div>
@@ -1039,10 +1097,10 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion32">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion32">XXX</div>
       </div>
+
+      <span class="general-issues__span-purple"></span>
 
       <div>
         <button
@@ -1053,9 +1111,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion33">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion33">XXX</div>
       </div>
 
       <div>
@@ -1067,9 +1123,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion34">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion34">XXX</div>
       </div>
 
       <div>
@@ -1081,9 +1135,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion35">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion35">XXX</div>
       </div>
 
       <div>
@@ -1095,9 +1147,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion36">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion36">XXX</div>
       </div>
 
       <div>
@@ -1109,9 +1159,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion37">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion37">XXX</div>
       </div>
 
       <!-- 41 -->
@@ -1124,9 +1172,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion38">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion38">XXX</div>
       </div>
       <!-- 41 -->
 
@@ -1139,9 +1185,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion39">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion39">XXX</div>
       </div>
 
       <div>
@@ -1153,9 +1197,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion40">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion40">XXX</div>
       </div>
 
       <div>
@@ -1167,9 +1209,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion41">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion41">XXX</div>
       </div>
 
       <div>
@@ -1181,9 +1221,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion42">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion42">XXX</div>
       </div>
 
       <div>
@@ -1195,9 +1233,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion43">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion43">XXX</div>
       </div>
 
       <div>
@@ -1209,9 +1245,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion44">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion44">XXX</div>
       </div>
 
       <div>
@@ -1223,9 +1257,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion45">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion45">XXX</div>
       </div>
 
       <div>
@@ -1237,9 +1269,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion46">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion46">XXX</div>
       </div>
 
       <div>
@@ -1251,9 +1281,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion47">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion47">XXX</div>
       </div>
 
       <div>
@@ -1265,9 +1293,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion48">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion48">XXX</div>
       </div>
 
       <div>
@@ -1279,9 +1305,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion49">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion49">XXX</div>
       </div>
 
       <div>
@@ -1293,9 +1317,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion50">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion50">XXX</div>
       </div>
 
       <div>
@@ -1307,9 +1329,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion51">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion51">XXX</div>
       </div>
 
       <div>
@@ -1321,9 +1341,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion52">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion52">XXX</div>
       </div>
 
       <div>
@@ -1335,9 +1353,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion53">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion53">XXX</div>
       </div>
 
       <div>
@@ -1349,9 +1365,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion54">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion54">XXX</div>
       </div>
 
       <div>
@@ -1363,9 +1377,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion55">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion55">XXX</div>
       </div>
 
       <div>
@@ -1377,9 +1389,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion56">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion56">XXX</div>
       </div>
 
       <div>
@@ -1391,9 +1401,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion57">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion57">XXX</div>
       </div>
 
       <div>
@@ -1405,9 +1413,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion59">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion59">XXX</div>
       </div>
     </div>
   </div>
@@ -1559,6 +1565,7 @@ export default {
   // general-issues__link
   &__link {
     text-decoration: none;
+    color: blue;
   }
 }
 </style>

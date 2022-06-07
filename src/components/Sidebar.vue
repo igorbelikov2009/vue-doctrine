@@ -75,6 +75,10 @@
         <router-link class="sidebar__link" :to="{ name: 'QuestionsWithAnswersPage' }"
           >Вопросы (с ответами) кандидату на должность frontend разработчика</router-link
         >
+
+        <router-link class="sidebar__link" :to="{ name: 'github' }"
+          >Git и Github для начинающих</router-link
+        >
       </div>
 
       <button class="sidebar__cross-switch" @click="closeSidebar">

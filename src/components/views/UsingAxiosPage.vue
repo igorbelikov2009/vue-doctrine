@@ -154,11 +154,23 @@
             @click="isQuestion04 = !isQuestion04"
             :class="{ 'general-issues__question_active': isQuestion04 }"
           >
-            xxx
+            Это ответ с сервера
           </button>
 
           <div class="general-issues__answer" v-if="isQuestion04">
-            XXX
+            <div class="appPost__container">
+              <div class="appPost__post" v-for="(user, index) in allUsers" :key="index">
+                <p class="appPost__body">index: {{ index }}</p>
+
+                <p class="appPost__body">userId: {{ user.userId }}</p>
+
+                <h2 class="appPost__title">id: {{ user.id }}</h2>
+
+                <p class="appPost__body">title: {{ user.title }}</p>
+
+                <p class="appPost__body">body: {{ user.body }}</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -168,11 +180,11 @@
             @click="isQuestion05 = !isQuestion05"
             :class="{ 'general-issues__question_active': isQuestion05 }"
           >
-            xxx
+            Это ответ с сервера в виде таблицы
           </button>
 
           <div class="general-issues__answer" v-if="isQuestion05">
-            xxx
+            <VueTable :userData="allUsers" />
           </div>
         </div>
 
@@ -608,6 +620,9 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+import VueTable from '../usingAxios/VueTable.vue'
+
 export default {
   name: 'UsingAxiosPage',
 
@@ -651,6 +666,18 @@ export default {
       isQuestion34: false,
       isQuestion35: false,
     }
+  },
+
+  computed: mapGetters(['allUsers']),
+
+  methods: mapActions(['axiosUsers']),
+
+  mounted() {
+    this.axiosUsers()
+  },
+
+  components: {
+    VueTable,
   },
 }
 </script>
@@ -785,6 +812,34 @@ export default {
   // general-issues__link
   &__link {
     text-decoration: none;
+  }
+}
+
+.appPost {
+  width: 100%;
+  margin: 0 auto;
+
+  &__container {
+    color: gray;
+    width: 400px;
+    margin: 60px auto;
+  }
+
+  &__post {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 6px;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__title,
+  &__body {
+    text-align: center;
   }
 }
 </style>

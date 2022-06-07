@@ -1552,7 +1552,7 @@ alertPostsCount(state, getters) {
           <span class="general-issues__span-blue">xx</span> <br />
         </p>
 
-        <div>
+        <!-- <div>
           <button
             class="general-issues__question"
             @click="isQuestion17 = !isQuestion17"
@@ -1690,9 +1690,9 @@ alertPostsCount(state, getters) {
           <div class="general-issues__answer" v-if="isQuestion26">
             XXX
           </div>
-        </div>
+        </div> -->
 
-        <div>
+        <!-- <div>
           <button
             class="general-issues__question"
             @click="isQuestion27 = !isQuestion27"
@@ -1816,7 +1816,7 @@ alertPostsCount(state, getters) {
           <div class="general-issues__answer" v-if="isQuestion35">
             XXX
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
