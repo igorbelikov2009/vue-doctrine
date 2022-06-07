@@ -138,15 +138,85 @@
       </div>
 
       <div>
-        <h3 class="github__subheading">x</h3>
+        <h1 class="github__subheading">Создать новый репозиторий в командной строке</h1>
 
-        <p class="github__paradraph">- x</p>
+        <p class="github__paradraph">
+          <strong>git init</strong>
+        </p>
+
+        <p class="github__paradraph">
+          <strong>git add README.md</strong>
+        </p>
+
+        <p class="github__paradraph">
+          <strong>git commit -m "first commit"</strong>
+        </p>
+
+        <p class="github__paradraph">
+          <strong>git branch -M main</strong>
+        </p>
+
+        <p class="github__paradraph">
+          <strong>git remote add origin https://github.com/igorbelikov2009/vue-doctrine.git</strong>
+        </p>
+
+        <p class="github__paradraph">
+          <strong>git push -u origin main</strong>
+        </p>
+
+        <blockquote class="github__blockquote"><strong>x</strong> — x</blockquote>
+      </div>
+
+      <!-- <div>
+        <h1 class="github__subheading">Заливаем проект в свой репозиторий</h1>
+
+        <p class="github__paradraph">
+          <strong>
+            git remote add origin https://github.com/igorbelikov2009/vue-doctrine.git
+          </strong>
+        </p>
+
+        <p class="github__paradraph">
+          Необходимую адресную строчку
+          <strong> https://github.com/igorbelikov2009/vue-doctrine.git</strong> берём из данного
+          репозитория из <strong> CODE </strong> зелёного цвета
+        </p>
+
+        <p class="github__paradraph">
+          Получаем ошибку: <br />
+          "fatal: The current branch master has no upstream branch. <br />
+          To push the current branch and set the remote as upstream, use <br /><br />
+          git push --set-upstream origin master"
+        </p>
+
+        <p class="github__paradraph">
+          Вводим: <br />
+          <strong> "git push --set-upstream origin master"</strong> <br />
+          и всё у нас получается. В своём репозитории выираем ветку мастер и видим там свой проект.
+        </p>
+      </div> -->
+
+      <div>
+        <h3 class="github__subheading">git config</h3>
+
+        <p class="github__paradraph">- Конфигурация и параметры git</p>
 
         <blockquote class="github__blockquote">
-          <strong>x</strong> — x <br />
-          <strong>x</strong> — x <br />
-          <strong>x</strong> — x <br />
+          <strong>git config --global user.name </strong> — Показывает имя пользователя <br />
+          <strong>git config --global user.name 'new user' </strong> — Изменяет имя пользователя
+          <br />
+          <strong>git config --global user.email </strong> — Показывает email пользователя <br />
+          <strong>git config --global user.email 'test@mail.ru' </strong> — Изменяет email
+          пользователя <br />
         </blockquote>
+      </div>
+
+      <div>
+        <h3 class="github__subheading">git push</h3>
+
+        <p class="github__paradraph">
+          - Заливает текущие локальные коммиты в удаленный репозиторий
+        </p>
       </div>
 
       <div>
