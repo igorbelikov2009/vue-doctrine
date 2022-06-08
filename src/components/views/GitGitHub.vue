@@ -130,8 +130,6 @@
       <div>
         <h3 class="github__subheading">git merge</h3>
 
-        <p class="github__paradraph">- Совмещает текущую ветку с выбранной</p>
-
         <blockquote class="github__blockquote">
           <strong>git merge branch-name</strong> — совмещает текущую ветку с branch-name
         </blockquote>
@@ -140,61 +138,34 @@
       <div>
         <h1 class="github__subheading">Создать новый репозиторий в командной строке</h1>
 
-        <p class="github__paradraph">
-          <strong>git init</strong>
-        </p>
+        <blockquote class="github__blockquote">
+          <p class="github__paradraph">
+            <strong>git init</strong>
+          </p>
 
-        <p class="github__paradraph">
-          <strong>git add README.md</strong>
-        </p>
+          <p class="github__paradraph">
+            <strong>git add README.md</strong>
+          </p>
 
-        <p class="github__paradraph">
-          <strong>git commit -m "first commit"</strong>
-        </p>
+          <p class="github__paradraph">
+            <strong>git commit -m "first commit"</strong>
+          </p>
 
-        <p class="github__paradraph">
-          <strong>git branch -M main</strong>
-        </p>
+          <p class="github__paradraph">
+            <strong>git branch -M main</strong>
+          </p>
 
-        <p class="github__paradraph">
-          <strong>git remote add origin https://github.com/igorbelikov2009/vue-doctrine.git</strong>
-        </p>
+          <p class="github__paradraph">
+            <strong
+              >git remote add origin https://github.com/igorbelikov2009/name-project.git</strong
+            >
+          </p>
 
-        <p class="github__paradraph">
-          <strong>git push -u origin main</strong>
-        </p>
-
-        <blockquote class="github__blockquote"><strong>x</strong> — x</blockquote>
+          <p class="github__paradraph">
+            <strong>git push -u origin main</strong>
+          </p>
+        </blockquote>
       </div>
-
-      <!-- <div>
-        <h1 class="github__subheading">Заливаем проект в свой репозиторий</h1>
-
-        <p class="github__paradraph">
-          <strong>
-            git remote add origin https://github.com/igorbelikov2009/vue-doctrine.git
-          </strong>
-        </p>
-
-        <p class="github__paradraph">
-          Необходимую адресную строчку
-          <strong> https://github.com/igorbelikov2009/vue-doctrine.git</strong> берём из данного
-          репозитория из <strong> CODE </strong> зелёного цвета
-        </p>
-
-        <p class="github__paradraph">
-          Получаем ошибку: <br />
-          "fatal: The current branch master has no upstream branch. <br />
-          To push the current branch and set the remote as upstream, use <br /><br />
-          git push --set-upstream origin master"
-        </p>
-
-        <p class="github__paradraph">
-          Вводим: <br />
-          <strong> "git push --set-upstream origin master"</strong> <br />
-          и всё у нас получается. В своём репозитории выираем ветку мастер и видим там свой проект.
-        </p>
-      </div> -->
 
       <div>
         <h3 class="github__subheading">git config</h3>
@@ -220,19 +191,27 @@
       </div>
 
       <div>
-        <h3 class="github__subheading">x</h3>
+        <h3 class="github__subheading">git pull</h3>
 
-        <p class="github__paradraph">- x</p>
-
-        <blockquote class="github__blockquote"><strong>x</strong> — x</blockquote>
+        <p class="github__paradraph">
+          - Забирает изменения других веток с удаленного репозитория в локальный
+        </p>
       </div>
 
       <div>
-        <h3 class="github__subheading">x</h3>
+        <h3 class="github__subheading">git clone</h3>
 
-        <p class="github__paradraph">- x</p>
+        <p class="github__paradraph">- Клонирует проект с удаленного репозитория</p>
 
-        <blockquote class="github__blockquote"><strong>x</strong> — x</blockquote>
+        <blockquote class="github__blockquote">
+          <strong>git clone </strong> https://github.com/igorbelikov2009/vue-doctrine.git
+        </blockquote>
+
+        <p class="github__paradraph">
+          Необходимую адресную строчку
+          <strong> https://github.com/igorbelikov2009/vue-doctrine.git</strong> берём из данного
+          репозитория из <strong> CODE </strong> зелёного цвета
+        </p>
       </div>
     </div>
   </div>
