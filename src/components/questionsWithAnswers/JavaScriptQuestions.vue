@@ -9,6 +9,168 @@
     </button>
 
     <div v-if="isJavaScriptQuestions">
+      <a class="general-issues__link" target="_blank" href="">xxx</a>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion56 = !isQuestion56"
+          :class="{ 'general-issues__question_active': isQuestion56 }"
+        >
+          Учебник по JavaScript (основной)
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion56">
+          <a class="general-issues__link" target="_blank" href="https://learn.javascript.ru/"
+            >Современный учебник JavaScript(основной)</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion55 = !isQuestion55"
+          :class="{ 'general-issues__question_active': isQuestion55 }"
+        >
+          Учебник по JavaScript
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion55">
+          <a class="general-issues__link" target="_blank" href="https://itchief.ru/javascript/"
+            >Учебник по JavaScript "ИТШЕФ"</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion57 = !isQuestion57"
+          :class="{ 'general-issues__question_active': isQuestion57 }"
+        >
+          Учебник по JavaScript. Подробное руководство, обработка событий
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion57">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://wm-help.net/lib/b/book/1117838843/384"
+            >Книга: JavaScript. Подробное руководство, 6-е издание 17 Обработка событий</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion53 = !isQuestion53"
+          :class="{ 'general-issues__question_active': isQuestion53 }"
+        >
+          w3schools Учебник по JavaScript с наглядными примерами
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion53">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://www.w3schools.com/jsref/met_win_scrollby.asp"
+            >w3schools Учебник по JavaScript с наглядными примерами</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion54 = !isQuestion54"
+          :class="{ 'general-issues__question_active': isQuestion54 }"
+        >
+          Как рисовать диаграммы с использованием JavaScript и HTML5 Canvas
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion54">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://code.tutsplus.com/ru/tutorials/how-to-draw-a-pie-chart-and-doughnut-chart-using-javascript-and-html5-canvas--cms-27197"
+            >Как рисовать диаграммы с использованием JavaScript и HTML5 Canvas</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion32 = !isQuestion32"
+          :class="{ 'general-issues__question_active': isQuestion32 }"
+        >
+          HTML5CSS.ru
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion32">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://html5css.ru/howto/howto_js_rangeslider.php"
+            >Как сделать - пользовательские ползунки</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion33 = !isQuestion33"
+          :class="{ 'general-issues__question_active': isQuestion33 }"
+        >
+          Дипломные проекты на JavaScript
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion33">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="http://old.code.mu/tasks/javascript/practice/diplomnye-proekty-na-javascript.html"
+            >Дипломные проекты на JavaScript</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion33 = !isQuestion33"
+          :class="{ 'general-issues__question_active': isQuestion33 }"
+        >
+          Практические задачи по JavaScript
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion33">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://www.webpupil.ru/javascript_home.php?page=5"
+            >Практические задачи по JavaScript</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion33 = !isQuestion33"
+          :class="{ 'general-issues__question_active': isQuestion33 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion33">
+          <a class="general-issues__link" target="_blank" href="">xxx</a>
+        </div>
+      </div>
+
       <div>
         <button
           class="general-issues__question"
@@ -521,11 +683,23 @@
           @click="isQuestion16 = !isQuestion16"
           :class="{ 'general-issues__question_active': isQuestion16 }"
         >
-          xxx
+          Событие Клавиатуры
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion16">
-          XXX
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent"
+            >developer.mozilla.org</a
+          >
+
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code"
+            >KeyboardEvent.code</a
+          >
         </div>
       </div>
 
@@ -535,13 +709,19 @@
           @click="isQuestion17 = !isQuestion17"
           :class="{ 'general-issues__question_active': isQuestion17 }"
         >
-          xxx
+          CSS: полное руководство по функции calc()
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion17">
-          XXX
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://habr.com/ru/company/ruvds/blog/493660/"
+            >CSS: полное руководство по функции calc()</a
+          >
         </div>
       </div>
+      <!--  -->
 
       <div>
         <button
@@ -552,9 +732,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion18">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion18">XXX</div>
       </div>
 
       <div>
@@ -566,9 +744,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion19">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion19">XXX</div>
       </div>
 
       <div>
@@ -580,9 +756,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion20">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion20">XXX</div>
       </div>
 
       <div>
@@ -594,9 +768,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion21">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion21">XXX</div>
       </div>
 
       <div>
@@ -608,9 +780,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion22">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion22">XXX</div>
       </div>
 
       <div>
@@ -622,9 +792,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion23">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion23">XXX</div>
       </div>
 
       <div>
@@ -636,9 +804,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion24">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion24">XXX</div>
       </div>
 
       <div>
@@ -650,9 +816,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion25">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion25">XXX</div>
       </div>
 
       <div>
@@ -664,9 +828,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion26">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion26">XXX</div>
       </div>
 
       <div>
@@ -678,9 +840,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion27">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion27">XXX</div>
       </div>
 
       <div>
@@ -692,9 +852,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion28">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion28">XXX</div>
       </div>
 
       <div>
@@ -706,9 +864,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion29">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion29">XXX</div>
       </div>
 
       <div>
@@ -720,9 +876,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion30">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion30">XXX</div>
       </div>
 
       <div>
@@ -734,37 +888,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion31">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion32 = !isQuestion32"
-          :class="{ 'general-issues__question_active': isQuestion32 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion32">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion33 = !isQuestion33"
-          :class="{ 'general-issues__question_active': isQuestion33 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion33">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion31">XXX</div>
       </div>
 
       <div>
@@ -776,9 +900,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion34">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion34">XXX</div>
       </div>
 
       <div>
@@ -790,9 +912,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion35">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion35">XXX</div>
       </div>
 
       <div>
@@ -804,9 +924,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion36">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion36">XXX</div>
       </div>
 
       <div>
@@ -818,9 +936,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion37">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion37">XXX</div>
       </div>
 
       <div>
@@ -832,9 +948,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion38">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion38">XXX</div>
       </div>
 
       <div>
@@ -846,9 +960,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion39">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion39">XXX</div>
       </div>
 
       <div>
@@ -860,9 +972,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion40">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion40">XXX</div>
       </div>
 
       <div>
@@ -874,9 +984,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion41">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion41">XXX</div>
       </div>
 
       <div>
@@ -888,9 +996,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion42">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion42">XXX</div>
       </div>
 
       <div>
@@ -902,9 +1008,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion43">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion43">XXX</div>
       </div>
 
       <div>
@@ -916,9 +1020,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion44">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion44">XXX</div>
       </div>
 
       <div>
@@ -930,9 +1032,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion45">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion45">XXX</div>
       </div>
 
       <div>
@@ -944,9 +1044,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion46">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion46">XXX</div>
       </div>
 
       <div>
@@ -958,9 +1056,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion47">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion47">XXX</div>
       </div>
 
       <div>
@@ -972,9 +1068,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion48">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion48">XXX</div>
       </div>
 
       <div>
@@ -986,9 +1080,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion49">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion49">XXX</div>
       </div>
 
       <div>
@@ -1000,9 +1092,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion50">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion50">XXX</div>
       </div>
 
       <div>
@@ -1014,9 +1104,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion51">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion51">XXX</div>
       </div>
 
       <div>
@@ -1028,79 +1116,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion52">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion53 = !isQuestion53"
-          :class="{ 'general-issues__question_active': isQuestion53 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion53">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion54 = !isQuestion54"
-          :class="{ 'general-issues__question_active': isQuestion54 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion54">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion55 = !isQuestion55"
-          :class="{ 'general-issues__question_active': isQuestion55 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion55">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion56 = !isQuestion56"
-          :class="{ 'general-issues__question_active': isQuestion56 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion56">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion57 = !isQuestion57"
-          :class="{ 'general-issues__question_active': isQuestion57 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion57">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion52">XXX</div>
       </div>
     </div>
   </div>
@@ -1258,7 +1274,16 @@ export default {
 
   // general-issues__link
   &__link {
+    display: block;
+    font-size: 19px;
+    line-height: 1.5em;
+    color: #2a5885;
     text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: blue;
+    }
   }
 }
 </style>

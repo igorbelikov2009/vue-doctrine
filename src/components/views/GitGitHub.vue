@@ -1,6 +1,61 @@
 <template>
   <div class="github">
     <h1 class="github__heading">Git</h1>
+
+    <div class="github__new-theme">
+      <a class="github__link" target="_blank" href="https://htmlacademy.ru/blog/best/git-console"
+        >Работа с Git через консоль</a
+      >
+
+      <span class="github__text">htmlacademy</span>
+    </div>
+
+    <div class="github__new-theme">
+      <a
+        class="github__link"
+        target="_blank"
+        href="https://htmlacademy.ru/blog/articles/version-control-system"
+        >Введение в системы контроля версий</a
+      >
+
+      <span class="github__text">htmlacademy</span>
+    </div>
+
+    <div class="github__new-theme">
+      <a
+        class="github__link"
+        target="_blank"
+        href="https://htmlacademy.ru/blog/articles/first-aid-git"
+        >Шпаргалка по Git. Решение основных проблем</a
+      >
+
+      <span class="github__text">htmlacademy</span>
+    </div>
+
+    <div class="github__new-theme">
+      <a
+        class="github__link"
+        target="_blank"
+        href="https://htmlacademy.ru/blog/articles/useful-commands-for-working-with-git"
+        >Полезные команды для работы с Git</a
+      >
+
+      <span class="github__text">htmlacademy</span>
+    </div>
+
+    <div class="github__new-theme">
+      <a
+        class="github__link"
+        target="_blank"
+        href="https://www.shellhacks.com/git-config-username-password-store-credentials/"
+        >Git — Config Имя пользователя и пароль — Хранить учетные данные</a
+      >
+
+      <span class="github__text"
+        >Git — Config Настройка имени пользователя и пароля для разных репозиториев</span
+      >
+    </div>
+
     <div>
       <p class="github__paradraph">
         Git - это система контроля версий, позволяющая эффективно управлять историей исходного кода.
@@ -213,6 +268,48 @@
           репозитория из <strong> CODE </strong> зелёного цвета
         </p>
       </div>
+
+      <div>
+        <h3 class="github__subheading">
+          Создаём новую папку через терминал, клонируем проект с удаленного репозитория
+        </h3>
+
+        <p class="github__paradraph">
+          <strong> нажимаем "Ctrl" + "c"</strong> получаем в терминале: "Завершить выполнение
+          пакетного файла [Y(да)/N(нет)]?"
+        </p>
+
+        <p class="github__paradraph">
+          <strong> нажимаем "y"</strong> получаем в терминале: "C:\Projects\name-project>"
+        </p>
+
+        <p class="github__paradraph">
+          <strong>набираем "cd.." (C:\Projects\name-project>cd..) </strong> этим мы выходим из
+          текущего проекта в папку проектов C:\Projects>
+        </p>
+
+        <p class="github__paradraph">
+          <strong> C:\Projects>mkdir new-git-project </strong> создали в папке Projects новую папку
+          "new-git-project"
+        </p>
+
+        <p class="github__paradraph">
+          <strong>C:\Projects>cd new-git-project</strong> переходим в папку new-git-project
+        </p>
+
+        <p class="github__paradraph">
+          <strong>git clone https://github.com/igorbelikov2009/vue-doctrine.git</strong> клонируем
+          vue-doctrine в папке new-git-project
+        </p>
+
+        <p class="github__paradraph">
+          <strong></strong>
+        </p>
+
+        <p class="github__paradraph">
+          <strong></strong>
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -313,16 +410,32 @@ export default {
     line-height: 1.5em;
   }
 
+  &__new-theme {
+    border-left: 2px solid #000;
+    padding-left: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+  }
+
   &__link {
     display: block;
     font-size: 19px;
     line-height: 1.5em;
     color: #2a5885;
+    text-decoration: none;
     cursor: pointer;
 
     &:hover {
       color: blue;
     }
+  }
+
+  &__text {
+    display: block;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.86);
+    line-height: 1.5em;
   }
 
   &__text {

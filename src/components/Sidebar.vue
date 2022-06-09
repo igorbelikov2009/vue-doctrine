@@ -76,8 +76,12 @@
           >Вопросы (с ответами) кандидату на должность frontend разработчика</router-link
         >
 
-        <router-link class="sidebar__link" :to="{ name: 'github' }"
-          >Git и Github для начинающих</router-link
+        <router-link class="sidebar__link" :to="{ name: 'github' }">Git и Github </router-link>
+
+        <router-link class="sidebar__link" :to="{ name: 'VueLinks' }">Vue ссылки </router-link>
+
+        <router-link class="sidebar__link" :to="{ name: 'UsefulLinks' }"
+          >Браузерные ссылки с компьютера</router-link
         >
       </div>
 

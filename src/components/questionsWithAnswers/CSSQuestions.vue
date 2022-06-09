@@ -12,6 +12,77 @@
       <div>
         <button
           class="general-issues__question"
+          @click="isQuestion56 = !isQuestion56"
+          :class="{ 'general-issues__question_active': isQuestion56 }"
+        >
+          Все для веб-дизайнера, стилизация разных вещей
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion56">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://www.rudebox.org.ua/category/css/"
+            >В данной рубрике вы можете найти интересные стилизации разных вещей «CSS».
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion57 = !isQuestion57"
+          :class="{ 'general-issues__question_active': isQuestion57 }"
+        >
+          jQuery.Maskedinput js - документация на русском с примерами
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion57">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://webstool.ru/jquery.maskedinput.html"
+            >jQuery.Maskedinput js - маска для телефона</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion59 = !isQuestion59"
+          :class="{ 'general-issues__question_active': isQuestion59 }"
+        >
+          Селекторы CSS
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion59">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"
+            >Селекторы CSS</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion59 = !isQuestion59"
+          :class="{ 'general-issues__question_active': isQuestion59 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion59">
+          <a class="general-issues__link" target="_blank" href="">xxx</a>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
           @click="isQuestion01 = !isQuestion01"
           :class="{ 'general-issues__question_active': isQuestion01 }"
         >
@@ -182,16 +253,17 @@
           @click="isQuestion08 = !isQuestion08"
           :class="{ 'general-issues__question_active': isQuestion08 }"
         >
+          Какими способами можно визуально скрыть элемент?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion08">
           <a
             class="general-issues__link"
             target="_blank"
             href="https://habr.com/ru/company/ruvds/blog/485640/"
-            >Какими способами</a
+            >Какими способами можно визуально скрыть элемент?</a
           >
-          можно визуально скрыть элемент?
-        </button>
 
-        <div class="general-issues__answer" v-if="isQuestion08">
           Элементы, невидимые на странице, могут пребывать в различных состояниях: <br />
           - Некий элемент совершенно невидим и, более того, удалён из потока документа. <br />
           - Глазами элемент не увидеть, но он присутствует в документе и доступен для ассистивных
@@ -979,7 +1051,6 @@
         </div>
       </div>
 
-      <!--  -->
       <div>
         <button
           class="general-issues__question"
@@ -1036,19 +1107,44 @@
           </p>
         </div>
       </div>
-      <!--  -->
 
-      <!-- 31 -->
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion30 = !isQuestion30"
+          :class="{ 'general-issues__question_active': isQuestion30 }"
+        >
+          Убрать стрелочки с "input type='number'"
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion30">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://ru.stackoverflow.com/questions/431590/%D0%A3%D0%B1%D1%80%D0%B0%D1%82%D1%8C-%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BE%D1%87%D0%BA%D0%B8-%D1%81-input-type-number"
+          >
+            Убрать стрелочки с "input type='number'"</a
+          >
+        </div>
+      </div>
+
       <div>
         <button
           class="general-issues__question"
           @click="isQuestion29 = !isQuestion29"
           :class="{ 'general-issues__question_active': isQuestion29 }"
         >
-          xxx
+          Как сделать тень блока с помощью свойства box-shadow
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion29">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion29">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://html5book.ru/css3-ten-bloka/"
+            >Как сделать тень блока с помощью свойства box-shadow</a
+          >
+        </div>
       </div>
       <!-- 31 -->
 
@@ -1058,22 +1154,17 @@
           @click="isQuestion30 = !isQuestion30"
           :class="{ 'general-issues__question_active': isQuestion30 }"
         >
-          xxx
+          transform Интерактивный пример
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion30">XXX</div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion30 = !isQuestion30"
-          :class="{ 'general-issues__question_active': isQuestion30 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion30">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion30">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://developer.mozilla.org/ru/docs/Web/CSS/transform"
+            >transform Интерактивный пример</a
+          >
+        </div>
       </div>
 
       <div>
@@ -1082,11 +1173,20 @@
           @click="isQuestion31 = !isQuestion31"
           :class="{ 'general-issues__question_active': isQuestion31 }"
         >
-          xxx
+          transition-timing-function
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion31">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion31">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="http://htmlbook.ru/index.php/css/transition-timing-function"
+            >transition-timing-function</a
+          >
+        </div>
       </div>
+
+      <a class="general-issues__link" target="_blank" href="">xx</a>
 
       <div>
         <button
@@ -1379,42 +1479,6 @@
 
         <div class="general-issues__answer" v-if="isQuestion55">XXX</div>
       </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion56 = !isQuestion56"
-          :class="{ 'general-issues__question_active': isQuestion56 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion56">XXX</div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion57 = !isQuestion57"
-          :class="{ 'general-issues__question_active': isQuestion57 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion57">XXX</div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion59 = !isQuestion59"
-          :class="{ 'general-issues__question_active': isQuestion59 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion59">XXX</div>
-      </div>
     </div>
   </div>
 </template>
@@ -1564,8 +1628,16 @@ export default {
 
   // general-issues__link
   &__link {
+    display: block;
+    font-size: 19px;
+    line-height: 1.5em;
+    color: #2a5885;
     text-decoration: none;
-    color: blue;
+    cursor: pointer;
+
+    &:hover {
+      color: blue;
+    }
   }
 }
 </style>
