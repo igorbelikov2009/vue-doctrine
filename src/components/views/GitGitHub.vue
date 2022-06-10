@@ -235,6 +235,32 @@
           <strong>git config --global user.email 'test@mail.ru' </strong> — Изменяет email
           пользователя <br />
         </blockquote>
+
+        <p class="github__paradraph">
+          Если выходит ошибка: <br />
+          <span class="github__span-red">
+            warning: user.name has multiple values <br />
+            error: cannot overwrite multiple values with a single value <br />
+            Use a regexp, --add or --replace-all to change user.name.</span
+          >
+          <br />
+          Значит: каким-то образом появилось несколько имен пользователя в глобальном конфиге
+          гита,<br />
+          что можно исправить так:
+          <span class="github__span-red"> </span>
+        </p>
+
+        <blockquote class="github__blockquote">
+          <strong>git config --global --replace-all user.name "Igor Belikov"</strong> <br />
+        </blockquote>
+
+        <p class="github__paradraph">
+          Либо, если вам нужны несколько имен, то можно добавить еще одно:
+        </p>
+
+        <blockquote class="github__blockquote">
+          <strong> git config --global --add user.name "igorbelikov2009" </strong>
+        </blockquote>
       </div>
 
       <div>
@@ -438,13 +464,13 @@ export default {
     line-height: 1.5em;
   }
 
-  &__text {
-    display: block;
-    font-size: 16px;
-    line-height: 24px;
-    color: #978d8d;
-    font-weight: 500;
-  }
+  // &__text {
+  //   display: block;
+  //   font-size: 16px;
+  //   line-height: 24px;
+  //   color: #978d8d;
+  //   font-weight: 500;
+  // }
 
   // github__span
   &__span {
