@@ -336,12 +336,6 @@
           <strong></strong>
         </p>
       </div>
-
-      <div>
-        <h3 class="github__subheading">touch1</h3>
-
-        <p class="github__paradraph">- Created any file</p>
-      </div>
     </div>
   </div>
 </template>
