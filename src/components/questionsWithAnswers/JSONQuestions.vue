@@ -740,5 +740,13 @@ export default {
       color: blue;
     }
   }
+
+  &__paragraph {
+    display: block;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.86);
+    line-height: 1.5em;
+    margin-top: 24px;
+  }
 }
 </style>

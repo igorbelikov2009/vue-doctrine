@@ -19,25 +19,31 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion01">
-          Promise (промис) - это возвращаемый объект асинхронной операции, результат успешного или
-          неудачного завершения асинхронной операции. <br />
+          <p class="general-issues__paragraph">
+            Промисы — это объекты, которые используются в JavaScript при выполнении асинхронных
+            операций. Они упрощают работу с асинхронными операциями и дают более удобные механизмы
+            обработки ошибок, чем коллбэки и события. <br />
 
-          Promise (промис) - это объект, в который мы записываем два колбэка вместо того, чтобы
-          передать их функции (resolve, reject). <br />
+            Promise (промис) - это возвращаемый объект асинхронной операции, результат успешного или
+            неудачного завершения асинхронной операции. <br />
 
-          Промис - это обещание предоставить результат позже. <br />
-          С помощью промиса можно поставить на ожидание получение результата и, когда его получаем,
-          можем его обрабатывать. Так же промис может вернуть ошибку, если результат вернуть не
-          возможно. Промис может вернуть либо результат, либо ошибку. <br />
+            Promise (промис) - это объект, в который мы записываем два колбэка вместо того, чтобы
+            передать их функции (resolve, reject). <br />
 
-          <span class="general-issues__span-red"> Промис- может быть создан: </span> <br />
-          - путём создания нового экземляра класса Promise <br />
-          - методом fetch(), который всегда возвращает промис. <br />
-          - асинхронной функцией async (), которая также всегда возвращает промис. <br />
+            Промис - это обещание предоставить результат позже. <br />
+            С помощью промиса можно поставить на ожидание получение результата и, когда его
+            получаем, можем его обрабатывать. Так же промис может вернуть ошибку, если результат
+            вернуть не возможно. Промис может вернуть либо результат, либо ошибку. <br />
 
-          <span class="general-issues__span-red"> Асинхронными событиями </span> являются те,
-          которые возникают независимо от основного потока выполнения программы, отложенные по
-          времени.
+            <span class="general-issues__span-red"> Промис- может быть создан: </span> <br />
+            - путём создания нового экземляра класса Promise <br />
+            - методом fetch(), который всегда возвращает промис. <br />
+            - асинхронной функцией async (), которая также всегда возвращает промис. <br />
+
+            <span class="general-issues__span-red"> Асинхронными событиями </span> являются те,
+            которые возникают независимо от основного потока выполнения программы, отложенные по
+            времени.
+          </p>
         </div>
       </div>
 
@@ -52,7 +58,7 @@
 
         <div class="general-issues__answer" v-if="isQuestion19">
           <h4>Цепочка вызовов:</h4>
-          <p>
+          <p class="general-issues__paragraph">
             Необходимость выполнить две или более асинхронных операции одна за другой реализуется
             созданием цепочки вызовов промисов. Причём каждый следующий вызов начинается при
             успешном завершении предыдущего и использует результат его выполнения. <br />
@@ -72,7 +78,7 @@
 
           <h4>Цепочка вызовов после catch</h4>
 
-          <p>
+          <p class="general-issues__paragraph">
             Можно продолжить цепочку вызовов после ошибки, т. е. после catch, что полезно для
             выполнения новых действий даже после того, как действие вернёт ошибку в цепочке вызовов.
             Ниже приведён пример: <br />
@@ -108,7 +114,7 @@
 
           <h4>Композиция</h4>
 
-          <p>
+          <p class="general-issues__paragraph">
             Promise.resolve() и Promise.reject() короткий способ создать уже успешные или
             отклонённые промисы соответственно. Это иногда бывает полезно. <br />
 
@@ -132,10 +138,12 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion02">
-          Promise может находиться в трёх состояниях: <br />
-          - ожидание (pending): начальное состояние, не исполнен и не отклонён. <br />
-          - исполнено (fulfilled): операция завершена успешно. <br />
-          - отклонено (rejected): операция завершена с ошибкой.
+          <p class="general-issues__paragraph">
+            Promise может находиться в трёх состояниях: <br />
+            - ожидание (pending): начальное состояние, не исполнен и не отклонён. <br />
+            - исполнено (fulfilled): операция завершена успешно. <br />
+            - отклонено (rejected): операция завершена с ошибкой.
+          </p>
         </div>
       </div>
 
@@ -149,34 +157,37 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion03">
-          Промис создаём путём создания нового экземляра класса Promise, передаём в него один
-          аргумент - функцию. В это функции находится весь наш асинхронный код, который мы должны
-          обрабатывать. Так же, эта функция принимает два аргумента: resolve, reject.
-          <br />
-          <span class="general-issues__span-purple">
-            const myPromise = new Promise((resolve, reject) => { <br />
-            <span class="general-issues__span-green">
-              /* выполнение асинхронных операций <br />
-              Внутри этой функции по результату нужно вызвать одну из функций : resolve или reject
-              */ <br />
+          <p class="general-issues__paragraph">
+            Промис создаём путём создания нового экземляра класса Promise, передаём в него один
+            аргумент - функцию. В это функции находится весь наш асинхронный код, который мы должны
+            обрабатывать. Так же, эта функция принимает два аргумента: resolve, reject.
+            <br />
+            <span class="general-issues__span-purple">
+              const myPromise = new Promise((resolve, reject) => { <br />
+              <span class="general-issues__span-green">
+                /* выполнение асинхронных операций <br />
+                Внутри этой функции по результату нужно вызвать одну из функций : resolve или reject
+                */ <br />
+              </span>
+              });
             </span>
-            });
-          </span>
-          <br />
-          <span class="general-issues__span-red"> resolve и reject </span> – это колбэки, которые
-          предоставляет сам JavaScript. <br />
-          С момента создания, промис находится в состоянии ожидания (pending). <br />
-          Когда мы вызываем resolve, мы должны передать результат - какие-то данные. Состояние
-          ожидания (pending) меняется на состояние исполнено (fulfilled). <br />
-          Если возникла ошибка, мы должны вызвать функцию reject и передать ей эту ошибку. В этом
-          случае промис считается отклонённым. <br />
-          Ещё раз: промис создаётся путём создания нового экземляра класса Promise. При создании, в
-          качестве аргументов, мы должны передать колбэк-функцию ((resolve, reject) => {}) c
-          параметрами resolve, reject. И внутри этой колбэк-функции мы долны вызвать одну из этих
-          функций (resolve, reject), чтобы промис завершился либо с успехом, либо с ошибкой. <br />
-          При создании Промиса, внутри колбэк-функции мы должны описать логику возврата данных либо
-          ошибки. То, что, мы поместим внутри resolve мы и получим результатом промиса. То, что мы
-          создадим, то и будем обрабатывать при получении результата.
+            <br />
+            <span class="general-issues__span-red"> resolve и reject </span> – это колбэки, которые
+            предоставляет сам JavaScript. <br />
+            С момента создания, промис находится в состоянии ожидания (pending). <br />
+            Когда мы вызываем resolve, мы должны передать результат - какие-то данные. Состояние
+            ожидания (pending) меняется на состояние исполнено (fulfilled). <br />
+            Если возникла ошибка, мы должны вызвать функцию reject и передать ей эту ошибку. В этом
+            случае промис считается отклонённым. <br />
+            Ещё раз: промис создаётся путём создания нового экземляра класса Promise. При создании,
+            в качестве аргументов, мы должны передать колбэк-функцию ((resolve, reject) => {}) c
+            параметрами resolve, reject. И внутри этой колбэк-функции мы долны вызвать одну из этих
+            функций (resolve, reject), чтобы промис завершился либо с успехом, либо с ошибкой.
+            <br />
+            При создании Промиса, внутри колбэк-функции мы должны описать логику возврата данных
+            либо ошибки. То, что, мы поместим внутри resolve мы и получим результатом промиса. То,
+            что мы создадим, то и будем обрабатывать при получении результата.
+          </p>
         </div>
       </div>
 
@@ -190,33 +201,36 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion04">
-          <span class="general-issues__span-purple">
-            myPromise <br />
-            .then(value => { <br />
-            <span class="general-issues__span-green">
-              /* Действия, в случае успешного исполнения Промиса <br />
-              - Значения value - это значение, переданное в вызове функции resolve внутри Промиса */
-              <br />
-            </span>
-            }) <br />
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              myPromise <br />
+              .then(value => { <br />
+              <span class="general-issues__span-green">
+                /* Действия, в случае успешного исполнения Промиса <br />
+                - Значения value - это значение, переданное в вызове функции resolve внутри Промиса
+                */
+                <br />
+              </span>
+              }) <br />
 
-            .catch(error => { <br />
-            <span class="general-issues__span-green">
-              /* Действия в случае отклонения Промиса <br />
-              - Значение error - это значение, переданное в вызове фунции reject внутри Промиса */
+              .catch(error => { <br />
+              <span class="general-issues__span-green">
+                /* Действия в случае отклонения Промиса <br />
+                - Значение error - это значение, переданное в вызове фунции reject внутри Промиса */
+              </span>
+              <br />
+              })
             </span>
             <br />
-            })
-          </span>
-          <br />
-          Получение результата Промиса происходит следующим образом: у объекта myPromise, который
-          был создан, будут доступно методы .then и .catch. Эти методы можно комбинировать: вызывать
-          .then, затем вызывать .catch. При вызове этих функций, необходимо передать им параметры:
-          value или error. <br />
-          Этими методами мы описываем, что делать в случае успешного исполнения Промиса или в случае
-          его отклонения.
+            Получение результата Промиса происходит следующим образом: у объекта myPromise, который
+            был создан, будут доступно методы .then и .catch. Эти методы можно комбинировать:
+            вызывать .then, затем вызывать .catch. При вызове этих функций, необходимо передать им
+            параметры: value или error. <br />
+            Этими методами мы описываем, что делать в случае успешного исполнения Промиса или в
+            случае его отклонения.
+          </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-purple">
               .finally(() => { <br />
               <span class="general-issues__span-green">
@@ -249,70 +263,74 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion05">
-          JavaScript может отправлять сетевые запросы на сервер и подгружать новую информацию по
-          мере необходимости. <br />
+          <p class="general-issues__paragraph">
+            JavaScript может отправлять сетевые запросы на сервер и подгружать новую информацию по
+            мере необходимости. <br />
 
-          Например, мы можем использовать сетевой запрос, чтобы: <br />
-          - Отправить заказ, <br />
-          - Загрузить информацию о пользователе, <br />
-          - Запросить последние обновления с сервера, <br />
-          - …и т.п. <br />
-          <br />
+            Например, мы можем использовать сетевой запрос, чтобы: <br />
+            - Отправить заказ, <br />
+            - Загрузить информацию о пользователе, <br />
+            - Запросить последние обновления с сервера, <br />
+            - …и т.п. <br />
+            <br />
 
-          <span class="general-issues__span-red">
-            Метод fetch() — современный, очень мощный способ выполнения сетевого запроса и получения
-            информации с сервера.</span
-          >
-          <br />
+            <span class="general-issues__span-red">
+              Метод fetch() — современный, очень мощный способ выполнения сетевого запроса и
+              получения информации с сервера.</span
+            >
+            <br />
 
-          Базовый синтаксис: <br />
+            Базовый синтаксис: <br />
 
-          <span class="general-issues__span-red"> let promise = fetch(url, [options]) </span> <br />
-          <span class="general-issues__span-green"> - url – </span> URL для отправки запроса. <br />
-          <span class="general-issues__span-green"> - options – </span> дополнительные параметры:
-          метод, заголовки и так далее. <br />
-          Без options это простой GET-запрос, скачивающий содержимое по адресу url. <br />
+            <span class="general-issues__span-red"> let promise = fetch(url, [options]) </span>
+            <br />
+            <span class="general-issues__span-green"> - url – </span> URL для отправки запроса.
+            <br />
+            <span class="general-issues__span-green"> - options – </span> дополнительные параметры:
+            метод, заголовки и так далее. <br />
+            Без options это простой GET-запрос, скачивающий содержимое по адресу url. <br />
 
-          Браузер сразу же начинает запрос и возвращает промис, который внешний код использует для
-          получения результата. <br />
+            Браузер сразу же начинает запрос и возвращает промис, который внешний код использует для
+            получения результата. <br />
 
-          Процесс получения ответа обычно происходит в два этапа: <br />
+            Процесс получения ответа обычно происходит в два этапа: <br />
 
-          <span class="general-issues__span-red"> Во-первых, </span> promise выполняется с объектом
-          встроенного класса
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Web/API/Response"
-            >Response</a
-          >
-          в качестве результата, как только сервер пришлёт заголовки ответа. <br />
+            <span class="general-issues__span-red"> Во-первых, </span> promise выполняется с
+            объектом встроенного класса
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Response"
+              >Response</a
+            >
+            в качестве результата, как только сервер пришлёт заголовки ответа. <br />
 
-          На этом этапе мы можем проверить статус HTTP-запроса и определить, выполнился ли он
-          успешно, а также посмотреть заголовки, но пока без тела ответа. <br />
+            На этом этапе мы можем проверить статус HTTP-запроса и определить, выполнился ли он
+            успешно, а также посмотреть заголовки, но пока без тела ответа. <br />
 
-          Промис завершается с ошибкой, если fetch не смог выполнить HTTP-запрос, например при
-          ошибке сети или если нет такого сайта. <br />
-          <br />
+            Промис завершается с ошибкой, если fetch не смог выполнить HTTP-запрос, например при
+            ошибке сети или если нет такого сайта. <br />
+            <br />
 
-          <span class="general-issues__span-red"> Во-вторых, </span> для получения тела ответа нам
-          нужно использовать дополнительный вызов метода:
-          <br />
+            <span class="general-issues__span-red"> Во-вторых, </span> для получения тела ответа нам
+            нужно использовать дополнительный вызов метода:
+            <br />
 
-          Response предоставляет несколько методов, основанных на промисах, для доступа к телу
-          ответа в различных форматах: <br />
-          <span class="general-issues__span-green"> - response.text() – </span> читает ответ и
-          возвращает как обычный текст, <br />
-          <span class="general-issues__span-green"> - response.json() – </span> декодирует ответ в
-          формате JSON, то есть, мы получаем промис <br />
-          <span class="general-issues__span-green"> - response.formData() – </span> возвращает ответ
-          как объект FormData (разберём его в следующей главе), <br />
-          <span class="general-issues__span-green"> - response.blob() – </span> возвращает объект
-          как Blob (бинарные данные с типом), <br />
-          <span class="general-issues__span-green"> - response.arrayBuffer() – </span> возвращает
-          ответ как ArrayBuffer (низкоуровневое представление бинарных данных), <br />
-          <span class="general-issues__span-green"> - помимо этого, response.body – </span> это
-          объект ReadableStream, с помощью которого можно считывать тело запроса по частям.
+            Response предоставляет несколько методов, основанных на промисах, для доступа к телу
+            ответа в различных форматах: <br />
+            <span class="general-issues__span-green"> - response.text() – </span> читает ответ и
+            возвращает как обычный текст, <br />
+            <span class="general-issues__span-green"> - response.json() – </span> декодирует ответ в
+            формате JSON, то есть, мы получаем промис <br />
+            <span class="general-issues__span-green"> - response.formData() – </span> возвращает
+            ответ как объект FormData (разберём его в следующей главе), <br />
+            <span class="general-issues__span-green"> - response.blob() – </span> возвращает объект
+            как Blob (бинарные данные с типом), <br />
+            <span class="general-issues__span-green"> - response.arrayBuffer() – </span> возвращает
+            ответ как ArrayBuffer (низкоуровневое представление бинарных данных), <br />
+            <span class="general-issues__span-green"> - помимо этого, response.body – </span> это
+            объект ReadableStream, с помощью которого можно считывать тело запроса по частям.
+          </p>
         </div>
       </div>
 
@@ -326,22 +344,24 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion06">
-          Запрос для получение данных будем делать на сайт
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://jsonplaceholder.typicode.com/"
-            >JSONPlaceholder</a
-          >
-          <br />( Можно перейти на вкладку
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://jsonplaceholder.typicode.com/guide/"
-            >Guide</a
-          >) <br />
+          <p class="general-issues__paragraph">
+            Запрос для получение данных будем делать на сайт
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://jsonplaceholder.typicode.com/"
+              >JSONPlaceholder</a
+            >
+            <br />( Можно перейти на вкладку
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://jsonplaceholder.typicode.com/guide/"
+              >Guide</a
+            >) <br />
+          </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">Запрос на получение данных массива</span> <br />
             <span class="general-issues__span-purple">
               fetch('https://jsonplaceholder.typicode.com/todos') <br />
@@ -362,7 +382,7 @@
             </span>
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red"
               >Запрос на получение данных отдельного элемента с id=55
             </span>
@@ -420,35 +440,37 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion07">
-          Можно создать новый Respons eобъект с помощью Response() конструктора, но обычно
-          встречается Response объект, возвращаемый в результате операции fetch() API. <br />
+          <p class="general-issues__paragraph">
+            Можно создать новый Respons eобъект с помощью Response() конструктора, но обычно
+            встречается Response объект, возвращаемый в результате операции fetch() API. <br />
 
-          Методы Response: <br />
-          - response.text() – читает ответ и возвращает как обычный текст, <br />
-          - response.json() – декодирует ответ в формате JSON, <br />
-          - response.formData() – возвращает ответ как объект FormData (разберём его в следующей
-          главе), <br />
-          - response.blob() – возвращает объект как Blob (бинарные данные с типом), <br />
-          - response.arrayBuffer() – возвращает ответ как ArrayBuffer (низкоуровневое представление
-          бинарных данных), <br />
-          <br />
+            Методы Response: <br />
+            - response.text() – читает ответ и возвращает как обычный текст, <br />
+            - response.json() – декодирует ответ в формате JSON, <br />
+            - response.formData() – возвращает ответ как объект FormData (разберём его в следующей
+            главе), <br />
+            - response.blob() – возвращает объект как Blob (бинарные данные с типом), <br />
+            - response.arrayBuffer() – возвращает ответ как ArrayBuffer (низкоуровневое
+            представление бинарных данных), <br />
+            <br />
 
-          Характеристики Response <br />
-          - Response.body - ReadableStream содержимого тела. <br />
-          - Response.bodyUsed - Сохраняет логическое значение, указывающее, использовалось ли тело в
-          ответе. <br />
-          - Response.headers - Объект Headers, связанный с ответом. <br />
-          - Response.ok - Логическое значение, указывающее, был ли ответ успешным (статус в
-          диапазоне 200– 299) или нет. <br />
-          - Response.redirected - Указывает, является ли ответ результатом перенаправления (то есть
-          его список URL-адресов содержит более одной записи). <br />
-          - Response.status - Код состояния ответа. (Это будет 200к успеху). <br />
-          - Response.statusText - Сообщение о состоянии, соответствующее коду состояния. (например,
-          OK для 200). <br />
-          - Response.trailers - Преобразование Promiseв Headersобъект, связанный с ответом,
-          Response.headersдля значений HTTP- Trailerзаголовка. <br />
-          - Response.type - Тип ответа (например, basic, cors). <br />
-          - Response.url - URL-адрес ответа.<br />
+            Характеристики Response <br />
+            - Response.body - ReadableStream содержимого тела. <br />
+            - Response.bodyUsed - Сохраняет логическое значение, указывающее, использовалось ли тело
+            в ответе. <br />
+            - Response.headers - Объект Headers, связанный с ответом. <br />
+            - Response.ok - Логическое значение, указывающее, был ли ответ успешным (статус в
+            диапазоне 200– 299) или нет. <br />
+            - Response.redirected - Указывает, является ли ответ результатом перенаправления (то
+            есть его список URL-адресов содержит более одной записи). <br />
+            - Response.status - Код состояния ответа. (Это будет 200к успеху). <br />
+            - Response.statusText - Сообщение о состоянии, соответствующее коду состояния.
+            (например, OK для 200). <br />
+            - Response.trailers - Преобразование Promiseв Headersобъект, связанный с ответом,
+            Response.headersдля значений HTTP- Trailerзаголовка. <br />
+            - Response.type - Тип ответа (например, basic, cors). <br />
+            - Response.url - URL-адрес ответа.<br />
+          </p>
         </div>
       </div>
 
@@ -462,79 +484,83 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion08">
-          <span class="general-issues__span-purple">
-            const getData = url => <br />
-            <span class="general-issues__span-green">
-              // стрелочная функция getData неявно возвращает промис
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              const getData = url => <br />
+              <span class="general-issues__span-green">
+                // стрелочная функция getData неявно возвращает промис
+              </span>
+              <br />
+              new Promise((resolve, reject) => <br />
+              fetch(url) <br />
+              .then(response => response.json()) <br />
+              .then(json => resolve(json)) <br />
+              <span class="general-issues__span-green">
+                // вызываем resolve передаём ей (json)
+              </span>
+              <br />
+              .catch(error => reject(error)) <br />
+              ) <br />
             </span>
             <br />
-            new Promise((resolve, reject) => <br />
-            fetch(url) <br />
-            .then(response => response.json()) <br />
-            .then(json => resolve(json)) <br />
-            <span class="general-issues__span-green"> // вызываем resolve передаём ей (json) </span>
-            <br />
-            .catch(error => reject(error)) <br />
-            ) <br />
-          </span>
-          <br />
-
-          <span class="general-issues__span-green">
-            // В случае возникновения ошибки, при запросе, вызываем reject и передаём ей ошибку
-            (error) <br />
-            // Мы создали свой промис, для того, чтобы обернуть в него вызов, используя функцию
-            fetch() <br />
-            <br />
-
-            // Сначала мы получаем ответ от сервера <br />
-            // Из стрима, методом response.json(), мы получаем (json) <br />
-            // Только тогда мы резольвим (resolve) наш промис (Promise) <br />
-            <br />
-
-            // следовательно, мы можем использовать фунцию getData, для того чтобы послать запросы
-            <br />
-            // при вызове фунции передаём ей (url) <br />
-            // Мы можем вынести фунцию getData в отдельный модуль и назвать его utility, <br />
-            // экспортировать эту фунцию из того модуля, <br />
-            // а в других местах импортировать эту фунцию, <br />
-            <br />
-            // и после этого просто выполнять вызовы таким образом <br />
-          </span>
-
-          <span class="general-issues__span-purple">
-            getData('https://jsonplaceholder.typicode.com/todos') <br />
-            .then(data => console.log(data)) <br />
-            <span class="general-issues__span-green">
-              // data - это то, что мы передали в resolve(json)</span
-            >
-            <br />
-            .catch(error => console.log(error.message)) <br />
-            <span class="general-issues__span-green">
-              // error - это то, что мы передали в reject(error)</span
-            >
-            <br />
-            <br />
 
             <span class="general-issues__span-green">
-              // вызываем нашу кастомную фунцию с другими (url</span
-            >) <br />
-            getData('https://jsonplaceholder.typicode.com/todos/5') <br />
-            .then(data => console.log(data)) <br />
-            <span class="general-issues__span-green">
-              // data - это то, что мы передали в resolve(json)
+              // В случае возникновения ошибки, при запросе, вызываем reject и передаём ей ошибку
+              (error) <br />
+              // Мы создали свой промис, для того, чтобы обернуть в него вызов, используя функцию
+              fetch() <br />
+              <br />
+
+              // Сначала мы получаем ответ от сервера <br />
+              // Из стрима, методом response.json(), мы получаем (json) <br />
+              // Только тогда мы резольвим (resolve) наш промис (Promise) <br />
+              <br />
+
+              // следовательно, мы можем использовать фунцию getData, для того чтобы послать запросы
+              <br />
+              // при вызове фунции передаём ей (url) <br />
+              // Мы можем вынести фунцию getData в отдельный модуль и назвать его utility, <br />
+              // экспортировать эту фунцию из того модуля, <br />
+              // а в других местах импортировать эту фунцию, <br />
+              <br />
+              // и после этого просто выполнять вызовы таким образом <br />
             </span>
-            <br />
-            .catch(error => console.log(error.message)) <br />
-            <br />
 
-            getData('https://jsonplaceholder.typicode.com/todos/55') <br />
-            .then(data => console.log(data)) <br />
-            <span class="general-issues__span-green">
-              // data - это то, что мы передали в resolve(json)</span
-            >
-            <br />
-            .catch(error => console.log(error.message)) <br />
-          </span>
+            <span class="general-issues__span-purple">
+              getData('https://jsonplaceholder.typicode.com/todos') <br />
+              .then(data => console.log(data)) <br />
+              <span class="general-issues__span-green">
+                // data - это то, что мы передали в resolve(json)</span
+              >
+              <br />
+              .catch(error => console.log(error.message)) <br />
+              <span class="general-issues__span-green">
+                // error - это то, что мы передали в reject(error)</span
+              >
+              <br />
+              <br />
+
+              <span class="general-issues__span-green">
+                // вызываем нашу кастомную фунцию с другими (url</span
+              >) <br />
+              getData('https://jsonplaceholder.typicode.com/todos/5') <br />
+              .then(data => console.log(data)) <br />
+              <span class="general-issues__span-green">
+                // data - это то, что мы передали в resolve(json)
+              </span>
+              <br />
+              .catch(error => console.log(error.message)) <br />
+              <br />
+
+              getData('https://jsonplaceholder.typicode.com/todos/55') <br />
+              .then(data => console.log(data)) <br />
+              <span class="general-issues__span-green">
+                // data - это то, что мы передали в resolve(json)</span
+              >
+              <br />
+              .catch(error => console.log(error.message)) <br />
+            </span>
+          </p>
         </div>
       </div>
 
@@ -549,87 +575,95 @@
 
         <div class="general-issues__answer" v-if="isQuestion09">
           <h4>ASYNK</h4>
-          Асинхронная функция – это функция, после вызова которой JavaScript приложение продолжает
-          работать, потому что функция сразу выполняет возврат. <br />
 
-          <span class="general-issues__span-red"> async</span> всегда ставится перед функцией, вот
-          так: <br />
+          <p class="general-issues__paragraph">
+            Асинхронная функция – это функция, после вызова которой JavaScript приложение продолжает
+            работать, потому что функция сразу выполняет возврат. <br />
 
-          <span class="general-issues__span-purple">
-            async function f() { <br />
-            return 1; <br />
-            } <br />
-          </span>
-          <br />
-          async функция() всегда возвращает <span class="general-issues__span-red">промис.</span>
-          <br />
-          Эта функция возвратит выполненный промис с результатом 1: <br />
-          <span class="general-issues__span-purple">
-            async function f() { <br />
-            return 1; <br />
-            } <br />
+            <span class="general-issues__span-red"> async</span> всегда ставится перед функцией, вот
+            так: <br />
 
-            f().then(alert); // 1 <br />
-          </span>
-          Можно и явно вернуть промис, результат будет одинаковым: <br />
+            <span class="general-issues__span-purple">
+              async function f() { <br />
+              return 1; <br />
+              } <br />
+            </span>
+            <br />
+            async функция() всегда возвращает <span class="general-issues__span-red">промис.</span>
+            <br />
+            Эта функция возвратит выполненный промис с результатом 1: <br />
+            <span class="general-issues__span-purple">
+              async function f() { <br />
+              return 1; <br />
+              } <br />
 
-          <span class="general-issues__span-purple">
-            async function f() { <br />
-            return Promise.resolve(1); <br />
-            } <br />
+              f().then(alert); // 1 <br />
+            </span>
+            Можно и явно вернуть промис, результат будет одинаковым: <br />
 
-            f().then(alert); // 1 <br />
-          </span>
-          <br />
-          <br />
+            <span class="general-issues__span-purple">
+              async function f() { <br />
+              return Promise.resolve(1); <br />
+              } <br />
+
+              f().then(alert); // 1 <br />
+            </span>
+            <br />
+            <br />
+          </p>
 
           <h4>AWAIT</h4>
 
-          Синтаксис: <br />
+          <p class="general-issues__paragraph">
+            Синтаксис: <br />
 
-          // работает только внутри async–функций <br />
+            // работает только внутри async–функций <br />
 
-          <span class="general-issues__span-purple"> let value = await promise; </span> <br />
-          Ключевое слово await заставит интерпретатор JavaScript ждать до тех пор, пока промис
-          справа от await не выполнится. После чего оно вернёт его результат, и выполнение кода
-          продолжится.
-          <br />
-          <br />
+            <span class="general-issues__span-purple"> let value = await promise; </span> <br />
+            Ключевое слово await заставит интерпретатор JavaScript ждать до тех пор, пока промис
+            справа от await не выполнится. После чего оно вернёт его результат, и выполнение кода
+            продолжится.
+            <br />
+            <br />
 
-          В этом примере промис успешно выполнится через 1 секунду: <br />
+            В этом примере промис успешно выполнится через 1 секунду: <br />
+          </p>
 
-          <span class="general-issues__span-purple">
-            async function f() { <br />
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              async function f() { <br />
 
-            let promise = new Promise((resolve, reject) => { <br />
-            setTimeout(() => resolve("готово!"), 1000) <br />
-            }); <br />
+              let promise = new Promise((resolve, reject) => { <br />
+              setTimeout(() => resolve("готово!"), 1000) <br />
+              }); <br />
 
-            let result = await promise; // будет ждать, пока промис не выполнится (*) <br />
+              let result = await promise; // будет ждать, пока промис не выполнится (*) <br />
 
-            alert(result); // "готово!" <br />
-            } <br />
+              alert(result); // "готово!" <br />
+              } <br />
 
-            f();
-          </span>
-          <br />
+              f();
+            </span>
+            <br />
 
-          <span class="general-issues__span-green">
-            В данном примере выполнение функции остановится на строке (*) до тех пор, пока промис не
-            выполнится. Это произойдёт через секунду после запуска функции. После чего в переменную
-            result будет записан результат выполнения промиса, и браузер отобразит alert-окно
-            «готово!». <br />
+            <span class="general-issues__span-green">
+              В данном примере выполнение функции остановится на строке (*) до тех пор, пока промис
+              не выполнится. Это произойдёт через секунду после запуска функции. После чего в
+              переменную result будет записан результат выполнения промиса, и браузер отобразит
+              alert-окно «готово!». <br />
 
-            Обратите внимание, хотя await и заставляет JavaScript дожидаться выполнения промиса, это
-            не отнимает ресурсов процессора. Пока промис не выполнится, JS-движок может заниматься
-            другими задачами: выполнять прочие скрипты, обрабатывать события и т.п. <br />
+              Обратите внимание, хотя await и заставляет JavaScript дожидаться выполнения промиса,
+              это не отнимает ресурсов процессора. Пока промис не выполнится, JS-движок может
+              заниматься другими задачами: выполнять прочие скрипты, обрабатывать события и т.п.
+              <br />
 
-            По сути, это просто «синтаксический сахар» для получения результата промиса, более
-            наглядный, чем promise.then. <br />
+              По сути, это просто «синтаксический сахар» для получения результата промиса, более
+              наглядный, чем promise.then. <br />
 
-            await нельзя использовать в обычных функциях Если мы попробуем использовать await внутри
-            функции, объявленной без async, получим синтаксическую ошибку. <br />
-          </span>
+              await нельзя использовать в обычных функциях Если мы попробуем использовать await
+              внутри функции, объявленной без async, получим синтаксическую ошибку. <br />
+            </span>
+          </p>
         </div>
       </div>
 
@@ -643,24 +677,26 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion10">
-          Асинхронная функция, это функция, которая вместо какого-то значения возвращает промис.
-          <br />
+          <p class="general-issues__paragraph">
+            Асинхронная функция, это функция, которая вместо какого-то значения возвращает промис.
+            <br />
 
-          <span class="general-issues__span-purple">
-            async function asynkFn(){ <br />
-            <span class="general-issues__span-red"> // всегда возвращает промис</span> <br />
-            }
-          </span>
-          <br />
+            <span class="general-issues__span-purple">
+              async function asynkFn(){ <br />
+              <span class="general-issues__span-red"> // всегда возвращает промис</span> <br />
+              }
+            </span>
+            <br />
 
-          функциональные выражения и стрелочные функции так же можно сделать асинхронными <br />
-          <span class="general-issues__span-purple">
-            const asynkFn = async () => { <br />
-            <span class="general-issues__span-red"> // всегда возвращает промис</span> <br />
-            }
-          </span>
+            функциональные выражения и стрелочные функции так же можно сделать асинхронными <br />
+            <span class="general-issues__span-purple">
+              const asynkFn = async () => { <br />
+              <span class="general-issues__span-red"> // всегда возвращает промис</span> <br />
+              }
+            </span>
+          </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             пример без AWAIT <br />
             <span class="general-issues__span-purple">
               const asynkFn = async () => { <br />
@@ -697,61 +733,64 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion11">
-          В данном примере промис будет мнговенно отклонён "rejected" с ошибкой<br />
-          <span class="general-issues__span-purple">
-            const asynkFn = async () => { <br />
-            throw new Error('There was an error') <br />
-            } <br />
+          <p class="general-issues__paragraph">
+            В данном примере промис будет мнговенно отклонён "rejected" с ошибкой<br />
+            <span class="general-issues__span-purple">
+              const asynkFn = async () => { <br />
+              throw new Error('There was an error') <br />
+              } <br />
 
-            asynkFn() <br />
-          </span>
-
-          <span class="general-issues__span-green">
-            Promise {rejected: Error: There was an error <br />
-            at asynkFn (anonymous:2:9) <br />
-            at anonymous:5:1} <br />
-            [[Prototype]]: Promise <br />
-            [[PromiseState]]: "rejected" <br />
-            [[PromiseResult]]: Error: There was an error at asynkFn (anonymous:2:9) at anonymous:5:1
-          </span>
-          <br />
-
-          <span class="general-issues__span-red">
-            Uncaught (in promise) Error: There was an error VM2663:2 <br />
-            at asynkFn (anonymous:2:9) <br />
-            at anonymous:5:1 <br />
-          </span>
-
-          <br />
-          Что бы обработать эту ошибку, нам нужно поймать её, используя метод .catch <br />
-          В данном примере функция reject будет вызвана не явно <br />
-          <span class="general-issues__span-purple">
-            const asynkFn = async () => { <br />
-            throw new Error('There was an error') } <br />
-
-            <span class="general-issues__span-green"> // ловим ошибку</span> <br />
-            asynkFn() <br />
-
-            .then(value => console.log(value)) <br />
-            <span class="general-issues__span-green">
-              // на случай, если промис будет исполнен</span
-            >
-            <br />
-            .catch(error => console.log(error.message)) <br />
-            <span class="general-issues__span-green">
-              // на случай, если промис будет отклонён
+              asynkFn() <br />
             </span>
-          </span>
-          <br />
-          В консоле получим строку <br />
-          <span class="general-issues__span-green">There was an error</span> <br />
 
-          <span class="general-issues__span-grey">
-            В данном случае промис выбрасывает ошибку, то есть, внутри асинхронной функции мы
-            выбрасываем ошибку, в таком случае промис будет автоматически отклонён с указанной
-            ошибкой. Здесь не надо указывать функции resolve и reject, они здесь присутствуют
-            неявно.
-          </span>
+            <span class="general-issues__span-green">
+              Promise {rejected: Error: There was an error <br />
+              at asynkFn (anonymous:2:9) <br />
+              at anonymous:5:1} <br />
+              [[Prototype]]: Promise <br />
+              [[PromiseState]]: "rejected" <br />
+              [[PromiseResult]]: Error: There was an error at asynkFn (anonymous:2:9) at
+              anonymous:5:1
+            </span>
+            <br />
+
+            <span class="general-issues__span-red">
+              Uncaught (in promise) Error: There was an error VM2663:2 <br />
+              at asynkFn (anonymous:2:9) <br />
+              at anonymous:5:1 <br />
+            </span>
+
+            <br />
+            Что бы обработать эту ошибку, нам нужно поймать её, используя метод .catch <br />
+            В данном примере функция reject будет вызвана не явно <br />
+            <span class="general-issues__span-purple">
+              const asynkFn = async () => { <br />
+              throw new Error('There was an error') } <br />
+
+              <span class="general-issues__span-green"> // ловим ошибку</span> <br />
+              asynkFn() <br />
+
+              .then(value => console.log(value)) <br />
+              <span class="general-issues__span-green">
+                // на случай, если промис будет исполнен</span
+              >
+              <br />
+              .catch(error => console.log(error.message)) <br />
+              <span class="general-issues__span-green">
+                // на случай, если промис будет отклонён
+              </span>
+            </span>
+            <br />
+            В консоле получим строку <br />
+            <span class="general-issues__span-green">There was an error</span> <br />
+
+            <span class="general-issues__span-grey">
+              В данном случае промис выбрасывает ошибку, то есть, внутри асинхронной функции мы
+              выбрасываем ошибку, в таком случае промис будет автоматически отклонён с указанной
+              ошибкой. Здесь не надо указывать функции resolve и reject, они здесь присутствуют
+              неявно.
+            </span>
+          </p>
         </div>
       </div>
 
@@ -765,29 +804,31 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion12">
-          С помощью AWAIT можно ожидать результата другого промиса, тем самым можно выполнять
-          какие-то асинхронные действия внутри асинхронной функции, ожидать какого-то результата.
-          <br />
-
-          AWAIT можно использовать только в асинхронной функции. <br />
-
-          <span class="general-issues__span-purple">
-            const asynkFn = async() => { <br />
-            await Promise
-            <span class="general-issues__span-green"> (ожидаем результата промиса)</span> <br />
-            } <br />
+          <p class="general-issues__paragraph">
+            С помощью AWAIT можно ожидать результата другого промиса, тем самым можно выполнять
+            какие-то асинхронные действия внутри асинхронной функции, ожидать какого-то результата.
             <br />
-            asyncFn()
-          </span>
-          <br />
 
-          <span class="general-issues__span-grey">
-            AWAIT может быть не один внутри асинхронной функции. То есть можно ожидать сначала
-            одного результата, потом другого, потом третьего и в конце вернуть какой-то результат
-            всей этой асинхронной функции. Ещё раз, асинхронная функция возвращает промис.
-          </span>
+            AWAIT можно использовать только в асинхронной функции. <br />
 
-          <p>
+            <span class="general-issues__span-purple">
+              const asynkFn = async() => { <br />
+              await Promise
+              <span class="general-issues__span-green"> (ожидаем результата промиса)</span> <br />
+              } <br />
+              <br />
+              asyncFn()
+            </span>
+            <br />
+
+            <span class="general-issues__span-grey">
+              AWAIT может быть не один внутри асинхронной функции. То есть можно ожидать сначала
+              одного результата, потом другого, потом третьего и в конце вернуть какой-то результат
+              всей этой асинхронной функции. Ещё раз, асинхронная функция возвращает промис.
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-purple">
               const timerPromise = () => <br />
               new Promise((resolve, reject) => <br />
@@ -860,12 +901,14 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion13">
-          <span class="general-issues__span-grey">
-            Посмотрим, как мы можем отследить, что мы ожидаем выполнения промиса, либо исполнения,
-            либо отклонения</span
-          >
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-grey">
+              Посмотрим, как мы можем отследить, что мы ожидаем выполнения промиса, либо исполнения,
+              либо отклонения</span
+            >
+          </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-purple">
               const timerPromise = () => <br />
               new Promise((resolve, reject) => <br />
@@ -932,7 +975,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion14">
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-grey"> имеем промисную запись </span> <br />
             <span class="general-issues__span-purple">
               const getData = url => <br />
@@ -949,7 +992,7 @@
             </span>
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-grey"> перезапишем на ASYNK/AWAIT </span> <br />
 
             <span class="general-issues__span-purple">
@@ -977,7 +1020,7 @@
             </span>
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-grey">
               перезапишем на ASYNK/AWAIT с расшифровкой
             </span>
@@ -1065,35 +1108,37 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion15">
-          <span class="general-issues__span-purple">
-            const getData = async url => { <br />
-            const res = await fetch(url) <br />
-            const json = await res.json() <br />
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              const getData = async url => { <br />
+              const res = await fetch(url) <br />
+              const json = await res.json() <br />
+              <br />
+              return json <br />
+              } <br />
+              <br />
+              const url = 'https://jsonplaceholder.typicode.com/todos' <br />
+              <br />
+              try { <br />
+              const data = await getData(url) <br />
+              console.log(data) <br />
+              } catch (error) { <br />
+              console.log(error.message) <br />
+              }
+            </span>
             <br />
-            return json <br />
-            } <br />
-            <br />
-            const url = 'https://jsonplaceholder.typicode.com/todos' <br />
-            <br />
-            try { <br />
-            const data = await getData(url) <br />
-            console.log(data) <br />
-            } catch (error) { <br />
-            console.log(error.message) <br />
-            }
-          </span>
-          <br />
 
-          <span class="general-issues__span-grey">Ошибку поймали</span>
+            <span class="general-issues__span-grey">Ошибку поймали</span>
 
-          <br />
-          <span class="general-issues__span-green">
-            /* GET https://jsonplaceholder.typicode.com/todos <br />
-            net::ERR_INTERNET_DISCONNECTED <br />
-            (ОШИБКА_ИНТЕРНЕТ_ОТКЛЮЧЕН) <br />
-            Failed to fetch <br />
-            */
-          </span>
+            <br />
+            <span class="general-issues__span-green">
+              /* GET https://jsonplaceholder.typicode.com/todos <br />
+              net::ERR_INTERNET_DISCONNECTED <br />
+              (ОШИБКА_ИНТЕРНЕТ_ОТКЛЮЧЕН) <br />
+              Failed to fetch <br />
+              */
+            </span>
+          </p>
         </div>
       </div>
 
@@ -1107,42 +1152,52 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion16">
-          1. <span class="general-issues__span-purple">asynk/await - </span> синтаксическая
-          надстройка над промисами, не более. <br />
-          2. <span class="general-issues__span-purple"> await </span>синтаксис возможен только
-          внутри <span class="general-issues__span-purple">asynk </span> (асинхронных) функций.
-          <br />
-          3. <span class="general-issues__span-purple">asynk</span> (асинхронная) функция всегда
-          возвращает <span class="general-issues__span-purple">Promise</span>. <br />
-          <span class="general-issues__span-green">
-            В асинхронной функции мы можем использовать ключевое слово return и возвращать какой-то
-            результат: строку, объект, число, всё, что угодно. И до момента возврата результата
-            функции с помощью ключевого слова return, Promise, который возвращает функция, будет в
-            состоянии ожидания (pending). И если нигде ошибок не возникло и функция дошла до
-            ключевого слова return, то Promise, возвращённый этой функцией, будет исполнен с теми
-            данными, которые мы возвращаем в инструкции с ключевым словом return. Если возвращаем
-            строку (return 'строка'). то промис будет исполнен и исполнен со строкой 'строка', как
-            данными. Или, если возвращаем объект, будет исполнен с объектом и т.д. <br />
-            Если где-то возникла ошибка, то промис будет отклонён с той ошибкой, которая возникла
-            внутри асинхронной функции.
-          </span>
-          <br />
-          <br />
+          <p class="general-issues__paragraph">
+            1. <span class="general-issues__span-purple">asynk/await - </span> синтаксическая
+            надстройка над промисами, не более. <br />
+          </p>
 
-          4. <span class="general-issues__span-purple">asynk</span> (асинхронная) функция ожидает
-          результата инструкции <span class="general-issues__span-purple">await</span> и не
-          выполняет последующие инструкции.
+          <p class="general-issues__paragraph">
+            2. <span class="general-issues__span-purple"> await </span>синтаксис возможен только
+            внутри <span class="general-issues__span-purple">asynk </span> (асинхронных) функций.
+            <br />
+          </p>
 
-          <span class="general-issues__span-green"
-            >Это очень важно. То есть, если есть инструкция с ключевым словом asynk, дальше функция
-            не будет выполнятся, пока Promise находится в состоянии pending (ожидания). Но при этом,
-            JavaScript может выполнять другие задачи, например, выполнять какие-то действия при
-            нажатии пользователем какой нибудь кнопки в интерфейсе фронт-энд приложения. То есть,
-            это не блокирующее действие. Промис не блокирует выполнение других частей нашего
-            приложения. И только, когда промис будет resolved или rejected, то есть - либо исполнен,
-            либо отклонён, выполнение функции продолжится.<br />
-            Это главное в ASYNK/AWAIT синтаксисе.
-          </span>
+          <p class="general-issues__paragraph">
+            3. <span class="general-issues__span-purple">asynk</span> (асинхронная) функция всегда
+            возвращает <span class="general-issues__span-purple">Promise</span>. <br />
+            <span class="general-issues__span-green">
+              В асинхронной функции мы можем использовать ключевое слово return и возвращать
+              какой-то результат: строку, объект, число, всё, что угодно. И до момента возврата
+              результата функции с помощью ключевого слова return, Promise, который возвращает
+              функция, будет в состоянии ожидания (pending). И если нигде ошибок не возникло и
+              функция дошла до ключевого слова return, то Promise, возвращённый этой функцией, будет
+              исполнен с теми данными, которые мы возвращаем в инструкции с ключевым словом return.
+              Если возвращаем строку (return 'строка'). то промис будет исполнен и исполнен со
+              строкой 'строка', как данными. Или, если возвращаем объект, будет исполнен с объектом
+              и т.д. <br />
+              Если где-то возникла ошибка, то промис будет отклонён с той ошибкой, которая возникла
+              внутри асинхронной функции.
+            </span>
+            <br />
+          </p>
+
+          <p class="general-issues__paragraph">
+            4. <span class="general-issues__span-purple">asynk</span> (асинхронная) функция ожидает
+            результата инструкции <span class="general-issues__span-purple">await</span> и не
+            выполняет последующие инструкции.
+
+            <span class="general-issues__span-green"
+              >Это очень важно. То есть, если есть инструкция с ключевым словом asynk, дальше
+              функция не будет выполнятся, пока Promise находится в состоянии pending (ожидания). Но
+              при этом, JavaScript может выполнять другие задачи, например, выполнять какие-то
+              действия при нажатии пользователем какой нибудь кнопки в интерфейсе фронт-энд
+              приложения. То есть, это не блокирующее действие. Промис не блокирует выполнение
+              других частей нашего приложения. И только, когда промис будет resolved или rejected,
+              то есть - либо исполнен, либо отклонён, выполнение функции продолжится.<br />
+              Это главное в ASYNK/AWAIT синтаксисе.
+            </span>
+          </p>
         </div>
       </div>
 
@@ -1158,7 +1213,7 @@
         <div class="general-issues__answer" v-if="isQuestion17">
           По сути, Promise - это определённая обёртка над асинхронностью, которая добавляет
           удобство.
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-grey"> Пример 1: промис </span> <br />
             <span class="general-issues__span-purple">
               console.log('Request data...') <br />
@@ -1189,7 +1244,7 @@
             <br />
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-grey"> Пример 2: промис с ошибкой и finally </span>
             <br />
 
@@ -1237,7 +1292,7 @@
             <br />
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-grey"> Пример 3: Функция sleep()</span> <br />
 
             <span class="general-issues__span-purple">
@@ -1259,7 +1314,7 @@
             <br />
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-grey">
               Пример 4: Функция sleep(), Promise.all, Promise.race</span
             >
@@ -1300,7 +1355,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion18">
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red"
               >создаём функцию, которая возвращает промис и которая делает некую искусственную
               задержку
@@ -1349,7 +1404,7 @@
             </span>
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red"> Переводим цепочку промисов в ASYNK/AWAIT </span>
             <br />
             <span class="general-issues__span-purple">
@@ -1379,7 +1434,7 @@
             <br />
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">
               Добавляем конструкцию tru{} catch{} finally{}
             </span>
@@ -1435,14 +1490,6 @@
         <div class="general-issues__answer" v-if="isQuestion20">XXX</div>
       </div>
 
-      <span class="general-issues__span-purple"></span> <br />
-
-      <span class="general-issues__span-green"></span> <br />
-
-      <span class="general-issues__span-red"></span> <br />
-
-      <span class="general-issues__span-grey"></span> <br />
-
       <div>
         <button
           class="general-issues__question"
@@ -1452,7 +1499,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion21">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion21">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1464,7 +1517,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion22">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion22">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1476,7 +1535,12 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion23">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion23"></div>
+        <p class="general-issues__paragraph">xx</p>
+
+        <p class="general-issues__paragraph">xx</p>
+
+        <p class="general-issues__paragraph">xx</p>
       </div>
 
       <div>
@@ -1488,7 +1552,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion24">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion24">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1500,7 +1570,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion25">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion25">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1512,7 +1588,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion26">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion26">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1524,7 +1606,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion27">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion27">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1536,7 +1624,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion28">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion28">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1548,7 +1642,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion29">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion29">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1560,7 +1660,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion30">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion30">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1572,7 +1678,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion31">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion31">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1584,7 +1696,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion32">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion32">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1596,7 +1714,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion33">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion33">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1608,7 +1732,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion34">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion34">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
 
       <div>
@@ -1620,7 +1750,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion35">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion35">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1783,6 +1919,14 @@ export default {
     &:hover {
       color: blue;
     }
+  }
+
+  &__paragraph {
+    display: block;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.86);
+    line-height: 1.5em;
+    margin-top: 24px;
   }
 }
 </style>

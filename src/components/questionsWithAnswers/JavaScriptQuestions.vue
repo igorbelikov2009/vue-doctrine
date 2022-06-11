@@ -9,8 +9,6 @@
     </button>
 
     <div v-if="isJavaScriptQuestions">
-      <a class="general-issues__link" target="_blank" href="">xxx</a>
-
       <div>
         <button
           class="general-issues__question"
@@ -181,36 +179,42 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion60">
-          <span class="general-issues__span">Область видимости</span>
-          — это зона доступности переменных (другого ресурса) в области твоего кода. <br />
-          <br />
+          <p class="general-issues__paragraph">
+            <strong>Область видимости</strong> — это зона доступности переменных (другого ресурса) в
+            области твоего кода.
+          </p>
 
-          <span class="general-issues__span">Глобальной областью видимости</span>
-          считается область за пределами всех функций. Она доступна для любой внутренней или
-          локальной области видимости. Переменные, определенные в глобальной области, могут быть
-          доступны и изменены в любых других областях. <br />
-          <br />
+          <p class="general-issues__paragraph">
+            <strong>Глобальной областью видимости</strong> считается область за пределами всех
+            функций. Она доступна для любой внутренней или локальной области видимости. Переменные,
+            определенные в глобальной области, могут быть доступны и изменены в любых других
+            областях.
+          </p>
 
-          <span class="general-issues__span">Лексическая область</span>
-          означает, что дочерняя область имеет доступ к переменным, определенным в родительской
-          области. Дочерние функции лексически связаны с контекстом исполнения их родителей.
-          Определяется во время написания кода, заботится о том, где была объявлена функция. <br />
-          <br />
+          <p class="general-issues__paragraph">
+            <strong>Лексическая область</strong> означает, что дочерняя область имеет доступ к
+            переменным, определенным в родительской области. Дочерние функции лексически связаны с
+            контекстом исполнения их родителей. Определяется во время написания кода, заботится о
+            том, где была объявлена функция.
+          </p>
 
-          <span class="general-issues__span">Локальная область видимости.</span>
-          Переменные, объявленные внутри функций, становятся локальными для функции и
-          рассматриваются в соответствующей локальной области. Каждая функция имеет свою область
-          видимости. Одна и та же переменная может использоваться в разных функциях, поскольку они
-          связаны с соответствующими функциями и не являются взаимно видимыми. <br />
-          <br />
+          <p class="general-issues__paragraph">
+            <strong>Локальная область видимости.</strong> Переменные, объявленные внутри функций,
+            становятся локальными для функции и рассматриваются в соответствующей локальной области.
+            Каждая функция имеет свою область видимости. Одна и та же переменная может
+            использоваться в разных функциях, поскольку они связаны с соответствующими функциями и
+            не являются взаимно видимыми.
+          </p>
 
-          <span class="general-issues__span">Блочная область видимости</span>
-          Это означает, что переменные объявленные с помощью let и const доступны только внутри
-          блока ({ }). <br />
-          <br />
+          <p class="general-issues__paragraph">
+            <strong>Блочная область видимости</strong>Это означает, что переменные объявленные с
+            помощью let и const доступны только внутри блока ({ }).
+          </p>
 
-          <span class="general-issues__span">Динамическая область</span>
-          Определяется во время выполнения, заботится о том, откуда была вызвана функция.
+          <p class="general-issues__paragraph">
+            <strong>Динамическая область</strong>Определяется во время выполнения, заботится о том,
+            откуда была вызвана функция.
+          </p>
         </div>
       </div>
 
@@ -266,7 +270,7 @@
           @click="isQuestion59 = !isQuestion59"
           :class="{ 'general-issues__question_active': isQuestion59 }"
         >
-          Поднятие (hoisting) var
+          Поднятие переменных и функций (hoisting) var
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion59">
@@ -429,31 +433,61 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion04">
-          В JavaScript есть 8 основных типов. <br />
-          <span class="general-issues__span-green"> - number</span> для любых чисел: целочисленных
-          или чисел с плавающей точкой; целочисленные значения ограничены диапазоном ±(253-1).
-          <br />
-          <span class="general-issues__span-green"> - bigint</span> для целых чисел произвольной
-          длины. <br />
-          <span class="general-issues__span-green"> - string</span> для строк. Строка может
-          содержать ноль или больше символов, нет отдельного символьного типа. <br />
-          <span class="general-issues__span-green"> - boolean</span> для true/false. <br />
-          <span class="general-issues__span-green"> - null</span> для неизвестных значений –
-          отдельный тип, имеющий одно значение null. <br />
-          <span class="general-issues__span-green"> - undefined</span> для неприсвоенных значений –
-          отдельный тип, имеющий одно значение undefined.
-          <br />
-          <span class="general-issues__span-green"> - object</span> для более сложных структур
-          данных. <br />
-          <span class="general-issues__span-green"> - symbol</span> для уникальных идентификаторов.
-          <br />
-          Оператор <span class="general-issues__span-green">typeof</span> позволяет нам увидеть,
-          какой тип данных сохранён в переменной. Имеет две формы:
-          <span class="general-issues__span-green">typeof x или typeof(x). </span>Возвращает строку
-          с именем типа. Например, <span class="general-issues__span-green">"string".</span> Для
-          <span class="general-issues__span-green"> null</span> возвращается
-          <span class="general-issues__span-green">"object"</span> – это ошибка в языке, на самом
-          деле это не объект.
+          <p class="general-issues__paragraph">В JavaScript есть 8 основных типов.</p>
+
+          <p class="general-issues__paragraph">
+            <strong> - number </strong> для любых чисел: целочисленных или чисел с плавающей точкой;
+            целочисленные значения ограничены диапазоном ±(253-1).
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> - bigint </strong> для целых чисел произвольной длины.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> - string </strong> для строк. Строка может содержать ноль или больше символов,
+            нет отдельного символьного типа.
+          </p>
+
+          <p class="general-issues__paragraph"><strong> - boolean</strong> для true/false.</p>
+
+          <p class="general-issues__paragraph">
+            <strong> - null </strong> для неизвестных значений – отдельный тип, имеющий одно
+            значение null.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> - undefined </strong> для неприсвоенных значений – отдельный тип, имеющий одно
+            значение undefined.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> - object </strong> для более сложных структур данных.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> - symbol </strong> для уникальных идентификаторов.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Оператор <strong> typeof </strong> позволяет нам увидеть, какой тип данных сохранён в
+            переменной.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Имеет две формы:
+            <strong> typeof x или typeof(x).</strong>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Возвращает строку с именем типа. Например,
+            <strong>"string".</strong>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Для <strong> null </strong> возвращается <strong> "object" </strong> – это ошибка в
+            языке, на самом деле это не объект.
+          </p>
         </div>
       </div>
 
@@ -467,14 +501,22 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion05">
-          <span class="general-issues__span-green"> undefined - </span> это переменная, которая была
-          объявлена, но у нее нет значения. <br />
-          <span class="general-issues__span-green"> null - </span> отсутствие какого-либо объектного
-          значения переменной. <br />
-          <span class="general-issues__span-green"> undeclared - </span> переменная, объявленная без
-          ключевого слова 'var'. <br />
+          <p class="general-issues__paragraph">
+            <strong> undefined -</strong> это переменная, которая была объявлена, но у нее нет
+            значения.
+          </p>
 
-          Для проверки можно использовать console.log() и typeof.
+          <p class="general-issues__paragraph">
+            <strong> null - </strong> отсутствие какого-либо объектного значения переменной.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> undeclared - </strong> переменная, объявленная без ключевого слова 'var'.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Для проверки можно использовать console.log() и typeof.
+          </p>
         </div>
       </div>
 
@@ -484,7 +526,7 @@
           @click="isQuestion06 = !isQuestion06"
           :class="{ 'general-issues__question_active': isQuestion06 }"
         >
-          Ложноподобное (falsy) значение
+          Какие значения в JavaScript являются ложными (falsy)?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion06">
@@ -492,32 +534,50 @@
             class="general-issues__link"
             target="_blank"
             href="https://developer.mozilla.org/ru/docs/Glossary/Falsy"
-            >Ложноподобное (falsy) значение</a
+            >Ложное (falsy) значение</a
           >
           — значение, которое становится false в булевом контексте. JavaScript использует
           преобразование типов, чтобы привести значение к булевому типу, там, где это требуется
           (например, в условных конструкциях и циклах. <br />
-          <span class="general-issues__span-green"> false </span>
-          Ключевое слово false. <br />
-          <span class="general-issues__span-green">0 </span>
-          Ноль Number (к нему также относятся 0.0, 0x0 и т.д.). <br />
-          <span class="general-issues__span-green">-0 </span>
-          Отрицательный ноль типа Number (к нему также относятся -0.0, -0x0 и т.д.). <br />
-          <span class="general-issues__span-green">0n</span>
-          Ноль типа BigInt (также 0x0n). Обратите внимание, что не может быть негативного нуля типа
-          BigInt — отрицательный 0n равняется 0n. <br />
-          <span class="general-issues__span-green">"", '', ``</span>
-          Значение, содержащее пустую строку . <br />
-          <span class="general-issues__span-green">null</span>
-          null — отсутствие какого-либо значения. <br />
-          <span class="general-issues__span-green">undefined</span>
-          undefined — примитивное значение. <br />
-          <span class="general-issues__span-green">NaN</span>
-          (en-US) NaN — значение, не являющиеся числом. <br />
-          <span class="general-issues__span-green">document.all</span>
-          Объекты считаются ложноподобными тогда и только тогда, когда у них есть внутренний слот
-          [[IsHTMLDDA]]. Этот слот есть только в объекте document.all, и его задать через
-          JavaScript.
+
+          <p class="general-issues__paragraph"><strong> false </strong> Ключевое слово false.</p>
+
+          <p class="general-issues__paragraph">
+            <strong> 0 </strong> - Ноль Number (к нему также относятся 0.0, 0x0 и т.д.).
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> -0 </strong> - Отрицательный ноль типа Number (к нему также относятся -0.0,
+            -0x0 и т.д.).
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> 0n </strong> - Ноль типа BigInt (также 0x0n). Обратите внимание, что не может
+            быть негативного нуля типа BigInt — отрицательный 0n равняется 0n.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> "", '', `` </strong> - Значение, содержащее пустую строку.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong>null</strong> - null — отсутствие какого-либо значения.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> undefined </strong> - undefined — примитивное значение, переменная, не имеющая
+            присвоенного значения.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> NaN </strong> - (en-US) NaN — значение, не являющиеся числом.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong> document.all </strong> Объекты считаются ложноподобными тогда и только тогда,
+            когда у них есть внутренний слот [[IsHTMLDDA]]. Этот слот есть только в объекте
+            document.all, и его задать через JavaScript.
+          </p>
         </div>
       </div>
 
@@ -709,17 +769,10 @@
           @click="isQuestion17 = !isQuestion17"
           :class="{ 'general-issues__question_active': isQuestion17 }"
         >
-          CSS: полное руководство по функции calc()
+          xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion17">
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://habr.com/ru/company/ruvds/blog/493660/"
-            >CSS: полное руководство по функции calc()</a
-          >
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion17">xxx</div>
       </div>
       <!--  -->
 
@@ -1116,7 +1169,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion52">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion52">
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1303,6 +1362,14 @@ export default {
     &:hover {
       color: blue;
     }
+  }
+
+  &__paragraph {
+    display: block;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.86);
+    line-height: 1.5em;
+    margin-top: 24px;
   }
 }
 </style>

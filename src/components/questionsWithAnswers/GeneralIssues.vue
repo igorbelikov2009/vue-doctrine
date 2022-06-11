@@ -1122,7 +1122,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion59">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion59">
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1301,6 +1307,14 @@ export default {
     &:hover {
       color: blue;
     }
+  }
+
+  &__paragraph {
+    display: block;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.86);
+    line-height: 1.5em;
+    margin-top: 24px;
   }
 }
 </style>

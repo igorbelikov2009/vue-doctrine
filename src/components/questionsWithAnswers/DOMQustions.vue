@@ -20,17 +20,23 @@
 
         <div class="general-issues__answer" v-if="isQuestion01">
           DOM (Document Object Model, объектная модель документа) — это программный интерфейс к
-          HTML-документам, который позволяет воздействовать на документ из скриптов, меняя его
-          стили, содержимое. В DOM документ представлен в виде дерева узлов. <br />
+          HTML-документам. Этот интерфейс позволяет воздействовать на документ из скриптов, меняя
+          его оформление, стили, содержимое. В DOM документ представлен в виде дерева узлов. <br />
+          <br />
           Объект <span class="general-issues__span-green"> document </span>– основная «входная
           точка». С его помощью мы можем что-то создавать или менять на странице. <br />
 
-          <span class="general-issues__span-purple">
+          <span class="general-issues__span-grey">
             // заменим цвет фона на красный, <br />
-            document.body.style.background = "red"; <br />
+            <span class="general-issues__span-purple">
+              document.body.style.background = "red";
+            </span>
+            <br />
             <br />
             // а через секунду вернём как было <br />
-            setTimeout(() => document.body.style.background = "", 1000);
+            <span class="general-issues__span-purple">
+              setTimeout(() => document.body.style.background = "", 1000);</span
+            >
           </span>
         </div>
       </div>
@@ -1096,7 +1102,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion60">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion60">
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1260,6 +1272,14 @@ export default {
     font-weight: inherit;
   }
 
+  // general-issues__span-grey
+  &__span-grey {
+    color: grey;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
   // general-issues__span-purple
   &__span-purple {
     color: purple;
@@ -1280,6 +1300,14 @@ export default {
     &:hover {
       color: blue;
     }
+  }
+
+  &__paragraph {
+    display: block;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.86);
+    line-height: 1.5em;
+    margin-top: 24px;
   }
 }
 </style>

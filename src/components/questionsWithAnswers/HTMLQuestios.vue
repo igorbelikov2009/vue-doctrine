@@ -2,28 +2,37 @@
   <div>
     <button
       class="general-issues__button"
-      @click="isThirtyFiveQustions = !isThirtyFiveQustions"
-      :class="{ 'general-issues__button_active': isThirtyFiveQustions }"
+      @click="isHTMLQustions = !isHTMLQustions"
+      :class="{ 'general-issues__button_active': isHTMLQustions }"
     >
-      Тридцать пять вопросов
+      Вопросы по HTML
     </button>
 
-    <div v-if="isThirtyFiveQustions">
+    <div v-if="isHTMLQustions">
       <div>
         <button
           class="general-issues__question"
           @click="isQuestion01 = !isQuestion01"
           :class="{ 'general-issues__question_active': isQuestion01 }"
         >
-          xxx
+          Какая разница между элементами &lt;span&gt; и &lt;div&gt;?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion01">
-          <p class="general-issues__paragraph">xxx</p>
+          <p class="general-issues__paragraph">
+            <strong> &lt;span&gt; </strong> — это строчный (inline) элемент. <br />
+            <strong> &lt;div&gt; </strong> — это блочный (block) элемент.
+          </p>
 
-          <p class="general-issues__paragraph">xxx</p>
+          <p class="general-issues__paragraph">
+            Элементы &lt;div&gt;нужно использовать для оформления разделов документа. А элементы
+            &lt;span&gt; — в роли контейнеров для небольших объёмов текста, для изображений и других
+            подобных элементов страниц.
+          </p>
 
-          <p class="general-issues__paragraph">xxx</p>
+          <p class="general-issues__paragraph">
+            Надо отметить, что нельзя помещать блочные элементы в строчные.
+          </p>
         </div>
       </div>
 
@@ -33,15 +42,31 @@
           @click="isQuestion02 = !isQuestion02"
           :class="{ 'general-issues__question_active': isQuestion02 }"
         >
-          xxx
+          Что такое мета-теги?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion02">
-          <p class="general-issues__paragraph">xxx</p>
+          <p class="general-issues__paragraph">
+            Мета-теги — это теги, находящиеся в теге страницы &lt;head&gt; и описывающие содержимое
+            страницы. Мета-теги не выводятся на странице. Они имеются лишь в её коде.
+          </p>
 
-          <p class="general-issues__paragraph">xxx</p>
+          <p class="general-issues__paragraph">
+            Их основная задача заключается в том, чтобы кратко описывать содержимое страниц
+            поисковым системам. Вот пример:
+          </p>
 
-          <p class="general-issues__paragraph">xxx</p>
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              &lt;head&gt; <br />
+              &lt;meta charset="UTF-8"&gt; <br />
+              &lt;meta name="description" content="Description search engines use"&gt; <br />
+              &lt;meta name="keywords" content="Keywords, of, your, page"&gt; <br />
+              &lt;meta name="author" content="Me"&gt; <br />
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; <br />
+              &lt;/head&gt;
+            </span>
+          </p>
         </div>
       </div>
 
@@ -645,11 +670,11 @@
 
 <script>
 export default {
-  name: 'ThirtyFiveQustions',
+  name: 'HTMLQuestios',
 
   data() {
     return {
-      isThirtyFiveQustions: false,
+      isHTMLQustions: false,
 
       isQuestion01: false,
       isQuestion02: false,
