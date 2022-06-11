@@ -136,34 +136,6 @@
           <strong>git merge branch-name</strong> — совмещает текущую ветку с branch-name
         </blockquote>
       </div>
-      <!-- 
-      <div>
-        <h3 class="github__subheading">x</h3>
-
-        <p class="github__paradraph">- x</p>
-
-        <blockquote class="github__blockquote">
-          <strong>x</strong> — x <br />
-          <strong>x</strong> — x <br />
-          <strong>x</strong> — x <br />
-        </blockquote>
-      </div>
-
-      <div>
-        <h3 class="github__subheading">x</h3>
-
-        <p class="github__paradraph">- x</p>
-
-        <blockquote class="github__blockquote"><strong>x</strong> — x</blockquote>
-      </div>
-
-      <div>
-        <h3 class="github__subheading">x</h3>
-
-        <p class="github__paradraph">- x</p>
-
-        <blockquote class="github__blockquote"><strong>x</strong> — x</blockquote>
-      </div> -->
     </div>
   </div>
 </template>

@@ -18,7 +18,7 @@
 
     <Promise />
 
-    <!-- <ThirtyFiveQustions /> -->
+    <ThirtyFiveQustions />
 
     <!-- <div id="general-issues-task">
       <button
@@ -80,11 +80,11 @@ export default {
     GeneralIssues,
     CSSQuestions,
     JavaScriptQuestions,
-    ThirtyFiveQustions,
     DOMQustions,
     HTTPRequestMethods,
     JSONQuestions,
     Promise,
+    ThirtyFiveQustions,
   },
 }
 </script>

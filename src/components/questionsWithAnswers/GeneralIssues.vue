@@ -12,6 +12,116 @@
       <div>
         <button
           class="general-issues__question"
+          @click="isQuestion60 = !isQuestion60"
+          :class="{ 'general-issues__question_active': isQuestion60 }"
+        >
+          Статьи по сайтостроению
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion60">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://webformyself.com/category/javascriptajax-2/javascriptajax/"
+            >Статьи по сайтостроению(много)</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion36 = !isQuestion36"
+          :class="{ 'general-issues__question_active': isQuestion36 }"
+        >
+          HTML, CSS, JavaScript, jQuery справочник
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion36">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://basicweb.ru/html/html_tags.php"
+            >HTML, CSS, JavaScript, jQuery справочник</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion37 = !isQuestion37"
+          :class="{ 'general-issues__question_active': isQuestion37 }"
+        >
+          htmlbook
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion37">
+          <a class="general-issues__link" target="_blank" href="http://htmlbook.ru/html/attr/hidden"
+            >htmlbook</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion38 = !isQuestion38"
+          :class="{ 'general-issues__question_active': isQuestion38 }"
+        >
+          figma.com
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion38">
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://www.figma.com/file/E1ctRoFLkYECcIDJgWDXK8Sv/Web-%E2%80%A2-Alpha?node-id=0%3A1"
+            >Alpha</a
+          >
+
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://www.figma.com/file/1ROI5eUMFVLsyKHxRUCwE5/NPF-%E2%80%A2-Renpensions-site?node-id=0%3A1634"
+            >NPF</a
+          >
+
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://www.figma.com/file/R82Jy7NiMWrP7VHVn8Paqp/%D0%A6%D0%B0%D1%80%D1%8C-%D0%BB%D0%B5%D0%BD%D0%B4%D0%BE%D1%81-1.1?node-id=216%3A468"
+            >Царь-лендос</a
+          >
+
+          <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://www.figma.com/file/8JLUz1mZDIMkE8BvTumzdd/Untitled?node-id=0%3A1"
+            >Южный банк</a
+          >
+
+          <a class="general-issues__link" target="_blank" href="">xxx</a>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion38 = !isQuestion38"
+          :class="{ 'general-issues__question_active': isQuestion38 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion38">
+          <a class="general-issues__link" target="_blank" href="">xxx</a>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
           @click="isQuestion01 = !isQuestion01"
           :class="{ 'general-issues__question_active': isQuestion01 }"
         >
@@ -350,14 +460,14 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion10">
-          <span class=" general-issues__span-green">Каскадная таблица стилей (CSS)</span>
+          <span class="general-issues__span-green">Каскадная таблица стилей (CSS)</span>
           формально является набором команд и инструментов для работы с внешним видом веб-страницы.
           Она делает интерфейс более восприимчивым и приятным – огромное количество сайтов работает
           на основе связки HTML и CSS. Как и в случае с языками программирования, существует
           множество готовых библиотек CSS, созданных профессионалами для удобства работы со стилями.
           <br />
           <br />
-          <span class=" general-issues__span-green">CSS-фреймворк</span>
+          <span class="general-issues__span-green">CSS-фреймворк</span>
           — фреймворк, созданный для упрощения работы верстальщика, быстроты разработки и исключения
           максимально возможного числа ошибок вёрстки (проблемы совместимости различных версий
           браузеров и т. д.). Готовые к использованию классы являются их основными строительными
@@ -544,9 +654,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion17">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion17">XXX</div>
       </div>
 
       <div>
@@ -558,9 +666,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion18">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion18">XXX</div>
       </div>
 
       <div>
@@ -572,9 +678,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion19">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion19">XXX</div>
       </div>
 
       <div>
@@ -586,9 +690,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion20">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion20">XXX</div>
       </div>
 
       <div>
@@ -600,9 +702,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion21">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion21">XXX</div>
       </div>
 
       <div>
@@ -614,9 +714,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion22">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion22">XXX</div>
       </div>
 
       <div>
@@ -628,9 +726,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion23">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion23">XXX</div>
       </div>
 
       <div>
@@ -642,9 +738,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion24">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion24">XXX</div>
       </div>
 
       <div>
@@ -656,9 +750,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion25">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion25">XXX</div>
       </div>
 
       <div>
@@ -670,9 +762,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion26">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion26">XXX</div>
       </div>
 
       <div>
@@ -684,9 +774,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion27">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion27">XXX</div>
       </div>
 
       <div>
@@ -698,9 +786,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion28">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion28">XXX</div>
       </div>
 
       <div>
@@ -712,9 +798,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion29">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion29">XXX</div>
       </div>
 
       <div>
@@ -726,9 +810,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion30">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion30">XXX</div>
       </div>
 
       <div>
@@ -740,9 +822,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion31">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion31">XXX</div>
       </div>
 
       <div>
@@ -754,9 +834,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion32">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion32">XXX</div>
       </div>
 
       <div>
@@ -768,9 +846,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion33">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion33">XXX</div>
       </div>
 
       <div>
@@ -782,9 +858,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion34">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion34">XXX</div>
       </div>
 
       <div>
@@ -796,51 +870,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion35">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion36 = !isQuestion36"
-          :class="{ 'general-issues__question_active': isQuestion36 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion36">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion37 = !isQuestion37"
-          :class="{ 'general-issues__question_active': isQuestion37 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion37">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion38 = !isQuestion38"
-          :class="{ 'general-issues__question_active': isQuestion38 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion38">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion35">XXX</div>
       </div>
 
       <div>
@@ -852,9 +882,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion39">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion39">XXX</div>
       </div>
 
       <div>
@@ -866,9 +894,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion40">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion40">XXX</div>
       </div>
 
       <div>
@@ -880,9 +906,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion41">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion41">XXX</div>
       </div>
 
       <div>
@@ -894,9 +918,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion42">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion42">XXX</div>
       </div>
 
       <div>
@@ -908,9 +930,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion43">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion43">XXX</div>
       </div>
 
       <div>
@@ -922,9 +942,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion44">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion44">XXX</div>
       </div>
 
       <div>
@@ -936,9 +954,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion45">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion45">XXX</div>
       </div>
 
       <div>
@@ -950,9 +966,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion46">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion46">XXX</div>
       </div>
 
       <div>
@@ -964,9 +978,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion47">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion47">XXX</div>
       </div>
 
       <div>
@@ -978,9 +990,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion48">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion48">XXX</div>
       </div>
 
       <div>
@@ -992,9 +1002,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion49">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion49">XXX</div>
       </div>
 
       <div>
@@ -1006,9 +1014,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion50">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion50">XXX</div>
       </div>
 
       <div>
@@ -1020,9 +1026,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion51">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion51">XXX</div>
       </div>
 
       <div>
@@ -1034,9 +1038,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion52">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion52">XXX</div>
       </div>
 
       <div>
@@ -1048,9 +1050,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion53">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion53">XXX</div>
       </div>
 
       <div>
@@ -1062,9 +1062,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion54">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion54">XXX</div>
       </div>
 
       <div>
@@ -1076,9 +1074,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion55">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion55">XXX</div>
       </div>
 
       <div>
@@ -1090,9 +1086,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion56">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion56">XXX</div>
       </div>
 
       <div>
@@ -1104,9 +1098,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion57">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion57">XXX</div>
       </div>
 
       <div>
@@ -1118,9 +1110,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion58">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion58">XXX</div>
       </div>
 
       <div>
@@ -1132,23 +1122,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion59">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion60 = !isQuestion60"
-          :class="{ 'general-issues__question_active': isQuestion60 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion60">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion59">XXX</div>
       </div>
     </div>
   </div>
@@ -1292,7 +1266,16 @@ export default {
 
   // general-issues__link
   &__link {
+    display: block;
+    font-size: 19px;
+    line-height: 1.5em;
+    color: #2a5885;
     text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: blue;
+    }
   }
 }
 </style>
