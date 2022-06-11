@@ -205,9 +205,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion05">
-          xxx
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion05">xxx</div>
       </div>
 
       <div>
@@ -219,9 +217,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion06">
-          xxxx
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion06">xxxx</div>
       </div>
 
       <span class="general-issues__span-red"></span>
@@ -241,9 +237,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion07">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion07">XXX</div>
       </div>
 
       <div>
@@ -255,9 +249,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion08">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion08">XXX</div>
       </div>
 
       <div>
@@ -269,9 +261,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion09">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion09">XXX</div>
       </div>
 
       <div>
@@ -283,9 +273,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion10">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion10">XXX</div>
       </div>
 
       <div>
@@ -312,9 +300,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion12">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion12">XXX</div>
       </div>
 
       <div>
@@ -326,9 +312,7 @@
           Xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion13">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion13">XXX</div>
       </div>
 
       <div>
@@ -340,9 +324,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion14">
-          xxxx
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion14">xxxx</div>
       </div>
 
       <div>
@@ -354,9 +336,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion15">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion15">XXX</div>
       </div>
 
       <div>
@@ -368,9 +348,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion16">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion16">XXX</div>
       </div>
 
       <div>
@@ -382,9 +360,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion17">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion17">XXX</div>
       </div>
 
       <div>
@@ -396,9 +372,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion18">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion18">XXX</div>
       </div>
 
       <div>
@@ -410,9 +384,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion19">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion19">XXX</div>
       </div>
 
       <div>
@@ -424,9 +396,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion20">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion20">XXX</div>
       </div>
 
       <div>
@@ -438,9 +408,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion21">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion21">XXX</div>
       </div>
 
       <div>
@@ -452,9 +420,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion22">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion22">XXX</div>
       </div>
 
       <div>
@@ -466,9 +432,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion23">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion23">XXX</div>
       </div>
 
       <div>
@@ -480,9 +444,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion24">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion24">XXX</div>
       </div>
 
       <div>
@@ -494,9 +456,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion25">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion25">XXX</div>
       </div>
 
       <div>
@@ -508,9 +468,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion26">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion26">XXX</div>
       </div>
 
       <div>
@@ -522,9 +480,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion27">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion27">XXX</div>
       </div>
 
       <div>
@@ -536,9 +492,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion28">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion28">XXX</div>
       </div>
 
       <div>
@@ -550,9 +504,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion29">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion29">XXX</div>
       </div>
 
       <div>
@@ -564,9 +516,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion30">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion30">XXX</div>
       </div>
 
       <div>
@@ -578,9 +528,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion31">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion31">XXX</div>
       </div>
 
       <div>
@@ -592,9 +540,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion32">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion32">XXX</div>
       </div>
 
       <div>
@@ -606,9 +552,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion33">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion33">XXX</div>
       </div>
 
       <div>
@@ -620,9 +564,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion34">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion34">XXX</div>
       </div>
 
       <div>
@@ -634,9 +576,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion35">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion35">XXX</div>
       </div>
     </div>
   </div>
@@ -742,7 +682,7 @@ export default {
   }
 
   &__answer {
-    font-size: 14px;
+    font-size: 19px;
     line-height: 24px;
     margin-left: 24px;
   }
@@ -750,41 +690,55 @@ export default {
   // general-issues__span
   &__span {
     color: black;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  // general-issues__span-grey
-  &__span-grey {
-    color: #605858;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  // general-issues__span-green
-  &__span-green {
-    color: green;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__span-red
   &__span-red {
     color: red;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-green
+  &__span-green {
+    color: green;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__span-purple
   &__span-purple {
     color: purple;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-grey
+  &__span-grey {
+    color: #605858;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__link
   &__link {
+    display: block;
+    font-size: 19px;
+    line-height: 1.5em;
+    color: #2a5885;
     text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: blue;
+    }
   }
 }
 </style>

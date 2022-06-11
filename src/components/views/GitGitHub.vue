@@ -161,7 +161,7 @@
           <strong>git branch </strong> — показывает список веток и выделяет действующую ветку
           зелёным цветом. <br />
 
-          <strong>git branch branch-name branch-name</strong> — создает новую ветку. <br />
+          <strong>git branch branch-name </strong> — создает новую ветку. <br />
 
           <strong>git branch -D branch-name </strong> — удаляет ветку branch-name. Для этого,
           предварительно, нужно выйти с этой ветки.

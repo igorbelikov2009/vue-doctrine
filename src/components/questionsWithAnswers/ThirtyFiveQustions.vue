@@ -535,28 +535,63 @@ export default {
   }
 
   &__answer {
-    font-size: 14px;
+    font-size: 19px;
     line-height: 24px;
     margin-left: 24px;
+  }
+
+  // general-issues__span
+  &__span {
+    color: black;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-red
+  &__span-red {
+    color: red;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__span-green
   &__span-green {
     color: green;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__span-purple
   &__span-purple {
     color: purple;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-grey
+  &__span-grey {
+    color: #605858;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__link
   &__link {
+    display: block;
+    font-size: 19px;
+    line-height: 1.5em;
+    color: #2a5885;
     text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: blue;
+    }
   }
 }
 </style>

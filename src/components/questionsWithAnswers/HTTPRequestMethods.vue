@@ -499,13 +499,9 @@
             данных multipart/form-data, что позволяет передавать файлы.
           </p>
 
-          <h4>
-            Ещё раз коротко
-          </h4>
+          <h4>Ещё раз коротко</h4>
 
-          <h5>
-            GET
-          </h5>
+          <h5>GET</h5>
 
           <p>
             - Фильтры в интернет-магазинах <br />
@@ -513,9 +509,7 @@
             - Другие безопасные запросы
           </p>
 
-          <h5>
-            POST
-          </h5>
+          <h5>POST</h5>
 
           <p>
             - Любые формы с паролями или банковскими картами <br />
@@ -736,9 +730,7 @@
             -
           </p>
 
-          <h4>
-            Установка
-          </h4>
+          <h4>Установка</h4>
 
           <p>
             <span class="general-issues__span-grey">Используя npm:</span> <br />
@@ -790,9 +782,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion16">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion16">XXX</div>
       </div>
 
       <p>
@@ -814,9 +804,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion18">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion18">XXX</div>
       </div>
 
       <div>
@@ -828,9 +816,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion19">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion19">XXX</div>
       </div>
 
       <div>
@@ -842,9 +828,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion20">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion20">XXX</div>
       </div>
 
       <div>
@@ -856,9 +840,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion21">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion21">XXX</div>
       </div>
 
       <div>
@@ -870,9 +852,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion22">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion22">XXX</div>
       </div>
 
       <div>
@@ -884,9 +864,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion23">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion23">XXX</div>
       </div>
 
       <div>
@@ -898,9 +876,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion24">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion24">XXX</div>
       </div>
 
       <div>
@@ -912,9 +888,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion25">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion25">XXX</div>
       </div>
 
       <div>
@@ -926,9 +900,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion26">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion26">XXX</div>
       </div>
 
       <div>
@@ -940,9 +912,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion27">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion27">XXX</div>
       </div>
 
       <div>
@@ -954,9 +924,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion28">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion28">XXX</div>
       </div>
 
       <div>
@@ -968,9 +936,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion29">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion29">XXX</div>
       </div>
 
       <div>
@@ -982,9 +948,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion30">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion30">XXX</div>
       </div>
 
       <div>
@@ -996,9 +960,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion31">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion31">XXX</div>
       </div>
 
       <div>
@@ -1010,9 +972,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion32">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion32">XXX</div>
       </div>
 
       <div>
@@ -1024,9 +984,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion33">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion33">XXX</div>
       </div>
 
       <div>
@@ -1038,9 +996,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion34">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion34">XXX</div>
       </div>
 
       <div>
@@ -1052,9 +1008,7 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion35">
-          XXX
-        </div>
+        <div class="general-issues__answer" v-if="isQuestion35">XXX</div>
       </div>
     </div>
   </div>
@@ -1185,7 +1139,7 @@ export default {
   }
 
   &__answer {
-    font-size: 14px;
+    font-size: 19px;
     line-height: 24px;
     margin-left: 24px;
   }
@@ -1193,41 +1147,55 @@ export default {
   // general-issues__span
   &__span {
     color: black;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  // general-issues__span-grey
-  &__span-grey {
-    color: #605858;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  // general-issues__span-green
-  &__span-green {
-    color: green;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__span-red
   &__span-red {
     color: red;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-green
+  &__span-green {
+    color: green;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__span-purple
   &__span-purple {
     color: purple;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-grey
+  &__span-grey {
+    color: #605858;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__link
   &__link {
+    display: block;
+    font-size: 19px;
+    line-height: 1.5em;
+    color: #2a5885;
     text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: blue;
+    }
   }
 }
 </style>
