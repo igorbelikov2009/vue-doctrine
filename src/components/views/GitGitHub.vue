@@ -269,6 +269,14 @@
         <p class="github__paradraph">
           - Заливает текущие локальные коммиты в удаленный репозиторий
         </p>
+
+        <blockquote class="github__blockquote">
+          <strong>git push --set-upstream origin evgeniy</strong>
+
+          <p class="github__paradraph">
+            - Заливает текущие локальные коммиты в удаленный репозиторий от ветки с именем evgeniy
+          </p>
+        </blockquote>
       </div>
 
       <div>
