@@ -78,7 +78,11 @@
 
         <router-link class="sidebar__link" :to="{ name: 'github' }">Git и Github </router-link>
 
-        <router-link class="sidebar__link" :to="{ name: 'VueLinks' }">Vue ссылки </router-link>
+        <router-link class="sidebar__link" :to="{ name: 'LinksVue' }">Ссылки на Vue </router-link>
+
+        <router-link class="sidebar__link" :to="{ name: 'LinksJavaScript' }"
+          >Ссылки на JavaScript</router-link
+        >
 
         <router-link class="sidebar__link" :to="{ name: 'UsefulLinks' }"
           >Браузерные ссылки с компьютера</router-link

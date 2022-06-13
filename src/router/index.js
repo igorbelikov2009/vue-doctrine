@@ -21,8 +21,9 @@ import FunctionalExpressionPage from '@/components/views/FunctionalExpressionPag
 import OperatorPage from '@/components/views/OperatorPage.vue'
 import ProcessingErrorsPage from '@/components/views/ProcessingErrorsPage.vue'
 import GitGitHub from '@/components/views/GitGitHub.vue'
-import UsefulLinks from '../components/views/UsefulLinks.vue'
-import VueLinks from '../components/views/VueLinks.vue'
+import UsefulLinks from '@/components/views/UsefulLinks.vue'
+import LinksJavaScript from '@/components/views/LinksJavaScript.vue'
+import LinksVue from '@/components/views/LinksVue.vue'
 
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
@@ -133,10 +134,16 @@ const routes = [
     component: GitGitHub,
   },
   {
-    path: '/vuelinks',
-    name: 'VueLinks',
-    component: VueLinks,
+    path: '/linksvue',
+    name: 'LinksVue',
+    component: LinksVue,
   },
+  {
+    path: '/linksjavascript',
+    name: 'LinksJavaScript',
+    component: LinksJavaScript,
+  },
+
   {
     path: '/usefullinks',
     name: 'UsefulLinks',
