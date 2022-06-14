@@ -74,7 +74,11 @@
           </p>
 
           <div class="general-issues__images">
-            <img class="general-issues__img" src="/images/doctrine/promises-block.png" alt="" />
+            <img
+              class="general-issues__img-promise"
+              src="/images/doctrine/promises-block.png"
+              alt=""
+            />
           </div>
 
           <p class="general-issues__paragraph"></p>
@@ -2170,7 +2174,7 @@ export default {
     width: calc(100% - 72px);
   }
 
-  &__img {
+  &__img-promise {
     width: 100%;
     aspect-ratio: 700 / 375;
   }
