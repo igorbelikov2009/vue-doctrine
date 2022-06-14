@@ -15,37 +15,73 @@
           @click="isQuestion01 = !isQuestion01"
           :class="{ 'general-issues__question_active': isQuestion01 }"
         >
-          Что такое JSON
+          Что такое <strong>JSON</strong>
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion01">
-          JSON (JavaScriptObjectNotation) - способ записи объектов в JavaScript, строковое
-          представление объекта. JSON используется (в основном) для передачи данных между сервером и
-          клиентом. <br />
+          <p class="general-issues__paragraph">
+            JSON (JavaScriptObjectNotation) - <strong>способ записи объектов в JavaScript</strong>,
+            строковое представление объекта.
+          </p>
 
-          JSON имеет структуру ключ-значение { <br />
-          "ключ1": "значение1", <br />
-          "ключ2": "значение2", <br />
-          "ключ3": "значение3", <br />
-          } <br />
+          <p class="general-issues__paragraph">
+            JSON <strong> используется</strong> (в основном) для передачи (обмена) данных между
+            сервером и клиентом. При отправке данных на сервер и наоборот данные должны быть в
+            текстовом формате.
+          </p>
 
-          <span class="general-issues__span-red">ключи</span> должны быть строками, в ковычках ""
-          <br />
+          <p class="general-issues__paragraph">
+            JSON — это <strong> текстовый формат</strong>, который позволяет отправлять данные на
+            сервер и данные с сервера в браузер. JSON поддерживается почти всеми языками
+            программирования, поэтому его можно использовать и с другими языками.
+          </p>
 
-          Доступные типы для значений: <br />
-          - массив простых или не простых значений <br />
-          - объект <br />
-          - число <br />
-          - строка <br />
-          - логическое значение <br />
-          - null <br />
+          <p class="general-issues__paragraph">
+            JSON имеет структуру <strong>ключ-значение</strong> { <br />
+            "ключ1": "значение1", <br />
+            "ключ2": "значение2", <br />
+            "ключ3": "значение3", <br />
+            } <br />
 
-          Объект JSON
-          <span class="general-issues__span-red">заключён в фигурные скобки {} </span> <br />
+            <strong>ключи</strong> должны быть строками, в ковычках ""
+          </p>
 
-          <span class="general-issues__span-red"></span> <br />
+          <p class="general-issues__paragraph">
+            Например, вот объект JSON: <br />
+            <span class="general-issues__span-purple">
+              { <br />
+              'name': 'Matt', <br />
+              'address': 'Imaginary Road 22', <br />
+              'age': 32, <br />
+              'married': false, <br />
+              'hobbies': ['Jogging', 'Tennis', 'Padel'] <br />
+              }
+            </span>
+          </p>
 
-          <span class="general-issues__span-red"></span> <br />
+          <p class="general-issues__paragraph">
+            <strong> Доступные типы для значений: </strong> <br />
+            - массив простых или не простых значений <br />
+            - объект <br />
+            - число <br />
+            - строка <br />
+            - логическое значение <br />
+            - null
+          </p>
+
+          <p class="general-issues__paragraph"><strong>Правила синтаксиса для JSON:</strong></p>
+
+          <p class="general-issues__paragraph">- Данные находятся в парах ключ-значение.</p>
+
+          <p class="general-issues__paragraph">- Данные разделяются запятыми.</p>
+
+          <p class="general-issues__paragraph">- Фигурные скобки определяют объект.</p>
+
+          <p class="general-issues__paragraph">- Квадратные скобки определяют массив.</p>
+
+          <p class="general-issues__paragraph">
+            - Объект JSON заключён в фигурные скобки <strong> {}</strong>
+          </p>
         </div>
       </div>
 
@@ -55,30 +91,38 @@
           @click="isQuestion02 = !isQuestion02"
           :class="{ 'general-issues__question_active': isQuestion02 }"
         >
-          Метод JSON.stringify()
+          Зачем использовать <strong> метод JSON.stringify()</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion02">
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"
-          >
-            Метод JSON.stringify()</a
-          >
+          <p class="general-issues__paragraph">
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"
+            >
+              <strong>Метод JSON.stringify()</strong></a
+            >
+          </p>
 
-          переводит переданный объект или значение JavaScript в строку JSON. <br />
-          <span class="general-issues__span-purple">
-            let obj = { <br />
-            prop1: 'строка1', <br />
-            id: 123, <br />
-            check: false, <br />
-            } <br />
-          </span>
+          <p class="general-issues__paragraph">
+            Когда вы отправляете данные на сервер, это должна быть строка. Метод JSON.stringify()
+            преобразует переданный объект или значение JavaScript в строку JSON.
+          </p>
 
-          <span class="general-issues__span-green"
-            >console.log(JSON.stringify(obj)) {"prop1":"строка1","id":123,"check":false}</span
-          >
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              let dataJSON = {name: "Matt", age: 51}; <br />
+              let dataString = JSON.stringify(dataJSON);
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-green"
+              >console.log(dataString); <br />
+              '{"name":"Matt","age":51}'
+            </span>
+          </p>
         </div>
       </div>
 
@@ -88,66 +132,72 @@
           @click="isQuestion04 = !isQuestion04"
           :class="{ 'general-issues__question_active': isQuestion04 }"
         >
-          Правила маппинга в JSON.stringify
+          <strong>Правила маппинга</strong> в JSON.stringify
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion04">
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://chernobrovov.ru/articles/big-data-mapping-chto-takoe-mappirovanie-bolshih-dannyh.html"
-            >Правило маппинга</a
-          >
-          проверяет если ключ (наименование свойства) <br />
-          <span class="general-issues__span"> пример 1</span> <br />
+          <p class="general-issues__paragraph">
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://chernobrovov.ru/articles/big-data-mapping-chto-takoe-mappirovanie-bolshih-dannyh.html"
+              ><strong>Правила маппинга</strong></a
+            >
+          </p>
 
-          <span class="general-issues__span-purple">
-            let obj1 = { <br />
-            property1: 'строка1', <br />
-            property2: { <br />
-            property6: false, <br />
-            }, <br />
-            property5: [1, 2, 3, 4], <br />
-            } <br />
+          <p class="general-issues__paragraph">
+            Правило маппинга проверяет если ключ (наименование свойства) <br />
+            <span class="general-issues__span"> пример 1</span> <br />
 
-            let JSONstr = JSON.stringify(obj1, ['property5'])
-          </span>
-          <br />
+            <span class="general-issues__span-purple">
+              let obj1 = { <br />
+              property1: 'строка1', <br />
+              property2: { <br />
+              property6: false, <br />
+              }, <br />
+              property5: [1, 2, 3, 4], <br />
+              } <br />
 
-          <span class="general-issues__span-green">
-            console.log(JSONstr) {"property5":[1,2,3,4]}</span
-          >
-          <br />
+              let stringJSON = JSON.stringify(obj1, ['property5'])
+            </span>
+            <br />
 
-          <span class="general-issues__span"> пример 2 </span> <br />
+            <span class="general-issues__span-green">
+              console.log(stringJSON) {"property5":[1,2,3,4]}</span
+            >
+          </p>
 
-          <span class="general-issues__span-purple">
-            let obj1 = { <br />
-            property1: 'строка1', <br />
-            property2: { <br />
-            property6: false, <br />
-            }, <br />
-            property5: [1, 2, 3, 4], <br />
-            } <br />
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span"> пример 2 </span> <br />
 
-            let JSONstr = JSON.stringify(obj1, function replacer(key, value) { <br />
-            console.log(`key = ${key} value = ${value}`) <br />
-            if (key !== 'property5') { <br />
-            return value <br />
-            } <br />
-            }) <br />
-            console.log(JSONstr)
-          </span>
-          <br />
-          получаем <br />
-          <span class="general-issues__span-green">
-            key = value = [object Object] <br />
-            key = property1 value = строка1 <br />
-            key = property2 value = [object Object] <br />
-            key = property6 value = false <br />
-            key = property5 value = 1,2,3,4 <br />
-            {"property1":"строка1","property2":{"property6":false}}
-          </span>
+            <span class="general-issues__span-purple">
+              let obj1 = { <br />
+              property1: 'строка1', <br />
+              property2: { <br />
+              property6: false, <br />
+              }, <br />
+              property5: [1, 2, 3, 4], <br />
+              } <br />
+
+              let stringJSON = JSON.stringify(obj1, function replacer(key, value) { <br />
+              console.log(`key = ${key} value = ${value}`) <br />
+              if (key !== 'property5') { <br />
+              return value <br />
+              } <br />
+              }) <br />
+              console.log(stringJSON)
+            </span>
+            <br />
+            получаем <br />
+            <span class="general-issues__span-green">
+              key = value = [object Object] <br />
+              key = property1 value = строка1 <br />
+              key = property2 value = [object Object] <br />
+              key = property6 value = false <br />
+              key = property5 value = 1,2,3,4 <br />
+              {"property1":"строка1","property2":{"property6":false}}
+            </span>
+          </p>
         </div>
       </div>
 
@@ -157,42 +207,54 @@
           @click="isQuestion03 = !isQuestion03"
           :class="{ 'general-issues__question_active': isQuestion03 }"
         >
-          Метод JSON.parse()
+          Как преобразовать строку JSON в объект JSON?
+          <strong>Метод JSON.parse()</strong>
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion03">
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse"
-            >Метод JSON.parse()</a
-          >
+          <p class="general-issues__paragraph">
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse"
+              ><strong>Метод JSON.parse()</strong></a
+            >
+          </p>
 
-          разбирает строку JSON, возможно с преобразованием получаемого значения и его свойств и
-          возвращает разобранное значение. <br />
+          <p class="general-issues__paragraph">
+            Когда вы получаете данные с сервера, они всегда имеют строковый формат. Чтобы
+            преобразовать строку JSON в объект JavaScript, используйте метод JSON.parse(). Метод
+            JSON.parse() разбирает строку JSON, возможно с преобразованием получаемого значения и
+            его свойств и возвращает разобранное значение.
+          </p>
 
-          <br />
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              let stringJSON = { "property1": "строка1", "property2": { "property6": false },
+              "property5": [1, 2, 3, 4] } <br />
+              let dataJSON = JSON.parse(stringJSON)
+            </span>
+          </p>
 
-          <span class="general-issues__span-purple">
-            JSONstr = {"property1":"строка1","property2":{"property6":false},"property5":[1,2,3,4]}
-            <br />
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-green">
+              console.log(dataJSON) <br />
+              <br />
+              { <br />
+              property1: 'строка1', <br />
+              property2: { property6: false }, <br />
+              property5: [ 1, 2, 3, 4 ] <br />
+              }
+            </span>
+          </p>
 
-            console.log(JSON.parse(JSONstr)) <br />
-          </span>
-
-          <span class="general-issues__span-green">
-            { <br />
-            property1: 'строка1', <br />
-            property2: { property6: false }, <br />
-            property5: [ 1, 2, 3, 4 ] <br />
-            }
-          </span>
-          <br />
-          Ограничения метода <br />
-          - свойства должны быть обёрнуты в ковычки <br />
-          - запрещено использование одинарных ковычек <br />
-          - запрещено использование ключевого слова New <br />
-          - в JSON не может быть комментариев <br />
+          <p class="general-issues__paragraph">
+            Ограничения метода <br />
+            - свойства должны быть обёрнуты в ковычки <br />
+            - запрещено использование одинарных ковычек <br />
+            - запрещено использование ключевого слова New <br />
+            - в JSON не может быть комментариев
+          </p>
         </div>
       </div>
 
@@ -219,6 +281,9 @@
 
         <div class="general-issues__answer" v-if="isQuestion06">xxxx</div>
       </div>
+
+      <p class="general-issues__paragraph"></p>
+      <strong></strong>
 
       <span class="general-issues__span-red"></span>
 

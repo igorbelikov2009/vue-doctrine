@@ -496,7 +496,31 @@ function createCounter() {
         </div>
       </div>
 
-      <!-- <div>
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion33 = !isQuestion33"
+          :class="{ 'general-issues__question_active': isQuestion33 }"
+        >
+          Как <strong> проверить тип переменной (данных)</strong> в JavaScript?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion33">
+          <p class="general-issues__paragraph">
+            Воспользуйтесь <strong>typeof</strong> оператором.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              typeof "John Abraham" // Возвращает "string" <br />
+              typeof 100 // Возвращает "number" <br />
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <!--  -->
+      <div>
         <button
           class="general-issues__question"
           @click="isQuestion23 = !isQuestion23"
@@ -511,7 +535,7 @@ function createCounter() {
             операнда.
           </p>
 
-          <p class="general-issues__paragraph">
+          <!--          <p class="general-issues__paragraph">
             <pre>
               <code>
 Пример:
@@ -523,9 +547,9 @@ typeof({ name: "James Smith"}) // "object"
 typeof (ложь) // "логическое"
               </code>
             </pre>
-          </p>
+          </p> -->
         </div>
-      </div>    -->
+      </div>
 
       <div>
         <button
@@ -544,7 +568,10 @@ typeof (ложь) // "логическое"
           </p>
 
           <p class="general-issues__paragraph">
-            <strong> null - </strong> отсутствие какого-либо объектного значения переменной.
+            <strong> null - </strong> отсутствие какого-либо объектного значения переменной. <br />
+            <strong> null - </strong> означает отсутствие ценности. Он подчеркивает, что переменная
+            не указывает ни на какой объект. <br />
+            Имеет тип <strong> object</strong>.
           </p>
 
           <p class="general-issues__paragraph">
@@ -560,7 +587,7 @@ typeof (ложь) // "логическое"
       <div>
         <button
           class="general-issues__question"
-          @click="isQuestionisQuestion22 = !isQuestion22"
+          @click="isQuestion22 = !isQuestion22"
           :class="{ 'general-issues__question_active': isQuestion22 }"
         >
           В чем разница между <strong>NULL</strong> и <strong>undefined</strong>?
@@ -573,8 +600,34 @@ typeof (ложь) // "логическое"
           </p>
 
           <p class="general-issues__paragraph">
+            Значение, указывающее, что переменная не указывает на объект.
+          </p>
+
+          <p class="general-issues__paragraph">Имеет тип object.</p>
+
+          <p class="general-issues__paragraph">
+            Представляет нулевую, пустую или несуществующую ссылку.
+          </p>
+
+          <p class="general-issues__paragraph">Представляет отсутствие значения переменной.</p>
+
+          <p class="general-issues__paragraph">Преобразуется в 0с помощью примитивных операций.</p>
+
+          <p class="general-issues__paragraph">
             <strong>undefined</strong> означает, что переменная была объявлена, но ей еще не
             присвоено значение
+          </p>
+
+          <p class="general-issues__paragraph">
+            Значение, представляющее переменную, которая была объявлена, но не имеет значения
+          </p>
+
+          <p class="general-issues__paragraph">Имеет тип undefined.</p>
+
+          <p class="general-issues__paragraph">Представляет отсутствие переменной.</p>
+
+          <p class="general-issues__paragraph">
+            Преобразуется в NaN с помощью примитивных операций.
           </p>
         </div>
       </div>
@@ -1200,7 +1253,8 @@ askName(greetName);
         </div>
       </div>
 
-      <!-- <div>
+      <!--  -->
+      <div>
         <button
           class="general-issues__question"
           @click="isQuestion18 = !isQuestion18"
@@ -1218,10 +1272,11 @@ askName(greetName);
 
           <p class="general-issues__paragraph">
             <strong>«===»</strong> используется для сравнения двух значений, но это будет строгая
-            проверка, поэтому будет проверяться соответствие значения и типа данных. (сравнивает как значение, так и тип)
+            проверка, поэтому будет проверяться соответствие значения и типа данных. (сравнивает как
+            значение, так и тип)
           </p>
 
-          <p class="general-issues__paragraph">
+          <!-- <p class="general-issues__paragraph">
 <pre>
               <code>
  Примеры:            
@@ -1230,23 +1285,27 @@ askName(greetName);
  50 === 50 // правда
               </code>
             </pre>
-          </p>
+          </p> -->
         </div>
-      </div> 
-      
-     <div>
+      </div>
+
+      <!--  -->
+      <div>
         <button
           class="general-issues__question"
           @click="isQuestion19 = !isQuestion19"
           :class="{ 'general-issues__question_active': isQuestion19 }"
         >
-          Как проверить, является ли значение  <strong>не числом</strong>?
+          Как проверить, является ли значение <strong>не числом</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion19">
-          <p class="general-issues__paragraph"> Функция <strong>isNaN()</strong> определяет, является ли значение <strong>не числом</strong>.</p>
-
           <p class="general-issues__paragraph">
+            Функция <strong>isNaN()</strong> определяет, является ли значение
+            <strong>не числом</strong>.
+          </p>
+
+          <!-- <p class="general-issues__paragraph">
             <pre>
               <code>
 isNaN(48) //false 
@@ -1259,9 +1318,26 @@ isNaN('') //false
 isNaN(undefined) //true  
               </code>
             </pre>
-          </p>
-          </div>
-      </div>  
+          </p> -->
+
+          <!-- <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple"></span>
+            <pre>
+              <code>
+function toPounds(kilos) {
+  if (isNaN(kilos)) {
+    return 'Not a Number! Cannot be a weight.';
+  }
+  return kilos * 2.2;
+}
+
+console.log(toPounds('this is a test'));
+console.log(toPounds('100'));
+              </code>
+            </pre>
+          </p> -->
+        </div>
+      </div>
 
       <div>
         <button
@@ -1277,7 +1353,7 @@ isNaN(undefined) //true
             <strong>parseInt()</strong> преобразует строку в целое число
           </p>
 
-          <p class="general-issues__paragraph">
+          <!--     <p class="general-issues__paragraph">
             <pre>
               <code>
 Пример:
@@ -1301,14 +1377,15 @@ parseFloat("55px") // 50
 parseFloat(2.55) // 2.55
               </code>
             </pre>
-          </p>
+          </p>-->
 
           <p class="general-issues__paragraph">
-            <strong> Number()</strong> преобразует строку в число. Это может быть целое число или десятичное число. Они часто могут быть менее безопасными, чем использование parseInt или parseFloat
+            <strong> Number()</strong> преобразует строку в число. Это может быть целое число или
+            десятичное число. Они часто могут быть менее безопасными, чем использование parseInt или
+            parseFloat
           </p>
-       
         </div>
-      </div> -->
+      </div>
 
       <div>
         <button
@@ -1324,7 +1401,8 @@ parseFloat(2.55) // 2.55
         </div>
       </div>
 
-      <!-- <div>
+      <!--  -->
+      <div>
         <button
           class="general-issues__question"
           @click="isQuestion24 = !isQuestion24"
@@ -1339,7 +1417,7 @@ parseFloat(2.55) // 2.55
             значение не передается или undefined не передается.
           </p>
 
-          <p class="general-issues__paragraph">
+          <!--   <p class="general-issues__paragraph">
             <pre>
               <code>
 function addTogether(x, y = 1) {
@@ -1349,9 +1427,9 @@ addTogether(10, 10) // 20
 addTogether(10) // 11
               </code>
             </pre>
-          </p>
+          </p> -->
         </div>
-      </div> -->
+      </div>
 
       <div>
         <button
@@ -1692,27 +1770,28 @@ addTogether(10) // 11
           Зачем использовать <strong>строгий режим</strong> в JavaScript?
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion40"></div>
-        <p class="general-issues__paragraph">
-          <strong>строгий режим</strong> помогает писать «безопасный» код JavaScript. Это означает,
-          что плохие синтаксические практики превращаются в настоящие ошибки.
-        </p>
+        <div class="general-issues__answer" v-if="isQuestion40">
+          <p class="general-issues__paragraph">
+            <strong>строгий режим</strong> помогает писать «безопасный» код JavaScript. Это
+            означает, что плохие синтаксические практики превращаются в настоящие ошибки.
+          </p>
 
-        <p class="general-issues__paragraph">
-          Например, <strong>строгий режим</strong> запрещает создание глобальных переменных.
-        </p>
+          <p class="general-issues__paragraph">
+            Например, <strong>строгий режим</strong> запрещает создание глобальных переменных.
+          </p>
 
-        <p class="general-issues__paragraph">
-          Чтобы объявить <strong>строгий режим</strong>, добавьте ‘use strict’;оператор перед
-          операторами, которые вы хотите использовать в строгом режиме:
-        </p>
+          <p class="general-issues__paragraph">
+            Чтобы объявить <strong>строгий режим</strong>, добавьте ‘use strict’;оператор перед
+            операторами, которые вы хотите использовать в строгом режиме:
+          </p>
 
-        <p class="general-issues__paragraph">
-          <span class="general-issues__span-purple"
-            >'use strict'; <br />
-            const sentence = "Hello, this is very strict";</span
-          >
-        </p>
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple"
+              >'use strict'; <br />
+              const sentence = "Hello, this is very strict";</span
+            >
+          </p>
+        </div>
       </div>
 
       <div>
@@ -1721,7 +1800,7 @@ addTogether(10) // 11
           @click="isQuestion37 = !isQuestion37"
           :class="{ 'general-issues__question_active': isQuestion37 }"
         >
-          Что такое немедленно вызываемая функция?
+          Что такое <strong> немедленно вызываемая функция</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion37">
@@ -1821,10 +1900,29 @@ addTogether(10) // 11
           @click="isQuestion39 = !isQuestion39"
           :class="{ 'general-issues__question_active': isQuestion39 }"
         >
-          xxx
+          Как можно <strong> удалить свойство</strong> и его значение из объекта?
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion39">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion39">
+          <p class="general-issues__paragraph">
+            Вы можете использовать ключевое слово <strong>delete</strong> для удаления свойства и
+            его значения из объекта.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Пример: <br />
+            <span class="general-issues__span-purple">
+              var student = {name: "John", age:20}; <br />
+              delete student.age; <br />
+              console.log(student); <br />
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Output: <br />
+            <span class="general-issues__span-green"> {name: "John"} </span>
+          </p>
+        </div>
       </div>
 
       <div>
@@ -1833,10 +1931,12 @@ addTogether(10) // 11
           @click="isQuestion41 = !isQuestion41"
           :class="{ 'general-issues__question_active': isQuestion41 }"
         >
-          xxx
+          Что такое <strong>глобальная переменная?</strong>
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion41">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion41">
+          <p class="general-issues__paragraph">Глобальная переменная доступна везде в коде.</p>
+        </div>
       </div>
 
       <div>
@@ -1845,10 +1945,15 @@ addTogether(10) // 11
           @click="isQuestion42 = !isQuestion42"
           :class="{ 'general-issues__question_active': isQuestion42 }"
         >
-          xxx
+          Что такое <strong>события</strong> JavaScript?
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion42">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion42">
+          <p class="general-issues__paragraph">
+            События — это то, что происходит с элементами HTML. Когда JavaScript используется на
+            HTML-странице, он может реагировать на события, такие как нажатие кнопки.
+          </p>
+        </div>
       </div>
 
       <div>
@@ -1857,10 +1962,27 @@ addTogether(10) // 11
           @click="isQuestion43 = !isQuestion43"
           :class="{ 'general-issues__question_active': isQuestion43 }"
         >
-          xxx
+          Что делает метод <strong>preventDefault()</strong>?
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion43">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion43">
+          <p class="general-issues__paragraph">
+            Название preventDefault "предотвратить дефолт" хорошо описывает поведение. Это
+            предотвращает поведение события по умолчанию.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Например, вы можете запретить отправку формы при нажатии кнопки отправки:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              document.getElementById("link").addEventListener("click", function(event){ <br />
+              event.preventDefault() <br />
+              });</span
+            >
+          </p>
+        </div>
       </div>
 
       <div>
@@ -1869,10 +1991,24 @@ addTogether(10) // 11
           @click="isQuestion44 = !isQuestion44"
           :class="{ 'general-issues__question_active': isQuestion44 }"
         >
-          xxx
+          Что такое метод <strong>setTimeout()</strong>?
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion44">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion44">
+          <p class="general-issues__paragraph">
+            Метод <strong>setTimeout()</strong> вызывает функцию (один раз) через указанное
+            количество миллисекунд. Например, давайте зарегистрируем сообщение через одну секунду (
+            1000ms):
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              setTimeout(function() { <br />
+              console.log("Good day"); <br />
+              }, 1000);
+            </span>
+          </p>
+        </div>
       </div>
 
       <div>
@@ -1881,10 +2017,27 @@ addTogether(10) // 11
           @click="isQuestion45 = !isQuestion45"
           :class="{ 'general-issues__question_active': isQuestion45 }"
         >
-          xxx
+          Что такое метод <strong>setInterval()</strong>?
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion45">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion45">
+          <p class="general-issues__paragraph">
+            Метод <strong>setInterval()</strong> периодически вызывает функцию с заданным
+            интервалом.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Например, давайте периодически логировать сообщение каждую секунду:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              setInterval(function() { <br />
+              console.log("Добрый день"); <br />
+              }, 1000);
+            </span>
+          </p>
+        </div>
       </div>
 
       <div>
@@ -1893,10 +2046,17 @@ addTogether(10) // 11
           @click="isQuestion46 = !isQuestion46"
           :class="{ 'general-issues__question_active': isQuestion46 }"
         >
-          xxx
+          Что такое <strong>ECMAScript</strong>?
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion46">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion46">
+          <p class="general-issues__paragraph">
+            <strong>ECMAScript</strong> — это язык сценариев, лежащий в основе JavaScript.
+
+            <strong>ECMAScript</strong> стандартизирован Международной организацией по
+            стандартизации ECMA.
+          </p>
+        </div>
       </div>
 
       <div>
@@ -1905,23 +2065,28 @@ addTogether(10) // 11
           @click="isQuestion47 = !isQuestion47"
           :class="{ 'general-issues__question_active': isQuestion47 }"
         >
-          xxx
+          Как можно присвоить переменной <strong>значение по умолчанию</strong>?
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion47">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion47">
+          <p class="general-issues__paragraph">
+            Используйте <strong>логический оператор || </strong> в назначении, чтобы указать
+            значение по умолчанию:
+          </p>
+
+          <p class="general-issues__paragraph"><strong>const a = b || c;</strong></p>
+
+          <p class="general-issues__paragraph">
+            Это работает так: если <strong>b</strong> ложно, то значение <strong>c</strong> будет
+            присвоено значению <strong>a</strong>.
+          </p>
+
+          <p class="general-issues__paragraph">
+            (<strong>Falsy</strong> означает:
+            <strong>null, false, undefined, 0, пустую строку, NaN</strong>.)
+          </p>
+        </div>
       </div>
-
-      <p class="general-issues__paragraph"></p>
-      <strong></strong>
-      <span class="general-issues__span-purple"></span>
-
-      <p class="general-issues__paragraph">
-        Например: <br />
-
-        <span class="general-issues__span-purple"></span> <br />
-        Выход: <br />
-        <span class="general-issues__span-green"> </span>
-      </p>
 
       <div>
         <button
@@ -1960,7 +2125,18 @@ addTogether(10) // 11
           <a class="general-issues__link" target="_blank" href="">xxx</a>
         </div>
       </div>
-      <!--  -->
+
+      <p class="general-issues__paragraph"></p>
+      <strong></strong>
+      <span class="general-issues__span-purple"></span>
+
+      <p class="general-issues__paragraph">
+        Например: <br />
+
+        <span class="general-issues__span-purple"></span> <br />
+        Выход: <br />
+        <span class="general-issues__span-green"> </span>
+      </p>
 
       <div>
         <button
@@ -2014,20 +2190,6 @@ addTogether(10) // 11
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion32">
-          <a class="general-issues__link" target="_blank" href="">xxx</a>
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion33 = !isQuestion33"
-          :class="{ 'general-issues__question_active': isQuestion33 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion33">
           <a class="general-issues__link" target="_blank" href="">xxx</a>
         </div>
       </div>
