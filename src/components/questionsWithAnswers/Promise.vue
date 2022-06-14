@@ -20,30 +20,118 @@
 
         <div class="general-issues__answer" v-if="isQuestion01">
           <p class="general-issues__paragraph">
+            Обещание — это объект, который может принести пользу в будущем
+          </p>
+
+          <p class="general-issues__paragraph">
+            Обещание всегда находится в одном из возможных состояний: выполнено, отклонено или
+            ожидает выполнения.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Создание промиса выглядит так: <br />
+            <span class="general-issues__span-purple"
+              >const promise = new Promise(function(resolve, reject) { <br />
+              // реализуем обещание здесь })</span
+            >
+          </p>
+
+          <p class="general-issues__paragraph">
+            Например, давайте создадим обещание, которое разрешается через две секунды после вызова.
+            <br />
+            <span class="general-issues__span-purple">
+              const promise = new Promise(resolve => { <br />
+              setTimeout(() => { <br />
+              resolve("Привет, мир!"); <br />
+              }, 2000); <br />
+              }, reject => {});
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Теперь ключ промисов в том, что вы можете выполнить код сразу после разрешения промиса с
+            помощью .then() метода:
+            <br />
+            <span class="general-issues__span-purple">
+              обещание.затем(результат => console.log(результат));
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Выход:
+            <br />
+            <span class="general-issues__span-purple">Привет, мир!</span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Обещания могут быть объединены в цепочку, так что разрешенное обещание возвращает новое
+            обещание.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Вот блок-схема промисов, которая также иллюстрирует, как они могут быть объединены в
+            цепочку:
+          </p>
+
+          <div class="general-issues__images">
+            <img class="general-issues__img" src="/images/doctrine/promises-block.png" alt="" />
+          </div>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph">
             Промисы — это объекты, которые используются в JavaScript при выполнении асинхронных
             операций. Они упрощают работу с асинхронными операциями и дают более удобные механизмы
-            обработки ошибок, чем коллбэки и события. <br />
+            обработки ошибок, чем коллбэки и события.
+          </p>
 
+          <p class="general-issues__paragraph">
             Promise (промис) - это возвращаемый объект асинхронной операции, результат успешного или
-            неудачного завершения асинхронной операции. <br />
+            неудачного завершения асинхронной операции.
+          </p>
 
+          <p class="general-issues__paragraph">
             Promise (промис) - это объект, в который мы записываем два колбэка вместо того, чтобы
-            передать их функции (resolve, reject). <br />
+            передать их функции (resolve, reject).
+          </p>
 
-            Промис - это обещание предоставить результат позже. <br />
-            С помощью промиса можно поставить на ожидание получение результата и, когда его
-            получаем, можем его обрабатывать. Так же промис может вернуть ошибку, если результат
-            вернуть не возможно. Промис может вернуть либо результат, либо ошибку. <br />
+          <p class="general-issues__paragraph">
+            Промис - это обещание предоставить результат позже. С помощью промиса можно поставить на
+            ожидание получение результата и, когда его получаем, можем его обрабатывать. Так же
+            промис может вернуть ошибку, если результат вернуть не возможно. Промис может вернуть
+            либо результат, либо ошибку.
+          </p>
 
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red"> Промис- может быть создан: </span> <br />
             - путём создания нового экземляра класса Promise <br />
             - методом fetch(), который всегда возвращает промис. <br />
-            - асинхронной функцией async (), которая также всегда возвращает промис. <br />
+            - асинхронной функцией async (), которая также всегда возвращает промис.
+          </p>
 
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red"> Асинхронными событиями </span> являются те,
             которые возникают независимо от основного потока выполнения программы, отложенные по
             времени.
           </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestionisQuestion22 = !isQuestion22"
+          :class="{ 'general-issues__question_active': isQuestion22 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion22">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
         </div>
       </div>
 
@@ -1511,24 +1599,6 @@
       <div>
         <button
           class="general-issues__question"
-          @click="isQuestionisQuestion22 = !isQuestion22"
-          :class="{ 'general-issues__question_active': isQuestion22 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion22">
-          <p class="general-issues__paragraph">xx</p>
-
-          <p class="general-issues__paragraph">xx</p>
-
-          <p class="general-issues__paragraph">xx</p>
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
           @click="isQuestion23 = !isQuestion23"
           :class="{ 'general-issues__question_active': isQuestion23 }"
         >
@@ -1927,6 +1997,15 @@ export default {
     color: rgba(0, 0, 0, 0.86);
     line-height: 1.5em;
     margin-top: 24px;
+  }
+
+  &__images {
+    width: calc(100% - 72px);
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 700 / 375;
   }
 }
 </style>

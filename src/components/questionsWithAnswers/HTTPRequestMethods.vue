@@ -903,6 +903,134 @@
       <div>
         <button
           class="general-issues__question"
+          @click="isQuestion21 = !isQuestion21"
+          :class="{ 'general-issues__question_active': isQuestion21 }"
+        >
+          Что такое файл <strong>cookie</strong>?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion21">
+          <p class="general-issues__paragraph">
+            Файл <strong>cookie</strong> — это небольшой пакет данных, хранящийся на вашем
+            компьютере.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Например, веб-сайт может размещать файлы <strong>cookie</strong> в браузерах
+            посетителей, чтобы запомнить учетные данные для входа в систему при следующем посещении
+            страницы пользователем.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Под капотом файлы <strong>cookie</strong> представляют собой текстовые файлы с парами
+            ключ-значение. Чтобы создать, прочитать или удалить файлы cookie, используйте
+            document.cookieсвойство.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Например, давайте создадим файл <strong>document.cookie</strong>, который сохраняет имя
+            пользователя:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong>document.cookie = "username=foobar123";</strong>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion20 = !isQuestion20"
+          :class="{ 'general-issues__question_active': isQuestion20 }"
+        >
+          Что такое <strong>веб-хранилище</strong>?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion20">
+          <p class="general-issues__paragraph">
+            Веб-хранилище — это API , который позволяет браузерам локально хранить пары
+            ключ-значение в браузере пользователя. Использование веб-хранилища делает этот процесс
+            более интуитивным, чем использование файлов cookie.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Веб-хранилище предоставляет два способа хранения данных:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong>Локальное хранилище </strong> — хранит данные для клиента без срока годности.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong>Хранилище сеанса</strong> — хранит данные только для одного сеанса. Данные
+            исчезают при закрытии браузера.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Вот пример того, как вы можете сохранить, получить доступ и удалить элемент из
+            sessionStorage:
+            <span class="general-issues__span-purple">
+              // Save data to sessionStorage <br />
+              sessionStorage.setItem('favoriteColor', 'gray'); <br />
+              <br />
+              // Get the color from the sessionStorage <br />
+              let data = sessionStorage.getItem('favoriteColor'); <br />
+              console.log(data); <br />
+              <br />
+              // Remove saved color preset from sessionStorage <br />
+              sessionStorage.removeItem('favoriteColor'); <br />
+              <br />
+              // Remove ALL the saved data from sessionStorage <br />
+              sessionStorage.clear();
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            И вот как вы можете сделать то же самое, используя localStorage:
+            <span class="general-issues__span-purple">
+              // Save data to localStorage <br />
+              localStorage.setItem('favoriteColor', 'gray'); <br />
+              <br />
+              // Get the color from the localStorage <br />
+              let data = localStorage.getItem('favoriteColor'); <br />
+              console.log(data); <br />
+              <br />
+              // Remove saved color preset from localStorage <br />
+              localStorage.removeItem('favoriteColor'); <br />
+              <br />
+              // Remove ALL the saved data from localStorage <br />
+              localStorage.clear();
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion20 = !isQuestion20"
+          :class="{ 'general-issues__question_active': isQuestion20 }"
+        >
+          Зачем вам веб-хранилище?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion20">
+          <p class="general-issues__paragraph">
+            <strong>Веб-хранилище</strong> позволяет хранить большие объемы данных локально.
+            Главное, это не влияет на производительность сайта.
+          </p>
+
+          <p class="general-issues__paragraph">
+            При использовании веб-хранилища информация не хранится на сервере. Это делает его более
+            предпочтительным подходом по сравнению с файлами cookie.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
           @click="isQuestion19 = !isQuestion19"
           :class="{ 'general-issues__question_active': isQuestion19 }"
         >
@@ -916,34 +1044,6 @@
             к ресурсам, расположенным за пределами некоего домена. Это расширяет возможности страниц
             и добавляет гибкости политике одинакового источника (same-origin policy).
           </p>
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion20 = !isQuestion20"
-          :class="{ 'general-issues__question_active': isQuestion20 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion20">
-          <p class="general-issues__paragraph">xxx</p>
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion21 = !isQuestion21"
-          :class="{ 'general-issues__question_active': isQuestion21 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion21">
-          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
