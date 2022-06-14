@@ -1122,7 +1122,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion59">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion59">
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1252,16 +1258,41 @@ export default {
   }
 
   &__answer {
-    font-size: 14px;
+    font-size: 19px;
     line-height: 24px;
     margin-left: 24px;
+  }
+
+  // general-issues__span
+  &__span {
+    color: black;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-red
+  &__span-red {
+    color: red;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__span-green
   &__span-green {
     color: green;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-purple
+  &__span-purple {
+    color: purple;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__link
@@ -1276,6 +1307,14 @@ export default {
     &:hover {
       color: blue;
     }
+  }
+
+  &__paragraph {
+    display: block;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.86);
+    line-height: 1.5em;
+    margin-top: 24px;
   }
 }
 </style>

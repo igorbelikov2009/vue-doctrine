@@ -6,6 +6,8 @@
 
     <GeneralIssues />
 
+    <HTMLQuestios />
+
     <CSSQuestions />
 
     <JavaScriptQuestions />
@@ -19,44 +21,13 @@
     <Promise />
 
     <ThirtyFiveQustions />
-
-    <!-- <div id="general-issues-task">
-      <button
-        class="general-issues__button"
-        @click="isNetworkingQuestions = !isNetworkingQuestions"
-        :class="{ 'general-issues__button_active': isNetworkingQuestions }"
-      >
-        Вопросы по сетям
-      </button>
-
-      <div v-if="isNetworkingQuestions">
-        <p class="general-issues__description">
-          <span class="general-issues__span">xxx </span>
-          <span class="general-issues__span-purple"> => </span>
-          <span class="general-issues__span-green"> xxx</span>
-        </p>
-
-        <p class="general-issues__text">
-          <span class="general-issues__span"> сделать что-то</span> <br />
-
-          имеем <span class="general-issues__span"></span> <br />
-          <span class="general-issues__span-purple"></span>
-          получаем:
-          <span class="general-issues__span-green"></span>
-        </p>
-
-        <p class="general-issues__text"></p>
-        <p class="general-issues__text"></p>
-        <p class="general-issues__text"></p>
-        <p class="general-issues__text"></p>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script>
 import GeneralIssues from '@/components/questionsWithAnswers/GeneralIssues.vue'
 import CSSQuestions from '@/components/questionsWithAnswers/CSSQuestions.vue'
+import HTMLQuestios from '@/components/questionsWithAnswers/HTMLQuestios.vue'
 import JavaScriptQuestions from '@/components/questionsWithAnswers/JavaScriptQuestions.vue'
 import DOMQustions from '@/components/questionsWithAnswers/DOMQustions.vue'
 import HTTPRequestMethods from '@/components/questionsWithAnswers/HTTPRequestMethods.vue'
@@ -79,6 +50,7 @@ export default {
   components: {
     GeneralIssues,
     CSSQuestions,
+    HTMLQuestios,
     JavaScriptQuestions,
     DOMQustions,
     HTTPRequestMethods,
@@ -92,7 +64,7 @@ export default {
 <style lang="scss" scoped>
 .general-issues {
   width: calc(100% - 48px);
-
+  max-width: 1024px;
   margin: 0 auto;
   margin-top: 76px;
   padding: 24px;

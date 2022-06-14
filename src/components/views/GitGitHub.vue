@@ -161,7 +161,7 @@
           <strong>git branch </strong> — показывает список веток и выделяет действующую ветку
           зелёным цветом. <br />
 
-          <strong>git branch branch-name branch-name</strong> — создает новую ветку. <br />
+          <strong>git branch branch-name </strong> — создает новую ветку. <br />
 
           <strong>git branch -D branch-name </strong> — удаляет ветку branch-name. Для этого,
           предварительно, нужно выйти с этой ветки.
@@ -269,6 +269,14 @@
         <p class="github__paradraph">
           - Заливает текущие локальные коммиты в удаленный репозиторий
         </p>
+
+        <blockquote class="github__blockquote">
+          <strong>git push --set-upstream origin evgeniy</strong>
+
+          <p class="github__paradraph">
+            - Заливает текущие локальные коммиты в удаленный репозиторий от ветки с именем evgeniy
+          </p>
+        </blockquote>
       </div>
 
       <div>
@@ -328,13 +336,18 @@
           vue-doctrine в папке new-git-project
         </p>
 
-        <p class="github__paradraph">
-          <strong></strong>
-        </p>
+        <div>
+          <h3 class="github__subheading">История коммитов</h3>
 
-        <p class="github__paradraph">
-          <strong></strong>
-        </p>
+          <p class="github__paradraph">
+            команда <strong>git log --graph</strong> позволяет нам увидеть историю коммитов снизу в
+            верх. (Почему-то компьютер висит после этой команды)
+          </p>
+
+          <p class="github__paradraph">
+            <strong></strong>
+          </p>
+        </div>
       </div>
     </div>
   </div>

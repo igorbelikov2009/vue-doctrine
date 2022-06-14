@@ -69,6 +69,93 @@
       <div>
         <button
           class="general-issues__question"
+          @click="isQuestion54 = !isQuestion54"
+          :class="{ 'general-issues__question_active': isQuestion54 }"
+        >
+          Какая разница между селекторами идентификаторов и классов в CSS?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion54">
+          <p class="general-issues__paragraph">
+            Идентификаторы (id) уникальны. У элемента может быть только один идентификатор. На
+            странице может присутствовать лишь один элемент с конкретным идентификатором.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Имена классов (class) не являются уникальными. Один и тот же класс можно назначать
+            множеству элементов. Элементу может быть назначено несколько классов.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Если некий стиль нужно применить к нескольким элементам страницы — эту задачу нужно
+            решать с использованием классов.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion52 = !isQuestion52"
+          :class="{ 'general-issues__question_active': isQuestion52 }"
+        >
+          Как пользоваться медиазапросами в CSS?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion52">
+          <p class="general-issues__paragraph">
+            В медиазапросах используется правило @media, с помощью которого можно применять
+            CSS-стили к различным типам содержимого. Медиазапросы могут использоваться и для
+            настройки элементов страниц с учётом характеристик среды, в которой просматривают
+            страницы.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+<span class="general-issues__span-grey">
+/* Изменить фоновый цвет любого элемента &lt;div&gt; на "red" в том случае, если
+ширина окна браузера составляет 600px или меньше */
+</span>
+@media only screen and (max-width: 600px) {
+  div {
+    background-color: red;
+  }
+}
+                </code>
+              </pre>
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion53 = !isQuestion53"
+          :class="{ 'general-issues__question_active': isQuestion53 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion53">
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div>
+        <button
+          class="general-issues__question"
           @click="isQuestion59 = !isQuestion59"
           :class="{ 'general-issues__question_active': isQuestion59 }"
         >
@@ -491,17 +578,32 @@
             href="https://developer.mozilla.org/ru/docs/Web/CSS/Pseudo-classes"
             >Псевдокласс в CSS
           </a>
-          — это ключевое слово, добавленное к селектору, которое позволяет стилизовать элемент на
-          основе отношений в DOM-дереве, истории посещений (например, :visited), состояние
-          содержимого (вроде :checked у некоторых элементов формы) или позиции курсора мыши
-          (например, :hover определяет, находится ли курсор мыши над элементом).. Например, :hover
-          может быть использован для изменения цвета кнопки при наведении курсора на неё. <br />
 
-          div:hover { <br />
-          background-color: #F89B4D; <br />
-          } <br />
-          Copy to Clipboard <br />
-          Псевдоклассы дают возможность <br />
+          <p class="general-issues__paragraph">
+          — это ключевое слово, добавленное к селектору, которое позволяет стилизовать элемент: <br> - на
+          основе отношений в DOM-дереве,  <br> -  истории посещений (например, :visited), <br> - состоянии
+          содержимого (вроде :checked у некоторых элементов формы)  <br> - или позиции курсора мыши
+          (например, :hover определяет, находится ли курсор мыши над элементом)..  <br> - Например, :hover
+          может быть использован для изменения цвета кнопки при наведении курсора на неё. <br />
+          <pre>
+           <code>
+      <span class="general-issues__span-purple">
+<span class="general-issues__span-grey">
+/* Любой элемент &lt;a&gt; на который пользователь наведёт указатель мыши, будет окрашен в цвет green. */
+</span>
+a:hover {
+  color: green;
+}
+ <span class="general-issues__span-grey">
+/* Выбирает все посещённые элементы &lt;a&gt; и окрашивает их в цвет purple.*/
+</span>
+a:visited {
+  color: purple;
+}
+      </span>
+           </code>
+          </pre>
+          </p>
         </div>
       </div>
 
@@ -761,6 +863,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion19">
+          <p class="general-issues__paragraph">
           <span class="general-issues__span-green"> - static - </span> значение по умолчанию,
           позволяет элементу находиться в обычном его состоянии. Свойства top, right, bottom, left и
           z-index не применяются. <br />
@@ -784,6 +887,7 @@
           относительно его ближайшего прокручивающего предка и содержащего блока (ближайший
           родительский уровень блока). Липкий элемент «прилипает» к его ближайшему предшественнику,
           имеющему «механизм прокрутки» (созданный при помощи overflow)
+          </p>
         </div>
       </div>
 
@@ -1185,23 +1289,26 @@
           >
         </div>
       </div>
-
-      <a class="general-issues__link" target="_blank" href="">xx</a>
-
+ 
       <div>
         <button
           class="general-issues__question"
           @click="isQuestion32 = !isQuestion32"
           :class="{ 'general-issues__question_active': isQuestion32 }"
         >
-          xxx
+           CSS: полное руководство по функции calc()
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion32">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion32">
+           <a
+            class="general-issues__link"
+            target="_blank"
+            href="https://habr.com/ru/company/ruvds/blog/493660/"
+            >CSS: полное руководство по функции calc()</a
+          >
+        </div>
       </div>
-
-      <span class="general-issues__span-purple"></span>
-
+  
       <div>
         <button
           class="general-issues__question"
@@ -1262,7 +1369,6 @@
         <div class="general-issues__answer" v-if="isQuestion37">XXX</div>
       </div>
 
-      <!-- 41 -->
       <div>
         <button
           class="general-issues__question"
@@ -1274,7 +1380,7 @@
 
         <div class="general-issues__answer" v-if="isQuestion38">XXX</div>
       </div>
-      <!-- 41 -->
+     
 
       <div>
         <button
@@ -1429,43 +1535,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion51">XXX</div>
-      </div>
+        <div class="general-issues__answer" v-if="isQuestion51">
+          <p class="general-issues__paragraph">xxx</p>
 
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestionisQuestion52 = !isQuestion52"
-          :class="{ 'general-issues__question_active': isQuestion52 }"
-        >
-          xxx
-        </button>
+          <p class="general-issues__paragraph">xxx</p>
 
-        <div class="general-issues__answer" v-if="isQuestion52">XXX</div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion53 = !isQuestion53"
-          :class="{ 'general-issues__question_active': isQuestion53 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion53">XXX</div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion54 = !isQuestion54"
-          :class="{ 'general-issues__question_active': isQuestion54 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion54">XXX</div>
+          <p class="general-issues__paragraph">xxx</p>
+        </div>
       </div>
 
       <div>
@@ -1477,7 +1553,13 @@
           xxx
         </button>
 
-        <div class="general-issues__answer" v-if="isQuestion55">XXX</div>
+        <div class="general-issues__answer" v-if="isQuestion55">
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+
+          <p class="general-issues__paragraph">xxx</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1607,7 +1689,7 @@ export default {
   }
 
   &__answer {
-    font-size: 14px;
+    font-size: 19px;
     line-height: 24px;
     margin-left: 24px;
   }
@@ -1615,15 +1697,25 @@ export default {
   // general-issues__span-green
   &__span-green {
     color: green;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__span-purple
   &__span-purple {
     color: purple;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-grey
+  &__span-grey {
+    color: #605858;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__link
@@ -1638,6 +1730,14 @@ export default {
     &:hover {
       color: blue;
     }
+  }
+
+  &__paragraph {
+    display: block;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.86);
+    line-height: 1.5em;
+    margin-top: 24px;
   }
 }
 </style>

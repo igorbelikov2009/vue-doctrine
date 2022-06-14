@@ -19,13 +19,16 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion17">
-          Как работает WWW (всемирная паутина, веб) в двух словах: <br />
-          - браузер пользователя (клиент) отправляет на сервер запрос с адресом сайта (URL); <br />
-          - сервер получает этот запрос и отдаёт клиенту требуемый тому контент. <br />
-          <br />
-          Иными словами, весь современный веб построен на модели клиент-серверного взаимодействия. И
-          чтобы весь этот процесс оказался возможным, необходим универсальный язык-протокол, который
-          будет понимать и сервер, и браузер. Такой протокол есть, а называется он HTTP
+          <p class="general-issues__paragraph">
+            Как работает WWW (всемирная паутина, веб) в двух словах: <br />
+            - браузер пользователя (клиент) отправляет на сервер запрос с адресом сайта (URL);
+            <br />
+            - сервер получает этот запрос и отдаёт клиенту требуемый тому контент. <br />
+            <br />
+            Иными словами, весь современный веб построен на модели клиент-серверного взаимодействия.
+            И чтобы весь этот процесс оказался возможным, необходим универсальный язык-протокол,
+            который будет понимать и сервер, и браузер. Такой протокол есть, а называется он HTTP
+          </p>
         </div>
       </div>
 
@@ -39,24 +42,27 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion10">
-          В клиент-серверной архитектуре: <br />
-          -
+          <p class="general-issues__paragraph">
+            В клиент-серверной архитектуре: <br />
+            -
 
-          <span class="general-issues__span-red">Клиентом </span>
-          может быть всё, что угодно, что имеет доступ в сеть и может отсылать сформированные HTTP-
-          запросы, либо XML- запросы на сервер и получать от него ответы:
-          <br />
-          - Браузер (сайт, например, фейсбук, инстаграмм) <br />
-          - Мобильное приложение <br />
-          - Умная бытовая техника, имеющая доступ к сети <br />
-          - Серверное приложение <br />
-          - Настольное приложение (например, клиент компьютерной игры)
-          <span class="general-issues__span-red">сервер - </span> поставщик поставляемой услуги
-          <br />
-          Вся информация хранится на сервере, и читается - меняется клиентом по запросу. Клиентское
-          приложение формирует запросы и отправляет на сервер. После чего програмное обеспечение
-          сервера формирует ответ и отправляет его клиенту. После этого клиентское приложение может
-          отправлять другие запросы, которые будут обработаны аналогичным образом.
+            <span class="general-issues__span-red">Клиентом </span>
+            может быть всё, что угодно, что имеет доступ в сеть и может отсылать сформированные
+            HTTP- запросы, либо XML- запросы на сервер и получать от него ответы:
+            <br />
+            - Браузер (сайт, например, фейсбук, инстаграмм) <br />
+            - Мобильное приложение <br />
+            - Умная бытовая техника, имеющая доступ к сети <br />
+            - Серверное приложение <br />
+            - Настольное приложение (например, клиент компьютерной игры)
+            <span class="general-issues__span-red">сервер - </span> поставщик поставляемой услуги
+            <br />
+            Вся информация хранится на сервере, и читается - меняется клиентом по запросу.
+            Клиентское приложение формирует запросы и отправляет на сервер. После чего програмное
+            обеспечение сервера формирует ответ и отправляет его клиенту. После этого клиентское
+            приложение может отправлять другие запросы, которые будут обработаны аналогичным
+            образом.
+          </p>
         </div>
       </div>
 
@@ -70,7 +76,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion01">
-          <p>
+          <p class="general-issues__paragraph">
             <a
               class="general-issues__link"
               target="_blank"
@@ -96,16 +102,18 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion02">
-          Фактически, это тот же самый протокол HTTP, только с дополнительным уровнем шифрования.
-          HTTPS расшифровывается как «защита протокола передачи гипертекста». Таким образом, HTTP —
-          самостоятельный протокол, а HTTPS — расширение для его защиты. По HTTP информация
-          передается незащищенной, а HTTPS обеспечивает криптографическую защиту. Особенно актуально
-          это для ресурсов с ответственной авторизацией. Это могут быть социальные сети или сайты
-          платежных систем. <br />
+          <p class="general-issues__paragraph">
+            Фактически, это тот же самый протокол HTTP, только с дополнительным уровнем шифрования.
+            HTTPS расшифровывается как «защита протокола передачи гипертекста». Таким образом, HTTP
+            — самостоятельный протокол, а HTTPS — расширение для его защиты. По HTTP информация
+            передается незащищенной, а HTTPS обеспечивает криптографическую защиту. Особенно
+            актуально это для ресурсов с ответственной авторизацией. Это могут быть социальные сети
+            или сайты платежных систем. <br />
 
-          Таким образом, HTTP применяется для передачи данных, а HTTPS позволяет осуществлять
-          защищенную передачу данных с помощью шифрования и выполнять авторизацию на ресурсах с
-          высоким уровнем безопасности.
+            Таким образом, HTTP применяется для передачи данных, а HTTPS позволяет осуществлять
+            защищенную передачу данных с помощью шифрования и выполнять авторизацию на ресурсах с
+            высоким уровнем безопасности.
+          </p>
         </div>
       </div>
 
@@ -119,18 +127,22 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion12">
-          HTTP - сообщения подразделяются на 2 типа: <br />
+          <p class="general-issues__paragraph">
+            HTTP - сообщения подразделяются на 2 типа: <br />
 
-          - <span class="general-issues__span-red"> HTTP - запросы, </span>
-          <span class="general-issues__span-grey"
-            >которые отправляет клиент, например браузер на сервер.</span
-          >
-          <br />
-          - <span class="general-issues__span-red"> HTTP - ответы, </span>
-          <span class="general-issues__span-grey">сообщения, котрые отправляет сервер.</span> <br />
-          <br />
+            - <span class="general-issues__span-red"> HTTP - запросы, </span>
+            <span class="general-issues__span-grey"
+              >которые отправляет клиент, например браузер на сервер.</span
+            >
+            <br />
+            - <span class="general-issues__span-red"> HTTP - ответы, </span>
+            <span class="general-issues__span-grey">сообщения, котрые отправляет сервер.</span>
+            <br />
+            <br />
 
-          У каждого HTTP - сообщения есть свои заголовки, строка состояния и, по возможности, тело.
+            У каждого HTTP - сообщения есть свои заголовки, строка состояния и, по возможности,
+            тело.
+          </p>
         </div>
       </div>
 
@@ -144,27 +156,29 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion09">
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers"
-            >Заголовки HTTP</a
-          >
-          позволяют клиенту и серверу передавать дополнительную информацию с HTTP-запросом или
-          ответом. <br />
-          Заголовки можно сгруппировать в соответствии с их контекстом: <br />
-          <span class="general-issues__span-green"> - Заголовки запроса содержат</span>
-          дополнительную информацию о ресурсе, который необходимо получить, или о клиенте,
-          запрашивающем ресурс. <br />
-          <span class="general-issues__span-green"> - Заголовки ответов </span>
-          содержат дополнительную информацию об ответе, например, о его местонахождении или о
-          сервере, который его предоставил. <br />
-          <span class="general-issues__span-green"> - Заголовки представления </span>
-          содержат информацию о теле ресурса, например о его MIME-типе или применяемом
-          кодировании/сжатии. <br />
-          <span class="general-issues__span-green"> - Заголовки полезной нагрузки </span>
-          содержат независимую от представления информацию о полезных данных, включая длину
-          содержимого и кодировку, используемую для транспортировки.
+          <p class="general-issues__paragraph">
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers"
+              >Заголовки HTTP</a
+            >
+            позволяют клиенту и серверу передавать дополнительную информацию с HTTP-запросом или
+            ответом. <br />
+            Заголовки можно сгруппировать в соответствии с их контекстом: <br />
+            <span class="general-issues__span-green"> - Заголовки запроса содержат</span>
+            дополнительную информацию о ресурсе, который необходимо получить, или о клиенте,
+            запрашивающем ресурс. <br />
+            <span class="general-issues__span-green"> - Заголовки ответов </span>
+            содержат дополнительную информацию об ответе, например, о его местонахождении или о
+            сервере, который его предоставил. <br />
+            <span class="general-issues__span-green"> - Заголовки представления </span>
+            содержат информацию о теле ресурса, например о его MIME-типе или применяемом
+            кодировании/сжатии. <br />
+            <span class="general-issues__span-green"> - Заголовки полезной нагрузки </span>
+            содержат независимую от представления информацию о полезных данных, включая длину
+            содержимого и кодировку, используемую для транспортировки.
+          </p>
         </div>
       </div>
 
@@ -178,23 +192,24 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion03">
-          Запросы содержат следующие элементы: <br />
+          <p class="general-issues__paragraph">
+            Запросы содержат следующие элементы: <br />
 
-          - HTTP-метод, обычно глагол подобно GET, POST или существительное, как OPTIONS или HEAD,
-          определяющее операцию, которую клиент хочет выполнить. Обычно, клиент хочет получить
-          ресурс (используя GET) или передать значения HTML-формы (используя POST), хотя другие
-          операция могут быть необходимы в других случаях. <br />
-          - Путь к ресурсу: URL ресурсы лишены элементов, которые очевидны из контекста, например
-          без протокола (http://), домена (здесь developer.mozilla.org), или TCP порта (здесь 80).
-          <br />
-          - Версию HTTP-протокола. <br />
-          - Заголовки (опционально), предоставляющие дополнительную информацию для сервера. <br />
-          - Или тело, для некоторых методов, таких как POST, которое содержит отправленный ресурс.
-          <br />
-          <span class="general-issues__span-red"> Строка состояния:</span>
-          [метод][URI][HTTP/версия], пример: GET/hello.html HTTP/1.1 <br />
-          <span class="general-issues__span-red"> Заголовки: </span> <br />
-          <span class="general-issues__span-red"></span>
+            - HTTP-метод, обычно глагол подобно GET, POST или существительное, как OPTIONS или HEAD,
+            определяющее операцию, которую клиент хочет выполнить. Обычно, клиент хочет получить
+            ресурс (используя GET) или передать значения HTML-формы (используя POST), хотя другие
+            операция могут быть необходимы в других случаях. <br />
+            - Путь к ресурсу: URL ресурсы лишены элементов, которые очевидны из контекста, например
+            без протокола (http://), домена (здесь developer.mozilla.org), или TCP порта (здесь 80).
+            <br />
+            - Версию HTTP-протокола. <br />
+            - Заголовки (опционально), предоставляющие дополнительную информацию для сервера. <br />
+            - Или тело, для некоторых методов, таких как POST, которое содержит отправленный ресурс.
+            <br />
+            <span class="general-issues__span-red"> Строка состояния:</span>
+            [метод][URI][HTTP/версия], пример: GET/hello.html HTTP/1.1 <br />
+            <span class="general-issues__span-red"> Заголовки: </span> <br />
+          </p>
         </div>
       </div>
 
@@ -208,20 +223,22 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion04">
-          HTTP определяет набор
-          <a
-            class="general-issues__link"
-            tabindex="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
-            >методов запроса</a
-          >
-          , чтобы указать желаемое действие, которое должно быть выполнено для данного ресурса. Хотя
-          они также могут быть существительными, эти методы запроса иногда называют HTTP-глаголами .
-          Каждый из них реализует различную семантику, но некоторые общие черты являются общими для
-          группы из них: например, метод запроса может быть безопасным , идемпотентным или
-          кэшируемым . <br />
+          <p class="general-issues__paragraph">
+            HTTP определяет набор
+            <a
+              class="general-issues__link"
+              tabindex="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+              >методов запроса</a
+            >
+            , чтобы указать желаемое действие, которое должно быть выполнено для данного ресурса.
+            Хотя они также могут быть существительными, эти методы запроса иногда называют
+            HTTP-глаголами . Каждый из них реализует различную семантику, но некоторые общие черты
+            являются общими для группы из них: например, метод запроса может быть безопасным ,
+            идемпотентным или кэшируемым . <br />
+          </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">GET</span> <br />
             <span class="general-issues__span-grey">
               Метод GET запрашивает получение содержимого ресурса.</span
@@ -239,7 +256,7 @@
             <span class="general-issues__span-purple"> GET /index.html</span>
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">HEAD</span> <br />
             <span class="general-issues__span-grey">Проверка состояния ресурса </span>
             <br />
@@ -260,7 +277,7 @@
             <span class="general-issues__span-purple">HEAD /index.html </span>
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">POST</span> <br />
             <span class="general-issues__span-grey">
               Метод запроса POST предназначен для направления запроса, при котором веб-сервер
@@ -304,10 +321,14 @@
             <span class="general-issues__span-purple"> POST /test </span>
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">PUT</span> <br />
+
             <span class="general-issues__span-grey">Изменениие ресурса</span>
             <br />
+            PUT-запросы приводят к замене целевого ресурса на данные, передаваемые в запросе. Его
+            можно использовать для обновления содержимого существующего ресурса или для создания
+            нового ресурса.
 
             <span class="general-issues__span-green">
               Есть тело запроса. <br />
@@ -335,7 +356,7 @@
             Content-Location: /existing.html
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">DELETE</span> <br />
             <span class="general-issues__span-grey"> Метод DELETE удаляет указанный ресурс.</span>
             <br />
@@ -359,7 +380,7 @@
             представление, описывающее состояние.
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">CONNECT</span> <br />
             <span class="general-issues__span-grey">
               Метод CONNECT создаёт соединение с ресурсом.</span
@@ -383,7 +404,7 @@
             <span class="general-issues__span-purple"> CONNECT www.example.com:443 HTTP/1.1</span>
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">OPTIONS</span> <br />
             <span class="general-issues__span-grey">
               Метод OPTIONS описывает варианты связи для целевого ресурса.</span
@@ -407,7 +428,7 @@
             >
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">TRACE</span> <br />
             <span class="general-issues__span-grey">Проверяет путь до ресурса.</span>
             <br />
@@ -422,7 +443,7 @@
             <span class="general-issues__span-purple"> TRACE /index.html</span>
           </p>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-red">PATCH</span> <br />
             <span class="general-issues__span-grey"> Частичное изменение ресурса</span>
             <br />
@@ -449,7 +470,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion13">
-          <p>
+          <p class="general-issues__paragraph">
             HTTP-методы GET и POST — самые распространённые способы отправить или получить данные с
             сервера. Но в разных случаях оба метода могут быть небезопасными или неудобными в
             использовании. В этой заметке рассмотрим, какой метод когда использовать. <br />
@@ -478,7 +499,7 @@
 
           <h4>GET для безопасных действий, POST для опасных</h4>
 
-          <p>
+          <p class="general-issues__paragraph">
             Говоря совсем просто, GET-запросы лучше не использовать с приватной информацией. Вот
             почему: <br />
             <span class="general-issues__span-green"> - Они кэшируются.</span> Это значит, что логин
@@ -499,28 +520,55 @@
             данных multipart/form-data, что позволяет передавать файлы.
           </p>
 
-          <h4>
-            Ещё раз коротко
-          </h4>
+          <h4>Ещё раз коротко</h4>
 
-          <h5>
-            GET
-          </h5>
+          <h5>GET</h5>
 
-          <p>
+          <p class="general-issues__paragraph">
             - Фильтры в интернет-магазинах <br />
             - Передача параметров через ссылку <br />
             - Другие безопасные запросы
           </p>
 
-          <h5>
-            POST
-          </h5>
+          <h5>POST</h5>
 
-          <p>
+          <p class="general-issues__paragraph">
             - Любые формы с паролями или банковскими картами <br />
             - Формы заявок с персональными данными <br />
             - Отправка файлов
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion35 = !isQuestion35"
+          :class="{ 'general-issues__question_active': isQuestion35 }"
+        >
+          Чем отличаются PUT- и POST-запросы?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion35">
+          <p class="general-issues__paragraph">
+            PUT-запросы приводят к замене целевого ресурса на данные, передаваемые в запросе. Его
+            можно использовать для обновления содержимого существующего ресурса или для создания
+            нового ресурса.
+          </p>
+
+          <p class="general-issues__paragraph">
+            POST-запросы приводят к специфической для ресурса обработке данных, передаваемых в
+            запросе. Их можно использовать для выполнения различных действий. В том числе — для
+            создания новых ресурсов, для выгрузки файлов на сервер, для отправки форм.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Ещё одно отличие между PUT- и POST-запросами заключается в том, что PUT-запросы являются
+            идемпотентными, а POST-запросы — нет. То есть — если запрос, в котором передаются одни и
+            те же данные, и который выполняется по одному и тому же URL, будет выполнен несколько
+            раз, это равносильно однократному выполнению этого запроса. Многократное выполнение
+            POST-запроса не эквивалентно его однократному выполнению. То есть — несколько таких
+            запросов, например, могут привести к созданию нескольких объектов на сервере
           </p>
         </div>
       </div>
@@ -535,35 +583,40 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion05">
-          Ответы содержат следующие элементы: <br />
-          - Версию HTTP-протокола. <br />
-          - HTTP код состояния, сообщающий об успешности запроса или причине неудачи. <br />
-          - Сообщение состояния — краткое описание кода состояния. <br />
-          - HTTP заголовки, подобно заголовкам в запросах. <br />
-          - Опционально: тело, содержащее пересылаемый ресурс. <br />
+          <p class="general-issues__paragraph">
+            Ответы содержат следующие элементы: <br />
+            - Версию HTTP-протокола. <br />
+            - HTTP код состояния, сообщающий об успешности запроса или причине неудачи. <br />
+            - Сообщение состояния — краткое описание кода состояния. <br />
+            - HTTP заголовки, подобно заголовкам в запросах. <br />
+            - Опционально: тело, содержащее пересылаемый ресурс. <br />
 
-          <span class="general-issues__span-red"> Строка состояния: </span> [HTTP/версия][статус
-          код], пример: HTTP/1.1 200 OK <br />
-          <span class="general-issues__span-red"> Заголовки: </span> <br />
-          <span class="general-issues__span-red"></span>
+            <span class="general-issues__span-red"> Строка состояния: </span> [HTTP/версия][статус
+            код], пример: HTTP/1.1 200 OK <br />
+            <span class="general-issues__span-red"> Заголовки: </span> <br />
+            <span class="general-issues__span-red"></span>
+          </p>
 
           <h4>HTTP коды ответов</h4>
-          1хх. Информационный <br />
-          --- 100 Continue (продолжай) <br />
-          2хх. Успех <br />
-          --- 200 Ok (Успех) <br />
-          --- 201 Created (Создано) <br />
-          --- 204 No content (Нет содержимого) <br />
-          3хх. Перенаправление <br />
-          --- 300 Moved permanently (перемещено навсегда) <br />
-          --- 301 Moved temporarily (перемещено временно) <br />
-          4хх. Ошибка клиента <br />
-          --- 400 Bad request (некорректный запрос) <br />
-          --- 401 Unauthorized (не авторизован) <br />
-          --- 404 Not found (не найден) <br />
-          5хх. Ошибка сервера <br />
-          --- 500 Internal server error (Внутренняя ошибка сервера) <br />
-          --- 502 Bad gateway (Ошибка проксирования)
+
+          <p class="general-issues__paragraph">
+            1хх. Информационный <br />
+            --- 100 Continue (продолжай) <br />
+            2хх. Успех <br />
+            --- 200 Ok (Успех) <br />
+            --- 201 Created (Создано) <br />
+            --- 204 No content (Нет содержимого) <br />
+            3хх. Перенаправление <br />
+            --- 300 Moved permanently (перемещено навсегда) <br />
+            --- 301 Moved temporarily (перемещено временно) <br />
+            4хх. Ошибка клиента <br />
+            --- 400 Bad request (некорректный запрос) <br />
+            --- 401 Unauthorized (не авторизован) <br />
+            --- 404 Not found (не найден) <br />
+            5хх. Ошибка сервера <br />
+            --- 500 Internal server error (Внутренняя ошибка сервера) <br />
+            --- 502 Bad gateway (Ошибка проксирования)
+          </p>
         </div>
       </div>
 
@@ -573,22 +626,24 @@
           @click="isQuestion06 = !isQuestion06"
           :class="{ 'general-issues__question_active': isQuestion06 }"
         >
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP"
-            >Безопасный
-          </a>
-          (методы HTTP)
+          Безопасный метод HTTP
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion06">
-          Метод HTTP безопасен , если он не изменяет состояние сервера. Другими словами, метод
-          безопасен, если он приводит к операции только для чтения. Несколько распространенных
-          HTTP-методов безопасны: GET, HEAD, или OPTIONS. Все безопасные методы также идемпотентны ,
-          но не все идемпотентные методы безопасны. Например, PUT и DELETE оба являются
-          идемпотентными, но небезопасными. <br />
-          Все безопасные методы также идемпотентны: HEAD PUT DELETE POST.
+          <p class="general-issues__paragraph">
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP"
+              >Безопасный метод HTTP
+            </a>
+            Метод HTTP безопасен , если он не изменяет состояние сервера. Другими словами, метод
+            безопасен, если он приводит к операции только для чтения. Несколько распространенных
+            HTTP-методов безопасны: GET, HEAD, или OPTIONS. Все безопасные методы также идемпотентны
+            , но не все идемпотентные методы безопасны. Например, PUT и DELETE оба являются
+            идемпотентными, но небезопасными. <br />
+            Все безопасные методы также идемпотентны: HEAD PUT DELETE POST.
+          </p>
         </div>
       </div>
 
@@ -598,20 +653,22 @@
           @click="isQuestion07 = !isQuestion07"
           :class="{ 'general-issues__question_active': isQuestion07 }"
         >
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Glossary/Idempotent"
-            >ИдемпотентныЙ
-          </a>
-          метод HTTP
+          ИдемпотентныЙ метод HTTP
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion07">
-          Метод HTTP является идемпотентным , если идентичный запрос может быть выполнен один или
-          несколько раз подряд с одинаковым эффектом, оставляя сервер в одном и том же состоянии.
-          Вызванный несколько раз подряд, клиент получает одинаковые результаты. <br />
-          Все безопасные методы также идемпотентны: HEAD PUT DELETE POST.
+          <p class="general-issues__paragraph">
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Idempotent"
+              >ИдемпотентныЙ метод HTTP
+            </a>
+            Метод HTTP является идемпотентным , если идентичный запрос может быть выполнен один или
+            несколько раз подряд с одинаковым эффектом, оставляя сервер в одном и том же состоянии.
+            Вызванный несколько раз подряд, клиент получает одинаковые результаты. <br />
+            Все безопасные методы также идемпотентны: HEAD PUT DELETE POST.
+          </p>
         </div>
       </div>
 
@@ -621,22 +678,24 @@
           @click="isQuestion08 = !isQuestion08"
           :class="{ 'general-issues__question_active': isQuestion08 }"
         >
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Glossary/cacheable"
-          >
-            Кэшируемый ответ
-          </a>
-          HTTP
+          Кэшируемый ответ HTTP
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion08">
-          Кэшируемый ответ — это HTTP-ответ, который можно кэшировать, который сохраняется для
-          извлечения и использования позже, сохраняя новый запрос на сервер. Не все HTTP-ответы
-          могут быть кэшированы. <br />
-          Кэшируемые методы: GET,HEAD. <br />
-          Некэшируемые методы: PUT, DELETE, часто POST
+          <p class="general-issues__paragraph">
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Glossary/cacheable"
+            >
+              Кэшируемый ответ HTTP
+            </a>
+            Кэшируемый ответ — это HTTP-ответ, который можно кэшировать, который сохраняется для
+            извлечения и использования позже, сохраняя новый запрос на сервер. Не все HTTP-ответы
+            могут быть кэшированы. <br />
+            Кэшируемые методы: GET,HEAD. <br />
+            Некэшируемые методы: PUT, DELETE, часто POST
+          </p>
         </div>
       </div>
 
@@ -650,30 +709,32 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion11">
-          <span class="general-issues__span-red">URI - Uniform Resource Identifier</span> <br />
-          <span class="general-issues__span-grey"
-            >унифицированный идентификатор ресурса. Включает в себя: URL и URN
-          </span>
-          <br />
-          URI: https://github.com/pulls/mentioned
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-red">URI - Uniform Resource Identifier</span> <br />
+            <span class="general-issues__span-grey"
+              >унифицированный идентификатор ресурса. Включает в себя: URL и URN
+            </span>
+            <br />
+            URI: https://github.com/pulls/mentioned
 
-          <br />
-          <br />
+            <br />
+            <br />
 
-          <span class="general-issues__span-red">URL - Uniform Resource Locator</span> <br />
-          <span class="general-issues__span-grey"
-            >унифицированный определитель местонахождения ресурса</span
-          >
-          <br />
-          URL: https://github.com/
+            <span class="general-issues__span-red">URL - Uniform Resource Locator</span> <br />
+            <span class="general-issues__span-grey"
+              >унифицированный определитель местонахождения ресурса</span
+            >
+            <br />
+            URL: https://github.com/
 
-          <br />
-          <br />
+            <br />
+            <br />
 
-          <span class="general-issues__span-red">URN - Uniform Resource Name</span> <br />
-          <span class="general-issues__span-grey">унифицированное имя ресурса</span> <br />
-          URN: /pulls/mentioned
-          <br />
+            <span class="general-issues__span-red">URN - Uniform Resource Name</span> <br />
+            <span class="general-issues__span-grey">унифицированное имя ресурса</span> <br />
+            URN: /pulls/mentioned
+            <br />
+          </p>
         </div>
       </div>
 
@@ -687,10 +748,12 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion12">
-          Тело HTTP - сообщения используется для передачи тела объекта запроса или тела объекта
-          ответа. Тело сообщения может отсутствовать, но стартовая строка и заголовок являются
-          обязательными элементами. Самым популярным типом тела сообщения является либо HTML, либо
-          JSON.
+          <p class="general-issues__paragraph">
+            Тело HTTP - сообщения используется для передачи тела объекта запроса или тела объекта
+            ответа. Тело сообщения может отсутствовать, но стартовая строка и заголовок являются
+            обязательными элементами. Самым популярным типом тела сообщения является либо HTML, либо
+            JSON.
+          </p>
         </div>
       </div>
 
@@ -709,7 +772,7 @@
         <div class="general-issues__answer" v-if="isQuestion14">
           <h4>Что такое Axios?</h4>
 
-          <p>
+          <p class="general-issues__paragraph">
             <a
               class="general-issues__link"
               target="_blank"
@@ -724,7 +787,7 @@
 
           <h4>Особенности</h4>
 
-          <p>
+          <p class="general-issues__paragraph">
             - Делает XMLHttpRequests запросы из браузера <br />
             - Делает http запросы из node.js <br />
             - Поддерживает Promise API <br />
@@ -736,11 +799,9 @@
             -
           </p>
 
-          <h4>
-            Установка
-          </h4>
+          <h4>Установка</h4>
 
-          <p>
+          <p class="general-issues__paragraph">
             <span class="general-issues__span-grey">Используя npm:</span> <br />
 
             <span class="general-issues__span-red">$ npm install axios</span> <br />
@@ -761,15 +822,18 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion15">
-          <a
-            class="general-issues__link"
-            target="_blank"
-            href="https://ru.vuejs.org/v2/cookbook/using-axios-to-consume-apis.html"
-          >
-            Используем axios для доступа к API Vue.js</a
-          >
-          <br />
-          <p>
+          <p class="general-issues__paragraph">
+            <a
+              class="general-issues__link"
+              target="_blank"
+              href="https://ru.vuejs.org/v2/cookbook/using-axios-to-consume-apis.html"
+            >
+              Используем axios для доступа к API Vue.js</a
+            >
+            <br />
+          </p>
+
+          <p class="general-issues__paragraph">
             Работаем по
             <a
               class="general-issues__link"
@@ -787,23 +851,30 @@
           @click="isQuestion16 = !isQuestion16"
           :class="{ 'general-issues__question_active': isQuestion16 }"
         >
-          xxx
+          В чём отличия технологии Long Polling, протокола WebSocket и событий, генерируемых
+          сервером?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion16">
-          XXX
+          <p class="general-issues__paragraph">
+            Технология Long Polling применяется при взаимодействии клиентских и серверных систем.
+            Клиент отправляет серверу запрос, ответ на который поступает тогда, когда в распоряжении
+            сервера оказываются данные, запрошенные клиентом. После этого клиент выполняет новый
+            запрос.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Протокол WebSocket позволяет устанавливать долгоживущие двусторонние соединения между
+            клиентом и сервером.
+          </p>
+
+          <p class="general-issues__paragraph">
+            В основе событий, генерируемых сервером, лежит использование долгоживущего
+            HTTP-соединения, которое используется для отправки клиенту новых данных по инициативе
+            сервера.
+          </p>
         </div>
       </div>
-
-      <p>
-        <span class="general-issues__span-purple">x</span> <br />
-
-        <span class="general-issues__span-green">x</span> <br />
-
-        <span class="general-issues__span-red">x</span> <br />
-
-        <span class="general-issues__span-grey">xx</span> <br />
-      </p>
 
       <div>
         <button
@@ -811,39 +882,21 @@
           @click="isQuestion18 = !isQuestion18"
           :class="{ 'general-issues__question_active': isQuestion18 }"
         >
-          xxx
+          Чем отличаются куки-файлы, сессионное хранилище и локальное хранилище?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion18">
-          XXX
-        </div>
-      </div>
+          <p class="general-issues__paragraph">
+            Локальное хранилище, это место, которое браузеры могут использовать для локального
+            хранения данных. В нём может храниться до 10 Мб данных. Сессионное хранилище — это
+            разновидность локального хранилища, которое привязано к сессии и удаляется после её
+            завершения. В сессионном хранилище может храниться до 5 Мб данных.
+          </p>
 
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion19 = !isQuestion19"
-          :class="{ 'general-issues__question_active': isQuestion19 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion19">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion20 = !isQuestion20"
-          :class="{ 'general-issues__question_active': isQuestion20 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion20">
-          XXX
+          <p class="general-issues__paragraph">
+            Куки-файлы используются для хранения небольших объёмов данных, не превышающих 4 Кб. Ими
+            может пользоваться браузер, их может запрашивать у браузера сервер.
+          </p>
         </div>
       </div>
 
@@ -853,11 +906,144 @@
           @click="isQuestion21 = !isQuestion21"
           :class="{ 'general-issues__question_active': isQuestion21 }"
         >
-          xxx
+          Что такое файл <strong>cookie</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion21">
-          XXX
+          <p class="general-issues__paragraph">
+            Файл <strong>cookie</strong> — это небольшой пакет данных, хранящийся на вашем
+            компьютере.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Например, веб-сайт может размещать файлы <strong>cookie</strong> в браузерах
+            посетителей, чтобы запомнить учетные данные для входа в систему при следующем посещении
+            страницы пользователем.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Под капотом файлы <strong>cookie</strong> представляют собой текстовые файлы с парами
+            ключ-значение. Чтобы создать, прочитать или удалить файлы cookie, используйте
+            document.cookieсвойство.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Например, давайте создадим файл <strong>document.cookie</strong>, который сохраняет имя
+            пользователя:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong>document.cookie = "username=foobar123";</strong>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion20 = !isQuestion20"
+          :class="{ 'general-issues__question_active': isQuestion20 }"
+        >
+          Что такое <strong>веб-хранилище</strong>?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion20">
+          <p class="general-issues__paragraph">
+            Веб-хранилище — это API , который позволяет браузерам локально хранить пары
+            ключ-значение в браузере пользователя. Использование веб-хранилища делает этот процесс
+            более интуитивным, чем использование файлов cookie.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Веб-хранилище предоставляет два способа хранения данных:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong>Локальное хранилище </strong> — хранит данные для клиента без срока годности.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong>Хранилище сеанса</strong> — хранит данные только для одного сеанса. Данные
+            исчезают при закрытии браузера.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Вот пример того, как вы можете сохранить, получить доступ и удалить элемент из
+            sessionStorage:
+            <span class="general-issues__span-purple">
+              // Save data to sessionStorage <br />
+              sessionStorage.setItem('favoriteColor', 'gray'); <br />
+              <br />
+              // Get the color from the sessionStorage <br />
+              let data = sessionStorage.getItem('favoriteColor'); <br />
+              console.log(data); <br />
+              <br />
+              // Remove saved color preset from sessionStorage <br />
+              sessionStorage.removeItem('favoriteColor'); <br />
+              <br />
+              // Remove ALL the saved data from sessionStorage <br />
+              sessionStorage.clear();
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            И вот как вы можете сделать то же самое, используя localStorage:
+            <span class="general-issues__span-purple">
+              // Save data to localStorage <br />
+              localStorage.setItem('favoriteColor', 'gray'); <br />
+              <br />
+              // Get the color from the localStorage <br />
+              let data = localStorage.getItem('favoriteColor'); <br />
+              console.log(data); <br />
+              <br />
+              // Remove saved color preset from localStorage <br />
+              localStorage.removeItem('favoriteColor'); <br />
+              <br />
+              // Remove ALL the saved data from localStorage <br />
+              localStorage.clear();
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion20 = !isQuestion20"
+          :class="{ 'general-issues__question_active': isQuestion20 }"
+        >
+          Зачем вам веб-хранилище?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion20">
+          <p class="general-issues__paragraph">
+            <strong>Веб-хранилище</strong> позволяет хранить большие объемы данных локально.
+            Главное, это не влияет на производительность сайта.
+          </p>
+
+          <p class="general-issues__paragraph">
+            При использовании веб-хранилища информация не хранится на сервере. Это делает его более
+            предпочтительным подходом по сравнению с файлами cookie.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion19 = !isQuestion19"
+          :class="{ 'general-issues__question_active': isQuestion19 }"
+        >
+          Что такое CORS?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion19">
+          <p class="general-issues__paragraph">
+            CORS (Cross-Origin Resource Sharing, совместное использование ресурсов между разными
+            источниками) — это браузерный механизм, который позволяет предоставлять страницам доступ
+            к ресурсам, расположенным за пределами некоего домена. Это расширяет возможности страниц
+            и добавляет гибкости политике одинакового источника (same-origin policy).
+          </p>
         </div>
       </div>
 
@@ -871,7 +1057,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion22">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -885,7 +1071,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion23">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -899,7 +1085,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion24">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -913,7 +1099,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion25">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -927,7 +1113,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion26">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -941,7 +1127,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion27">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -955,7 +1141,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion28">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -969,7 +1155,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion29">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -983,7 +1169,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion30">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -997,7 +1183,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion31">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -1011,7 +1197,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion32">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -1025,7 +1211,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion33">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
 
@@ -1039,21 +1225,7 @@
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion34">
-          XXX
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion35 = !isQuestion35"
-          :class="{ 'general-issues__question_active': isQuestion35 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion35">
-          XXX
+          <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
     </div>
@@ -1185,7 +1357,7 @@ export default {
   }
 
   &__answer {
-    font-size: 14px;
+    font-size: 19px;
     line-height: 24px;
     margin-left: 24px;
   }
@@ -1193,41 +1365,63 @@ export default {
   // general-issues__span
   &__span {
     color: black;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  // general-issues__span-grey
-  &__span-grey {
-    color: #605858;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  // general-issues__span-green
-  &__span-green {
-    color: green;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__span-red
   &__span-red {
     color: red;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-green
+  &__span-green {
+    color: green;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__span-purple
   &__span-purple {
     color: purple;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  // general-issues__span-grey
+  &__span-grey {
+    color: #605858;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 
   // general-issues__link
   &__link {
+    display: block;
+    font-size: 19px;
+    line-height: 1.5em;
+    color: #2a5885;
     text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: blue;
+    }
+  }
+
+  &__paragraph {
+    display: block;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.86);
+    line-height: 1.5em;
+    margin-top: 24px;
   }
 }
 </style>
