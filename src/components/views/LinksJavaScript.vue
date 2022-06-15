@@ -85,6 +85,13 @@
       >
     </div>
 
+    <h2 class="links-to__subheading">TypeScript</h2>
+    <div class="links-to__new-theme">
+      <a class="links-to__link" target="_blank" href="https://www.typescriptlang.org/"
+        >TypeScript</a
+      >
+    </div>
+
     <!-- <h2 class="links-to__subheading">xxx</h2>
     <div class="links-to__new-theme">
       <a class="links-to__link" target="_blank" href="">xxx</a>
@@ -98,22 +105,7 @@
 
         <span class="links-to__span-red">xxx </span> <br />
       </p>
-    </div>
-
-    <h2 class="links-to__subheading">xxx</h2>
-    <div class="links-to__new-theme">
-      <a class="links-to__link" target="_blank" href="">xxx</a>
-
-      <p class="links-to__paradraph">
-        <a class="links-to__link" target="_blank" href="">xxx</a>
-      </p>
-
-      <p class="links-to__paradraph">
-        <strong>xxx: </strong> <br />
-
-        <span class="links-to__span-red">xxx </span> <br />
-      </p>
-    </div>  -->
+    </div>   -->
   </div>
 </template>
 

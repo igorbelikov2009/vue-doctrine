@@ -639,6 +639,611 @@
           <p class="general-issues__paragraph">xxx</p>
         </div>
       </div>
+
+      <!--  -->
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion61 = !isQuestion61"
+          :class="{ 'general-issues__question_active': isQuestion61 }"
+        >
+          xx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion61">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion62 = !isQuestion62"
+          :class="{ 'general-issues__question_active': isQuestion62 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion62">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion63 = !isQuestion63"
+          :class="{ 'general-issues__question_active': isQuestion63 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion63">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion64 = !isQuestion64"
+          :class="{ 'general-issues__question_active': isQuestion64 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion64">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion65 = !isQuestion65"
+          :class="{ 'general-issues__question_active': isQuestion65 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion65">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion66 = !isQuestion66"
+          :class="{ 'general-issues__question_active': isQuestion66 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion66">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion61isQuestion67 = !isQuestion67"
+          :class="{ 'general-issues__question_active': isQuestion67 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion67">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion68 = !isQuestion68"
+          :class="{ 'general-issues__question_active': isQuestion68 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion68">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion69 = !isQuestion69"
+          :class="{ 'general-issues__question_active': isQuestion69 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion69">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion70 = !isQuestion70"
+          :class="{ 'general-issues__question_active': isQuestion70 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion70">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <!--  -->
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion71 = !isQuestion71"
+          :class="{ 'general-issues__question_active': isQuestion71 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion71">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion72 = !isQuestion72"
+          :class="{ 'general-issues__question_active': isQuestion72 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion72">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion73 = !isQuestion73"
+          :class="{ 'general-issues__question_active': isQuestion73 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion73">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion74 = !isQuestion74"
+          :class="{ 'general-issues__question_active': isQuestion74 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion74">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion75 = !isQuestion75"
+          :class="{ 'general-issues__question_active': isQuestion75 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion75">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion76 = !isQuestion76"
+          :class="{ 'general-issues__question_active': isQuestion76 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion76">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion77 = !isQuestion77"
+          :class="{ 'general-issues__question_active': isQuestion77 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion77">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion78 = !isQuestion78"
+          :class="{ 'general-issues__question_active': isQuestion78 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion78">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion79 = !isQuestion79"
+          :class="{ 'general-issues__question_active': isQuestion79 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion79">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion80 = !isQuestion80"
+          :class="{ 'general-issues__question_active': isQuestion80 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion80">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <!--  -->
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion81 = !isQuestion81"
+          :class="{ 'general-issues__question_active': isQuestion81 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion81">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion82 = !isQuestion82"
+          :class="{ 'general-issues__question_active': isQuestion82 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion82">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion83 = !isQuestion83"
+          :class="{ 'general-issues__question_active': isQuestion83 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion83">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion84 = !isQuestion84"
+          :class="{ 'general-issues__question_active': isQuestion84 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion84">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion85 = !isQuestion85"
+          :class="{ 'general-issues__question_active': isQuestion85 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion85">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion86 = !isQuestion86"
+          :class="{ 'general-issues__question_active': isQuestion86 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion86">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion87 = !isQuestion87"
+          :class="{ 'general-issues__question_active': isQuestion87 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion87">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion88 = !isQuestion88"
+          :class="{ 'general-issues__question_active': isQuestion88 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion88">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion89 = !isQuestion89"
+          :class="{ 'general-issues__question_active': isQuestion89 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion89">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion90 = !isQuestion90"
+          :class="{ 'general-issues__question_active': isQuestion90 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion90">
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+
+          <p class="general-issues__paragraph"></p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -686,6 +1291,36 @@ export default {
       isQuestion33: false,
       isQuestion34: false,
       isQuestion35: false,
+      isQuestion61: false,
+      isQuestion62: false,
+      isQuestion63: false,
+      isQuestion64: false,
+      isQuestion65: false,
+      isQuestion66: false,
+      isQuestion67: false,
+      isQuestion68: false,
+      isQuestion69: false,
+      isQuestion70: false,
+      isQuestion71: false,
+      isQuestion72: false,
+      isQuestion73: false,
+      isQuestion74: false,
+      isQuestion75: false,
+      isQuestion76: false,
+      isQuestion77: false,
+      isQuestion78: false,
+      isQuestion79: false,
+      isQuestion80: false,
+      isQuestion81: false,
+      isQuestion82: false,
+      isQuestion83: false,
+      isQuestion84: false,
+      isQuestion85: false,
+      isQuestion86: false,
+      isQuestion87: false,
+      isQuestion88: false,
+      isQuestion89: false,
+      isQuestion90: false,
     }
   },
 }

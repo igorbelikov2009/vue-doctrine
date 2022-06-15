@@ -831,6 +831,52 @@ typeof (ложь) // "логическое"
       <div>
         <button
           class="general-issues__question"
+          @click="isQuestion70 = !isQuestion70"
+          :class="{ 'general-issues__question_active': isQuestion70 }"
+        >
+          Что такое цикл for?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion70">
+          <p class="general-issues__paragraph">
+            Цикл for…of можно использовать для перебора итерируемых объектов в JavaScript.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Например, вы можете распечатать содержимое массива, используя цикл for…of:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+const nums = [1,2,3];
+for (const num of nums) {
+    console.log(num);
+}
+                </code>
+              </pre>
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Выход:
+
+            <br />
+            <span class="general-issues__span-green">
+              1 <br />
+              2 <br />
+              3
+            </span>
+          </p>
+          <strong></strong>
+          <span class="general-issues__span-purple"></span>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
           @click="isQuestion32 = !isQuestion32"
           :class="{ 'general-issues__question_active': isQuestion32 }"
         >
@@ -2580,7 +2626,7 @@ console.log(Object.keys(student));
           @click="isQuestionisQuestion52 = !isQuestion52"
           :class="{ 'general-issues__question_active': isQuestion52 }"
         >
-          Какие существуют способы доступа к свойствам объекта?
+          Какие существуют <strong>способы доступа к свойствам объекта</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion52">
@@ -2604,10 +2650,6 @@ console.log(Object.keys(student));
         </div>
       </div>
 
-      <p class="general-issues__paragraph"></p>
-      <strong></strong>
-      <span class="general-issues__span-purple"></span>
-
       <!--  -->
       <div>
         <button
@@ -2615,17 +2657,23 @@ console.log(Object.keys(student));
           @click="isQuestion61 = !isQuestion61"
           :class="{ 'general-issues__question_active': isQuestion61 }"
         >
-          xxx
+          Какова цель <strong>точки останова</strong> при отладке кода?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion61">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Точки останова позволяют находить ошибки в коде JavaScript.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Вы можете установить точки останова в своем коде, когда оператор отладчика выполняется и
+            появляется окно отладчика.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            В точке останова JavaScript останавливает выполнение и позволяет вам проверить значения
+            и область действия для решения возможных проблем.
+          </p>
         </div>
       </div>
 
@@ -2635,17 +2683,27 @@ console.log(Object.keys(student));
           @click="isQuestion62 = !isQuestion62"
           :class="{ 'general-issues__question_active': isQuestion62 }"
         >
-          xxx
+          Как выполнить код JavaScript <strong>после загрузки страницы</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion62">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">Это можно сделать тремя способами:</p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Установите свойство <strong>window.onload</strong> как функцию, которая выполняется
+            после загрузки страницы: <br />
+            <span class="general-issues__span-purple">window.onload = функция ...</span>
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Установите свойство <strong>document.onload</strong> как функцию, которая выполняется
+            после загрузки страницы: <br />
+            <span class="general-issues__span-purple">document.onload = функция ...</span>
+          </p>
+          <p class="general-issues__paragraph">
+            установите <strong>onload</strong> свойство атрибута HTML как функцию JS: <br />
+            <span class="general-issues__span-purple"> &lt;body onload="script();"></span>
+          </p>
         </div>
       </div>
 
@@ -2655,17 +2713,41 @@ console.log(Object.keys(student));
           @click="isQuestion63 = !isQuestion63"
           :class="{ 'general-issues__question_active': isQuestion63 }"
         >
-          xxx
+          Что такое <strong>объект ошибки</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion63">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            <strong>Oбъект ошибки</strong> — это встроенный объект, который предоставляет подробную
+            информацию об ошибке, если она возникает.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Объект ошибки имеет два свойства: <br />
+            <strong>name</strong> <br />
+            <strong>message</strong>
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Например, предположим, что функция <strong>sayHi()</strong> выдает ошибку. Когда это
+            происходит, <strong>catch</strong> блок дает вам <strong>error объект</strong>, который
+            вы можете распечатать, например, на консоли.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+try {
+  sayHi("Welcome");
+}
+catch(error) {
+  console.log(error.name + "\n" + error.message);
+}
+                </code>
+              </pre>
+            </span>
+          </p>
         </div>
       </div>
 
@@ -2675,17 +2757,39 @@ console.log(Object.keys(student));
           @click="isQuestion64 = !isQuestion64"
           :class="{ 'general-issues__question_active': isQuestion64 }"
         >
-          xxx
+          Что делает тег <strong> NoScript</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion64">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Тег Noscript предназначен для обнаружения и реагирования на браузеры, в которых отключен
+            JavaScript.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Вы можете использовать тег NoScript для выполнения фрагмента кода, который уведомляет
+            пользователя.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Например, ваша HTML-страница может иметь такой noscriptтег:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+&lt;script&gt;
+  document.write("Hello World!");
+&lt;/script&gt;
+
+&lt;noscript&gt;
+  Your browser does not support JavaScript!
+&lt;/noscript&gt;
+                </code>
+              </pre>
+            </span>
+          </p>
         </div>
       </div>
 
@@ -2695,17 +2799,38 @@ console.log(Object.keys(student));
           @click="isQuestion65 = !isQuestion65"
           :class="{ 'general-issues__question_active': isQuestion65 }"
         >
-          xxx
+          Что такое <strong> входной контролируемый контур</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion65">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            В цикле, <strong>контролируемом входом</strong>, условие проверяется перед входом в тело
+            цикла.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            <br />
+            <span class="general-issues__span-purple">
+              <pre>
+              <code>
+let nums = [1,2,3];
+for (let num of nums) {
+    console.log(num);
+}
+              </code>
+            </pre>
+            </span>
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Output:
+            <br />
+            <span class="general-issues__span-green">
+              1 <br />
+              2 <br />
+              3
+            </span>
+          </p>
         </div>
       </div>
 
@@ -2715,37 +2840,107 @@ console.log(Object.keys(student));
           @click="isQuestion66 = !isQuestion66"
           :class="{ 'general-issues__question_active': isQuestion66 }"
         >
-          xxx
+          Что такое <strong>петля с контролируемым выходом</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion66">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            В цикле, управляемом выходом, условие оценивается в конце цикла. Это означает, что тело
+            цикла выполняется по крайней мере один раз, независимо от того, было ли условие true или
+            false.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Например, в эту категорию попадает цикл do-while:
+            <br />
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+const i = 0;
+do {
+  console.log('The number is', i);
+} while (i !== 0);
+                </code>
+              </pre>
+            </span>
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Output:
+
+            <br />
+            <span class="general-issues__span-green">The number is 0</span>
+          </p>
         </div>
       </div>
 
       <div>
         <button
           class="general-issues__question"
-          @click="isQuestion61isQuestion67 = !isQuestion67"
+          @click="isQuestion67 = !isQuestion67"
           :class="{ 'general-issues__question_active': isQuestion67 }"
         >
-          xxx
+          Что такое <strong>итератор</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion67">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Протокол итератора позволяет объекту генерировать последовательность значений.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Итератор должен реализовать <strong>next()</strong> метод получения следующего значения
+            в последовательности. Этот метод возвращает объект с <br />
+            <strong>- value— </strong> следующее значение в последовательности итераций <br />
+            <strong>- done— </strong> если это значение является последним в последовательности, это
+            true. Если нет, то это false.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Вот пример создания и использования итератора. Эта функция реализует итератор диапазона,
+            который может быть вызван rangeIter(1,5), и выводит значения 1 2 3 4.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+// define a function that returns an iterator 
+function rangeIter(start = 0, end = Infinity, step = 1) {
+    let nextIndex = start;
+    let count = 0;
+    // create the actual iterator object
+    const iterator = {
+       // create the next() method that knows how to get the next value in the sequence
+       next: function() {
+           let result;
+           if (nextIndex &lt; end) {
+               // Return the value and set done 'false' because the iteration is not completed
+               result = { value: nextIndex, done: false }
+               nextIndex += step;
+               count++;
+               return result;
+           }
+           // set done 'true' when the end has been reached
+           return { value: count, done: true }
+       }
+    };
+    // return an iterator object
+    return iterator;
+}
+
+// Using the iterator
+const it = rangeIter(1, 5);
+
+let result = it.next();
+while (!result.done) { // prints 1 2 3 4
+     console.log(result.value);
+     result = it.next();
+}
+                </code>
+              </pre>
+            </span>
+          </p>
         </div>
       </div>
 
@@ -2755,17 +2950,52 @@ console.log(Object.keys(student));
           @click="isQuestion68 = !isQuestion68"
           :class="{ 'general-issues__question_active': isQuestion68 }"
         >
-          xxx
+          Что <strong>можно повторять</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion68">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Итерируемый протокол означает, что объект может быть итерирован, и, таким образом,
+            реализует протокол итератора (предыдущий вопрос)
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Другими словами, вы можете использовать <strong>for...of</strong> цикл для любого
+            итерируемого объекта, чтобы перебирать последовательность значений, которые он
+            генерирует.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Например, <strong>Array</strong> или <strong>Map</strong> являются итерируемыми в
+            JavaScript, но <strong>Object</strong> не является.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Вот пример применения цикла <strong>for…of</strong> к массиву, который по своей природе
+            является итерируемым:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+const nums = [1,2,3];
+for (let num of nums) {
+    console.log(num);
+}
+                </code>
+              </pre>
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Выход: <br />
+            <span class="general-issues__span-green">
+              1 <br />
+              2 <br />
+              3
+            </span>
+          </p>
         </div>
       </div>
 
@@ -2775,37 +3005,68 @@ console.log(Object.keys(student));
           @click="isQuestion69 = !isQuestion69"
           :class="{ 'general-issues__question_active': isQuestion69 }"
         >
-          xxx
+          Что такое <strong>генератор</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion69">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Генератор является альтернативой итераторам. Вы можете писать итеративный код с
+            прерывистым выполнением. Другими словами, выполнение функции генератора может быть
+            приостановлено.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Генераторы определяются с использованием <strong>function*</strong> синтаксиса. Вместо
+            того, чтобы возвращать значения, они <strong>yield значения</strong> (значения
+            доходности.)
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
-        </div>
-      </div>
+          <p class="general-issues__paragraph">
+            При создании генераторы не выполняют свой код. Вместо этого они возвращают объект
+            Generator, который по сути является итератором. Когда вы вызываете next()
+            объект-генератор, он запускает код до тех пор, пока не встретит yield (доход) инструкцию
+            и не остановится.
+          </p>
 
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion70 = !isQuestion70"
-          :class="{ 'general-issues__question_active': isQuestion70 }"
-        >
-          xxx
-        </button>
+          <p class="general-issues__paragraph">
+            Например, вот генератор, который делает то же самое, что и итератор в части итератора
+            выше:
+          </p>
 
-        <div class="general-issues__answer" v-if="isQuestion70">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+// Создайте функцию генератора, которая возвращает итератор
+function* rangeIter(start = 0, end = Infinity, step = 1) {
+    let count = 0;
+    for (let i = start; i &lt; end; i += step) {
+        count++;
+        yield i;
+    }
+    return count;
+}
 
-          <p class="general-issues__paragraph"></p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+// Создайте объект генератора
+const it = rangeIter(1, 5);
+
+
+// Используйте генератор точно так же, как вы бы использовали итератор
+let result = it.next();
+while (!result.done) { // prints 1 2 3 4
+     console.log(result.value);
+     result = it.next();
+}
+                </code>
+              </pre>
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Функцию <strong>rangeIter</strong> намного легче читать, чем rangeIter в примере с
+            итератором. Тем не менее, оба делают одно и то же.
+          </p>
         </div>
       </div>
 
@@ -2817,17 +3078,27 @@ console.log(Object.keys(student));
           @click="isQuestion71 = !isQuestion71"
           :class="{ 'general-issues__question_active': isQuestion71 }"
         >
-          xxx
+          Что такое <strong>node.js</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion71">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Node.js — популярная платформа для разработки с открытым исходным кодом.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Он используется для выполнения кода JavaScript на стороне сервера.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Node.js удобен для разработки приложений, которым требуется постоянное соединение
+            браузера с сервером.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Node.js обычно используется для создания приложений реального времени, таких как чат,
+            новостная лента и т.п.
+          </p>
         </div>
       </div>
 
@@ -2837,17 +3108,35 @@ console.log(Object.keys(student));
           @click="isQuestion72 = !isQuestion72"
           :class="{ 'general-issues__question_active': isQuestion72 }"
         >
-          xxx
+          Что такое <strong>цикл событий</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion72">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Цикл событий — это очередь функций обратного вызова. Он обрабатывает все асинхронные
+            обратные вызовы.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Когда выполняется асинхронная функция, функция обратного вызова помещается в очередь.
+            Механизм JavaScript не запускает цикл событий до завершения асинхронной задачи.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Например, структура цикла событий может выглядеть так:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                   <code>
+while (queue.waitForMessage()) {
+    queue.processNextMessage();
+}
+                   </code>
+                 </pre>
+            </span>
+          </p>
         </div>
       </div>
 
@@ -2857,17 +3146,52 @@ console.log(Object.keys(student));
           @click="isQuestion73 = !isQuestion73"
           :class="{ 'general-issues__question_active': isQuestion73 }"
         >
-          xxx
+          Что такое <strong>унарный оператор</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion73">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            <strong>Унарные операции</strong> - это операции, имеющие один операнд (аргумент),
+            например, декремент и инкремент. В JavaScript унарные операции имеют самый высокий
+            приоритет и все они правоассоциативные (операция находится справа от переменной i++,
+            i--).
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            <strong>Унарный плюс (+)</strong> преобразует строку в число, если это возможно.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            <strong>Унарный минус (-)</strong> преобразует строку в число, если это возможно и затем
+            изменяет знак результата.
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong>Оператор инкремент (++)</strong> означает увеличение на единицу. Работает он
+            так: преобразует в число, увеличивает на единицу, присваивает обратно этой переменной.
+            <br />
+
+            Значение, возвращаемое оператором ++, зависит от его положения по отношению к операнду.
+            Если поставить его перед операндом (префиксный оператор инкремента), то к операнду
+            прибавляется 1, а результатом является увеличенное значение операнда. Если же он
+            размещается после операнда (постфиксный оператор инкремента), то к операнду прибавляется
+            1, однако результатом является первоначальное, неувеличенное значение операнда.
+            Взгляните на различия в следующих двух выражениях: <br />
+
+            <span class="general-issues__span-purple">
+              Пример 1 <br />
+              var a = 1; <br />
+              var b = 1; <br />
+              <br />
+              document.write(a++); /* -> 1 */ <br />
+              document.write(++b); /* -> 2 */
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            <strong>Оператор декремент (--) </strong> означает уменьшение на единицу. Работает он
+            так же, как и инкремент.
+          </p>
         </div>
       </div>
 
@@ -2877,17 +3201,40 @@ console.log(Object.keys(student));
           @click="isQuestion74 = !isQuestion74"
           :class="{ 'general-issues__question_active': isQuestion74 }"
         >
-          xxx
+          Что такое <strong>TypeScript</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion74">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            TypeScript — это JavaScript с типами, с синтаксисом для типов. Это надмножество
+            JavaScript, созданное Microsoft.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            TypeScript — это строго типизированный язык программирования, основанный на JavaScript,
+            предоставляющий вам лучшие инструменты в любом масштабе.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            TypeScript добавляет такие типы, как необязательные типы, классы, async/await и т. д., в
+            обычный JavaScript.
+          </p>
+
+          <p class="general-issues__paragraph">Вот простой пример функции TypeScript:</p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                 <code>
+function greet(name: string): string {
+   return "Hello, " + name;
+}
+
+console.log(greet("Michael"));
+                 </code>
+               </pre>
+            </span>
+          </p>
         </div>
       </div>
 
@@ -2897,17 +3244,34 @@ console.log(Object.keys(student));
           @click="isQuestion75 = !isQuestion75"
           :class="{ 'general-issues__question_active': isQuestion75 }"
         >
-          xxx
+          Что такое <strong>конструктор</strong> в JavaScript?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion75">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Конструктор — это метод создания и инициализации объекта класса. Он выполняется, когда
+            вы создаете экземпляр нового объекта из класса.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">Например:</p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <p>
+                <code>
+                  class Student { constructor() { this.name = "Mike"; } } let student = new
+                  Student(); console.log(student.name);
+                </code>
+              </p>
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Output:
+
+            <br />
+            <span class="general-issues__span-green">Mike</span>
+          </p>
         </div>
       </div>
 
@@ -2917,17 +3281,14 @@ console.log(Object.keys(student));
           @click="isQuestion76 = !isQuestion76"
           :class="{ 'general-issues__question_active': isQuestion76 }"
         >
-          xxx
+          Что такое <strong>ES6</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion76">
-          <p class="general-issues__paragraph"></p>
-
-          <p class="general-issues__paragraph"></p>
-
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            ES6 (ECMAScript 6) — шестая версия языка программирования JavaScript. Он был выпущен еще
+            в июне 2015 года.
+          </p>
         </div>
       </div>
 
@@ -2937,17 +3298,38 @@ console.log(Object.keys(student));
           @click="isQuestion77 = !isQuestion77"
           :class="{ 'general-issues__question_active': isQuestion77 }"
         >
-          xxx
+          Что такое <strong>шаблонные литералы</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion77">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Литералы шаблонов позволяют встраивать <strong>выражения</strong> непосредственно в
+            строку.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            - При использовании литерала шаблона не объявляйте строку в кавычках, а вместо этого
+            используйте обратную кавычку <strong>(`)</strong>.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            - Чтобы вставить переменную или выражение в строку, вам нужно добавить ее между
+            <strong>${}</strong>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Например:
+
+            <br />
+            <span class="general-issues__span-purple">console.log(`Это ${10 * 10}-й раз`)</span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Выход:
+
+            <br />
+            <span class="general-issues__span-green"> Это в сотый раз</span>
+          </p>
         </div>
       </div>
 
@@ -2957,17 +3339,34 @@ console.log(Object.keys(student));
           @click="isQuestion78 = !isQuestion78"
           :class="{ 'general-issues__question_active': isQuestion78 }"
         >
-          xxx
+          Как можно <strong>поменять местами</strong> две переменные без третьей?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion78">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Используйте деструктурирование, чтобы отделить значения от массива. Это также можно
+            использовать для замены двух переменных без третьего помощника:
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+let a = 1;
+let b = 2;
+[a, b] = [b, a];
+console.log(a, b)
+                </code>
+              </pre>
+            </span>
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Output:
+
+            <br />
+            <span class="general-issues__span-green">2 1</span>
+          </p>
         </div>
       </div>
 
@@ -2977,17 +3376,31 @@ console.log(Object.keys(student));
           @click="isQuestion79 = !isQuestion79"
           :class="{ 'general-issues__question_active': isQuestion79 }"
         >
-          xxx
+          Что такое <strong>ArrayBuffer</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion79">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            An ArrayBuffer— это универсальный буфер двоичных данных фиксированной длины.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                 <code>
+let buffer = new ArrayBuffer(16);
+console.log(buffer.byteLength)
+                 </code>
+               </pre>
+            </span>
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Output:
+
+            <br />
+            <span class="general-issues__span-green">16</span>
+          </p>
         </div>
       </div>
 
@@ -2997,17 +3410,45 @@ console.log(Object.keys(student));
           @click="isQuestion80 = !isQuestion80"
           :class="{ 'general-issues__question_active': isQuestion80 }"
         >
-          xxx
+          Что такое <strong>прототип</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion80">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Все объекты JavaScript наследуют свойства прототипа.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Например: <br />
+            <br />
+            - Математические объекты наследуют свойства от Math прототипа <br />
+            - Объекты массива наследуют свойства Array прототипа.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Прототип – это характеристика объекта. Он описывает атрибуты, связанные с ним. Он
+            действует как план объекта.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Например, вы можете получить доступ к объекту, prototypeчтобы добавить новое свойство в
+            конструктор объекта, например:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+function Fruit(name, weight) {
+  this.name = name;
+  this.weight = weight;
+}
+Fruit.prototype.description = "Yum!";
+                </code>
+              </pre>
+            </span>
+          </p>
           <strong></strong>
-          <span class="general-issues__span-purple"></span>
         </div>
       </div>
 
@@ -3019,17 +3460,52 @@ console.log(Object.keys(student));
           @click="isQuestion81 = !isQuestion81"
           :class="{ 'general-issues__question_active': isQuestion81 }"
         >
-          xxx
+          Что такое <strong>стрелочные функции</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion81">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Стрелочные функции обеспечивают сокращение для создания функций в JavaScript.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Вы можете использовать стрелочные функции только в функциональных выражениях.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            Вот сравнение обычной функции и стрелочной функции:
+          </p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                 <code>
+// Traditional function
+var sum = function(a,b){
+  return a + b;
+}
+
+// Arrow Function
+var sum = (a,b) => a + b;
+                 </code>
+               </pre>
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            - Стрелочные функции объявляются без ключевого слова function.
+          </p>
+
+          <p class="general-issues__paragraph">
+            - Если есть только одно (возвращающее) выражение, вам не нужно использовать ключевое
+            слово return.
+          </p>
+
+          <p class="general-issues__paragraph">
+            В приведенном выше также отсутствуют фигурные скобки. Это возможно только в том случае,
+            если стрелочная функция состоит только из одного выражения. Если их больше, то нужно
+            добавить фигурные скобки после стрелки.
+          </p>
         </div>
       </div>
 
@@ -3039,17 +3515,35 @@ console.log(Object.keys(student));
           @click="isQuestion82 = !isQuestion82"
           :class="{ 'general-issues__question_active': isQuestion82 }"
         >
-          xxx
+          Какая польза от <strong>метода dir()</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion82">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Отображает console.dir() интерактивный список свойств объекта JavaScript в формате JSON.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Например:
+            <br />
+            <span class="general-issues__span-purple"
+              >const student = { "name":"Mike", "id": 132123, "city": "New York"}; <br />
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+              console.dir(student);</span
+            >
+          </p>
+
+          <p class="general-issues__paragraph">
+            В результате в консоли появится следующий интерактивный список:
+          </p>
+
+          <p class="general-issues__images">
+            <img
+              class="general-issues__img-interactive-list"
+              src="/images/doctrine/interactive-list.png"
+              alt="interactive-list"
+            />
+          </p>
         </div>
       </div>
 
@@ -3438,12 +3932,17 @@ export default {
   }
 
   &__images {
-    width: 50%;
+    width: 100%;
   }
 
   &__img-event-bubbling {
-    width: 100%;
+    width: 50%;
     aspect-ratio: 354 / 194;
+  }
+
+  &__img-interactive-list {
+    width: 50%;
+    aspect-ratio: 403 / 97;
   }
 }
 </style>
