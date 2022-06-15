@@ -74,7 +74,11 @@
           </p>
 
           <div class="general-issues__images">
-            <img class="general-issues__img" src="/images/doctrine/promises-block.png" alt="" />
+            <img
+              class="general-issues__img-promise"
+              src="/images/doctrine/promises-block.png"
+              alt=""
+            />
           </div>
 
           <p class="general-issues__paragraph"></p>
@@ -117,10 +121,176 @@
         </div>
       </div>
 
+      <!--  -->
       <div>
         <button
           class="general-issues__question"
-          @click="isQuestionisQuestion22 = !isQuestion22"
+          @click="isQuestion22 = !isQuestion22"
+          :class="{ 'general-issues__question_active': isQuestion22 }"
+        >
+          Метод Promise.race(iterable)
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion22">
+          <p class="general-issues__paragraph">
+            Метод Promise.race(iterable) возвращает промис, который выполнен (разрешен) или отклонён
+            первым, со значением или причиной отклонения этого промиса.
+          </p>
+
+          <p class="general-issues__paragraph">Пример:</p>
+
+          <!-- <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, 'one');
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, 'two');
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);
+  // Оба разрешенны, но promise2 выполнился быстрее
+});
+//результат: "two"
+
+                </code>
+              </pre>  
+            </span>
+          </p> -->
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion36 = !isQuestion36"
+          :class="{ 'general-issues__question_active': isQuestion36 }"
+        >
+          Метод Promise.all(iterable)
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion36">
+          <p class="general-issues__paragraph">
+            Метод Promise.all(iterable) возвращает промис, который принимает массив промисов в
+            качестве входных данных. Он выполнится тогда, когда: <br />
+            - будут выполнены все промисы, переданные в виде перечисляемых аргументов, <br />
+            - или отклонён любой из переданных промисов.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Promise.all возвращает массив значений от всех промисов, которые были ему переданы.
+            Возвращаемый массив значений сохраняет порядок оригинального перечисляемого объекта, но
+            не порядок выполнения промисов. Если какой-либо элемент перечисляемого объекта не
+            является промисом, то он будет преобразован с помощью метода Promise.resolve.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Promise.all ждёт выполнения всех промисов (или первого метода reject()).
+            <br />
+            <br />
+
+            <span class="general-issues__span-purple">
+              var p1 = Promise.resolve(3); <br />
+              var p2 = 1337; <br />
+              var p3 = new Promise((resolve, reject) => { <br />
+              setTimeout(resolve, 100, "foo"); <br />
+              }); <br />
+              <br />
+              Promise.all([p1, p2, p3]).then(values => { <br />
+              console.log(values); <br />
+              }); <br />
+              <br />
+              //Выведет: <br />
+              // [3, 1337, "foo"]
+            </span>
+          </p>
+
+          <p class="general-issues__paragraph">
+            Если одно из переданных промисов будет отклонено, Promise.all будет немедленно отклонён
+            со значением отклонённого промиса, не учитывая другие промисы, независимо выполнены они
+            или нет. Если в качестве аргумента будет передан пустой массив, то Promise.all будет
+            выполнен немедленно.
+          </p>
+
+          <p class="general-issues__paragraph">
+            Promise.all будет немедленно отклонён если один из переданных промисов будет отклонен:
+            если у вас есть четыре промиса которые будут выполнены с задержкой и один, который будет
+            отклонен немедленно - тогда Promise.all будет немедленно отклонён. <br />
+            <span class="general-issues__span-purple">
+              var p1 = new Promise((resolve, reject) => { <br />
+              setTimeout(resolve, 1000, "one"); <br />
+              }); <br />
+              var p2 = new Promise((resolve, reject) => { <br />
+              setTimeout(resolve, 2000, "two"); <br />
+              }); <br />
+              var p3 = new Promise((resolve, reject) => { <br />
+              setTimeout(resolve, 3000, "three"); <br />
+              }); <br />
+              var p4 = new Promise((resolve, reject) => { <br />
+              setTimeout(resolve, 4000, "four"); <br />
+              }); <br />
+              var p5 = new Promise((resolve, reject) => { <br />
+              // Этот промис прервёт Promise.all <br />
+              reject("reject"); <br />
+              }); <br />
+              <br />
+              Promise.all([p1, p2, p3, p4, p5]).then(value => { <br />
+              console.log(value); <br />
+              }, reason => { <br />
+              console.log(reason) <br />
+              }); <br />
+              <br />
+              //Выведет: <br />
+              //"reject"
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion22 = !isQuestion22"
+          :class="{ 'general-issues__question_active': isQuestion22 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion22">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion22 = !isQuestion22"
+          :class="{ 'general-issues__question_active': isQuestion22 }"
+        >
+          xxx
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion22">
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+
+          <p class="general-issues__paragraph">xx</p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
+          @click="isQuestion22 = !isQuestion22"
           :class="{ 'general-issues__question_active': isQuestion22 }"
         >
           xxx
@@ -1875,6 +2045,7 @@ export default {
       isQuestion33: false,
       isQuestion34: false,
       isQuestion35: false,
+      isQuestion36: false,
     }
   },
 }
@@ -2003,7 +2174,7 @@ export default {
     width: calc(100% - 72px);
   }
 
-  &__img {
+  &__img-promise {
     width: 100%;
     aspect-ratio: 700 / 375;
   }
