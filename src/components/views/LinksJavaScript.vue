@@ -77,8 +77,15 @@
         Практические задачи по JavaScript</a
       >
     </div>
-    <!-- 
-    <h2 class="links-to__subheading">xxx</h2>
+
+    <h2 class="links-to__subheading">Изучение регулярных выражений.</h2>
+    <div class="links-to__new-theme">
+      <a class="links-to__link" target="_blank" href="https://www.codingem.com/regex/"
+        >Изучение регулярных выражений: подробное руководство</a
+      >
+    </div>
+
+    <!-- <h2 class="links-to__subheading">xxx</h2>
     <div class="links-to__new-theme">
       <a class="links-to__link" target="_blank" href="">xxx</a>
 
@@ -106,7 +113,7 @@
 
         <span class="links-to__span-red">xxx </span> <br />
       </p>
-    </div> -->
+    </div>  -->
   </div>
 </template>
 
