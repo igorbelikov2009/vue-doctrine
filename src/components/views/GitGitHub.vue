@@ -3,6 +3,28 @@
     <h1 class="github__heading">Git</h1>
 
     <div class="github__new-theme">
+      <a
+        class="github__link"
+        target="_blank"
+        href="https://www.flenov.info/story/show/Uchimsya-rabotaty-s-GIT-prosche-nekuda"
+        >Учимся работать с GIT проще некуда</a
+      >
+
+      <span class="github__text"> часть 1</span>
+    </div>
+
+    <div class="github__new-theme">
+      <a
+        class="github__link"
+        target="_blank"
+        href="https://www.flenov.info/story/show/Udalennyy-GIT-sliyaniya-i-konflikty-prosche-nekuda"
+        >Учимся работать с GIT проще некуда</a
+      >
+
+      <span class="github__text">часть 2</span>
+    </div>
+
+    <div class="github__new-theme">
       <a class="github__link" target="_blank" href="https://htmlacademy.ru/blog/best/git-console"
         >Работа с Git через консоль</a
       >

@@ -3198,6 +3198,36 @@ while (queue.waitForMessage()) {
       <div>
         <button
           class="general-issues__question"
+          @click="isQuestion84 = !isQuestion84"
+          :class="{ 'general-issues__question_active': isQuestion84 }"
+        >
+          Что такое <strong>унарная функция</strong>?
+        </button>
+
+        <div class="general-issues__answer" v-if="isQuestion84">
+          <p class="general-issues__paragraph">
+            Унарная функция — это функция, которая принимает только один аргумент.
+          </p>
+
+          <p class="general-issues__paragraph">Например:</p>
+
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+              <code>
+function greet(name){
+    console.log('Hello', name);
+}
+              </code>
+            </pre>
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="general-issues__question"
           @click="isQuestion74 = !isQuestion74"
           :class="{ 'general-issues__question_active': isQuestion74 }"
         >
@@ -3553,37 +3583,18 @@ var sum = (a,b) => a + b;
           @click="isQuestion83 = !isQuestion83"
           :class="{ 'general-issues__question_active': isQuestion83 }"
         >
-          xxx
+          Как <strong> отключить щелчок правой кнопкой</strong> мыши на веб-странице?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion83">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Вы можете отключить правый щелчок на веб-странице, вернув false из oncontextmenu
+            атрибута body элемента.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
-        </div>
-      </div>
-
-      <div>
-        <button
-          class="general-issues__question"
-          @click="isQuestion84 = !isQuestion84"
-          :class="{ 'general-issues__question_active': isQuestion84 }"
-        >
-          xxx
-        </button>
-
-        <div class="general-issues__answer" v-if="isQuestion84">
-          <p class="general-issues__paragraph"></p>
-
-          <p class="general-issues__paragraph"></p>
-
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            <strong> &lt;body oncontextmenu="return false;"&gt;</strong>
+          </p>
         </div>
       </div>
 
@@ -3593,17 +3604,31 @@ var sum = (a,b) => a + b;
           @click="isQuestion85 = !isQuestion85"
           :class="{ 'general-issues__question_active': isQuestion85 }"
         >
-          xxx
+          Что такое <strong>чистая функция</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion85">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Чистая функция — это функция, которая возвращает один и тот же результат с одними и теми
+            же аргументами независимо от того, когда и где она вызывается. Функция является чистой,
+            если она не зависит от состояния или изменения данных во время выполнения программы.
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Например, функция, вычисляющая площадь круга, является чистой:
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                <code>
+function circleArea(radius) {
+  return Math.PI * Math.pow(radius, 2);
+}
+                </code>
+              </pre>
+            </span>
+          </p>
         </div>
       </div>
 
@@ -3613,17 +3638,38 @@ var sum = (a,b) => a + b;
           @click="isQuestion86 = !isQuestion86"
           :class="{ 'general-issues__question_active': isQuestion86 }"
         >
-          xxx
+          Что такое <strong>деструктуризация объекта</strong>?
         </button>
 
         <div class="general-issues__answer" v-if="isQuestion86">
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Деструктуризация объекта — это способ извлечения свойств из объекта (или массива).
+          </p>
 
-          <p class="general-issues__paragraph"></p>
+          <p class="general-issues__paragraph">
+            Но начиная с ES6 вы можете сделать это с помощью одной строки кода, используя
+            деструктурирование объекта:
+          </p>
 
-          <p class="general-issues__paragraph"></p>
-          <strong></strong>
-          <span class="general-issues__span-purple"></span>
+          <p class="general-issues__paragraph">
+            <span class="general-issues__span-purple">
+              <pre>
+                 <code>
+const PersonDetails = {
+  name: "Matty",
+  age: 42,
+  married: false
+}
+
+const {name, age, married} = PersonDetails;
+
+console.log(name);
+console.log(age);
+console.log(married);
+                 </code>
+               </pre>
+            </span>
+          </p>
         </div>
       </div>
 
